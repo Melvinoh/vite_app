@@ -1,0 +1,14 @@
+.wrapper{
+    display: flex;
+    padding: 10px;
+    background-color: greenyellow;
+
+}
+.slides{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(188, 188, 254);
+    color:white;
+
+}

@@ -1,0 +1,16 @@
+.slide_card{
+    border-radius: 2rem;
+    width: 400px;
+    height: 40px;
+    position: relative;
+}
+.slide_img img{
+    object-fit: contain;
+}
+.overlay{
+    position: absolute;top: 0; right: 0;left: 0;
+    background-color:#0c140c76 ;
+    column-rule: white;
+    font-size: medium;
+    font-family: 'Trebuchet MS';
+}

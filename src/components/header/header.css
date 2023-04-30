@@ -1,0 +1,123 @@
+*{
+    font-size: 95%;
+}
+
+/* header container */
+.container{
+    padding: 0.5rem;
+    margin: 0 0.1rem ;
+    position: sticky;top:0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: last baseline;
+    justify-content: space-between;
+    background-color: #E1EBDF;
+    border: solid #58D43F  1px;
+    border-radius: 0.2rem;
+
+}
+/* logo section */
+.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-style: italic;
+    font-size: 1rem;
+}
+.title{
+  color: #008000;
+  font-weight:400px;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium';
+  
+}
+.name{
+ color: #235631;
+ font-family: 'Arial ';
+}
+
+/* icons section */
+
+.icons_container{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: last baseline;
+   
+}
+.icons{
+    font-size:1.2rem;
+    color:#22B94C;
+    cursor:pointer;
+}
+.icons:hover{
+    background-color: #008000;
+    color: white;
+    border-radius: .2rem;
+    padding: 0.1rem;
+    font-size: 1.25rem;
+}
+.bars{
+    display: none;
+}
+
+/* profile popup section */
+
+.profile_pic{
+    width: 1.25rem; height: 1.25rem;
+}
+.profile_popup{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    position:absolute;
+    top: 3.5rem;
+    right :5px;
+    padding: 1rem;
+    gap: 1rem;
+    background-color:  #FAFAFA;
+    box-shadow: 0.05rem 0.1rem 0.02rem #2356313b;
+    border-radius: 0.3rem;
+    justify-content: center;
+    font-size: 85%;
+}
+.pop_items:hover{
+    background-color: #E1EBDF ;
+    color:#008000;
+    border: #22B94C solid 1px;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+
+/* media queries for header section*/
+
+@media (max-width:768px) {
+    .name{
+        font-size: small;
+    }
+    .icons_container .icons{
+        font-size: 1.25rem;
+    }
+    .logo{
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        
+    }
+    .icons_container .bars{
+        display:block;
+        cursor: pointer;
+    }
+    .icons.active{
+        background-color: #008000;
+        color: white;
+        border-radius: .2rem;
+        padding: 0.1rem;
+        font-size: 1.25rem;
+    };
+}

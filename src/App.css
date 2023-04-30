@@ -1,0 +1,12 @@
+.app_container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+/* media queries */
+
+@media (max-width:768px) {
+  .app_container{
+    flex-direction: column;
+  }
+}
