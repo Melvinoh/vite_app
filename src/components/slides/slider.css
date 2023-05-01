@@ -1,14 +1,10 @@
-.wrapper{
-    display: flex;
-    padding: 10px;
-    background-color: greenyellow;
-
+.card{
+    width: 100%;
+    max-width: 300px;
 }
-.slides{
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    background-color: rgb(188, 188, 254);
-    color:white;
-
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
 }

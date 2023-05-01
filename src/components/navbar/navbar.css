@@ -1,3 +1,6 @@
+.nav_container{
+    width: fit-content;
+}
 .navbar{
     padding: 2.5rem 1rem;
     margin: 0.2rem 0.1rem;
@@ -10,8 +13,7 @@
     min-width: fit-content;
     animation-name: navAnimation;
     animation-duration: 0.7s;
-    
-    
+    z-index: 900; 
 }
 .nav_item{
     display: flex;
@@ -54,9 +56,11 @@
         top:3.4rem;
         width: 100%;
         display: none;
+        z-index: 900;
     }
     .nav_container.open{
        display: block;
+       z-index: 900;
         
     }
   
