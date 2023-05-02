@@ -1,0 +1,21 @@
+
+
+const data = [
+    {
+        id:"1",
+        img:"/pictures/content.jpg",
+        text:"getting all in one click"
+    },
+    {
+        id:"2",
+        img:"/pictures/homespic.jpg",
+        text:"platform to have the best of tuk"
+    },
+    {
+        id:"3",
+        img:"/pictures/rotaract.jpg",
+        text:"the greatest network"
+    } 
+]
+ 
+export default data
