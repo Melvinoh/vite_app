@@ -9,6 +9,7 @@
     border-radius: 0.2rem;
     margin:0.1rem;
     display: none;
+    z-index: 200;
     
 }
 .login_modal.active{

@@ -1,5 +1,6 @@
 import React from 'react'
 import DatePicker from "react-datepicker";
+import { TbBellRinging2Filled } from 'react-icons/tb'
 import "react-datepicker/dist/react-datepicker.css";
 import "./home.css"
 import Slider from '../../components/slider/Slider';
@@ -31,6 +32,36 @@ const Home = () => {
             selectsRange
             inline
           />
+        </div>
+      </div>
+    </div>
+    <div className="notice_wrapper">
+      <div className="elements">
+        <img src="/pictures/customercare.PNG" alt="" />
+        <div className="text">
+          <span>tuk admission notification</span>
+          <TbBellRinging2Filled />
+        </div>
+      </div>
+      <div className="elements">
+        <img src="/pictures/darling.jpg" alt="" />
+        <div className="text">
+         <span>clubs notification</span>
+         <TbBellRinging2Filled />
+        </div>
+      </div>
+      <div className="elements">
+        <img src="/pictures/mrform.jpg" alt="" />
+        <div className="text">
+          <span> sports notification</span>
+          <TbBellRinging2Filled />
+        </div>
+      </div>
+      <div className="elements">
+        <img src="/pictures/mrform.jpg" alt="" />
+        <div className="text">
+          <span> sports notification</span>
+          <TbBellRinging2Filled />
         </div>
       </div>
     </div>
