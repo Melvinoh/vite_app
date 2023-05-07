@@ -7,26 +7,25 @@ body{
     position: relative;
 }
 .slider-profile{
-    width: 100%;
-    gap: 0.5rem;
     display: flex;
+    max-width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.5rem;
 }
 
 .slider_wrapper{
     margin: 0.2rem;
     border-radius: 1rem;
-    max-width: 550px;
-    height: 100%;
-    max-height: 200px;
+    max-width: 500px;
     width: 98%;
     z-index: 1;
     position: relative;
+    
 }
 .react-multi-carousel-list{
-    max-width: 550px;
+    max-width: 500px;
     width: 100%;
+    border-radius: 1rem;
 }
 
 /* profile and calender wrapper*/
@@ -57,11 +56,10 @@ body{
     color: rgb(5, 164, 5);
     text-decoration: underline;
 }
-
 .profile img{
-    max-width: 100px;
-    width: 100%;
     border-radius: 10px;
+    height: 150px;
+    
 }
 .profile .content{
     display: flex;
@@ -92,7 +90,7 @@ body{
     font-size: 0.6rem;
 }
 .react-datepicker__day-name,.react-datepicker__day{
-    width: 1.2rem;
+    max-width: 1.2rem;
     line-height: 1.2rem;
     margin: 0.15rem;
     color: rgb(13, 43, 13);
@@ -128,8 +126,8 @@ body{
 }
 .elements img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
 }
 .notice_wrapper .text{
     position: absolute;
@@ -157,8 +155,12 @@ body{
         flex-direction: column;
     }
     .notice_wrapper{
-        position: absolute;
-        top: 9rem;left: 3rem;
+        position: relative;
+        top: -14rem;left: 1rem;
+    }
+    .react-datepicker__day-name,.react-datepicker__day{
+        width: 1.5rem;
+        line-height: 1.5rem;
     }
 
 }
