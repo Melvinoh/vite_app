@@ -1,5 +1,5 @@
 *{
-    font-size: 95%;
+    font-size: 97%;
 }
 
 /* header container */
@@ -31,14 +31,13 @@
 .title{
   color: #008000;
   font-weight:400px;
-  font-size: 2rem;
-;
-  font-family: 'Franklin Gothic Medium';
+  font-size: 1.5rem;
   
 }
 .name{
  color: #235631;
  font-family: 'Arial ';
+ font-size: large;
 }
 
 /* icons section */
@@ -50,7 +49,7 @@
    
 }
 .icons{
-    font-size:1.2rem;
+    font-size:1.5rem;
     color:#22B94C;
     cursor:pointer;
 }
@@ -103,6 +102,9 @@
 @media (max-width:768px) {
     .name{
         font-size: small;
+    }
+    .title{
+        font-size: medium;
     }
     .icons_container .icons{
         font-size: 1.25rem;

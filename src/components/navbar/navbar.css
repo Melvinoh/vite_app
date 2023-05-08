@@ -43,7 +43,7 @@
 }
 
 /*media queries */
-@media ( max-width : 768px) {
+@media ( max-width : 899px) {
     .navbar{
         border: solid  #4ECB71 1px;
     }

@@ -56,8 +56,9 @@
     font-style: italic;
     font-weight: 200;
 }
-.title{
+form .title{
     font-size: medium;
+    color: green;
 }
 .form_elements{
     display: flex;
