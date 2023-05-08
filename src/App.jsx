@@ -36,11 +36,11 @@ function App() {
       return (
         <>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
-          <Login  isOpen={openform} closefun={CloseformHandler}/>
           <div className="app_container">
             <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
             <Outlet />
           </div>
+          <Login  isOpen={openform} closefun={CloseformHandler}/>
         </>
       )
     }

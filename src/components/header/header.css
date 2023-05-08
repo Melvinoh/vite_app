@@ -6,7 +6,8 @@
 .container{
     padding: 0.5rem;
     margin: 0 0.1rem ;
-    position: sticky;top:0;
+    position: fixed;top:0;right:0;left:0;
+    height: 11vh;
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
@@ -15,6 +16,7 @@
     background-color: #EAF6EA;
     border: solid #58D43F  1px;
     border-radius: 0.2rem;
+    z-index: 300;
 
 }
 /* logo section */
@@ -29,7 +31,8 @@
 .title{
   color: #008000;
   font-weight:400px;
-  font-size: 1.2rem;
+  font-size: 2rem;
+;
   font-family: 'Franklin Gothic Medium';
   
 }
@@ -71,9 +74,9 @@
     display: flex;
     flex-direction: column;
     width: 120px;
-    position:absolute;
-    top: 3.5rem;
-    right :5px;
+    position:fixed;
+    top: 11.5vh;
+    right :2px;
     padding: 1rem;
     gap: 1rem;
     background-color:  #FAFAFA;
@@ -107,7 +110,7 @@
     .logo{
         flex-direction: column;
         gap: 0;
-        align-items: flex-start;
+        align-items:flex-start ;
         
     }
     .icons_container .bars{
@@ -121,4 +124,5 @@
         padding: 0.1rem;
         font-size: 1.25rem;
     };
+   
 }

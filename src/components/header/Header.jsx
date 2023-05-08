@@ -15,9 +15,9 @@ const Header = (props) => {
     <>
         <div className='container'>
             <div className="logo">
-                <span className="title">
+                <h5 className="title">
                     SATUK
-                </span>
+                </h5>
                 <span className="name">
                     student association of TUK
                 </span>

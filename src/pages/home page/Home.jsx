@@ -16,7 +16,7 @@ const Home = () => {
       </div>
       <div className="profile_wrapper">
         <div className="profile">
-          <h4 className="title">my profile</h4>
+          <h3 className="heading">my profile</h3>
           <div className="img">
             <img src="/pictures/babygirl.jpg" alt="profile" srcset="" />
           </div>
@@ -36,6 +36,9 @@ const Home = () => {
       </div>
     </div>
     <div className="notice_wrapper">
+      <div className="elements">
+     <h5 className="heading">notice board</h5>
+      </div>
       <div className="elements">
         <img src="/pictures/customercare.PNG" alt="" />
         <div className="text">
