@@ -99,7 +99,10 @@
 
 /* media queries for header section*/
 
-@media (max-width:768px) {
+@media (max-width:899px) {
+    .home_container{
+        left: 0;
+    }
     .name{
         font-size: small;
     }

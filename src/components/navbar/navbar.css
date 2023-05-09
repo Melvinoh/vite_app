@@ -3,17 +3,18 @@
 }
 .navbar{
     padding: 2.5rem 1rem;
-    margin: 0.2rem 0.1rem;
+    margin: 0.4rem 0.1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     background-color: #ebfeeb81;
     border: solid  #4ECB71 1px;
-    width: 20%;
+    width: 10%;
     min-width: fit-content;
     animation-name: navAnimation;
     animation-duration: 0.7s;
     z-index: 900; 
+    position: fixed;
 }
 .nav_item{
     display: flex;
@@ -22,7 +23,7 @@
     background-color: white;
     border-radius: 0.5rem;
     min-width: 100px;
-    padding: 0.7rem;
+    padding: 0.6rem;
    
     align-items: center;
     font-size: 0.9rem;
@@ -46,16 +47,20 @@
 @media ( max-width : 899px) {
     .navbar{
         border: solid  #4ECB71 1px;
+        gap: 0.9rem;
+        margin: 0.1rem;
     }
     .nav_container{
         background-color: #434d43a6 ;
         margin:0.15rem 0.1rem;
         padding: 0.1rem 0;
         border-radius: 0.1rem;
-        position:absolute;
-        top:0px;left: 1px;right: 3px;
+        position:fixed;
+        top: 10.7vh;;left: 1px;right: 3px;
         width: 100%;
         display: none;
+        z-index: -200;
+        height: 100%;
     }
     .nav_container.open{
        display: block;

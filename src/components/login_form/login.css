@@ -1,6 +1,6 @@
 /* modal styles */
 .login_modal{
-    position: absolute;
+    position: fixed;
     top:3.15rem; 
     background-color: #333432c5;
     width: 100%;
@@ -21,7 +21,7 @@
 .form{
     display: flex;
     width: 60%;
-    min-width: 200px;
+    min-width: 250px;
     max-width: 400px;
     margin: 3rem auto;
     flex-direction: column;
