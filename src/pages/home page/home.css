@@ -164,6 +164,6 @@ body{
 }
 @media (min-width:899px) {
     .home_container{
-        left: 14vw;
+        left: 10rem;
     }
 }

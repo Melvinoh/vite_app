@@ -4,7 +4,7 @@
   gap: 1rem;
   height:100%;
   position: relative;
-  top: 11vh;
+  top:3.9rem;
 }
 .heading{
   font-family: 'Trebuchet MS';
@@ -18,5 +18,7 @@
 @media (max-width:768px) {
   .app_container{
     flex-direction: column;
+  
   }
+  
 }

@@ -7,7 +7,7 @@
     padding: 0.5rem;
     margin: 0 0.1rem ;
     position: fixed;top:0;right:0;left:0;
-    height: 11vh;
+    height:fit-content;
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
@@ -74,7 +74,7 @@
     flex-direction: column;
     width: 120px;
     position:fixed;
-    top: 11.5vh;
+    top: 3.7rem;
     right :2px;
     padding: 1rem;
     gap: 1rem;
@@ -100,9 +100,7 @@
 /* media queries for header section*/
 
 @media (max-width:899px) {
-    .home_container{
-        left: 0;
-    }
+  
     .name{
         font-size: small;
     }
