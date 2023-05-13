@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./schoolcard.css"
 
 const SchoolCard = ({items}) => {
   return (
-      <div className="schoolcard_container">
+    <Link to={items.id} className="schoolcard_container">
+      <div>
         <div className="schoolpic">
             <img src={items.img} alt="" />
         </div>
@@ -14,7 +16,8 @@ const SchoolCard = ({items}) => {
             <span>{items.block}</span>
         </div>
       </div>
-    
+    </Link>
+
   )
    
    

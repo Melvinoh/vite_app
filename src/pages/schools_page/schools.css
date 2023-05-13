@@ -1,23 +1,27 @@
 .schools_container{
     position:relative;
     left: 10rem; 
-    padding: 0.2rem;
+    padding: 0.5rem;
     display: grid;
     gap: 0.7rem;
     margin: 0.1rem;
     height: auto;
-    width: 80%;
+    background-color: white;
+    width: 82%;
+    place-items: center;
     grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
 }
 .schools_container .heading {
     text-decoration: none;
     padding-top: 0;padding-bottom: 0.4rem;
 }
+
+
 @media (max-width:899px) {
     .schools_container{
         position: relative;
         left:0;
-        width: 100%;
+        width: 99%;
 
     }
 }
