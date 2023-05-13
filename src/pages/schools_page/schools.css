@@ -1,4 +1,21 @@
-*{
-    padding: 10px;
-    margin: 10px;
+.schools_container{
+    position:relative;
+    left: 10rem; top: 1.2rem;
+    padding: 0.2rem;
+    display: grid;
+    gap: 0.7rem;
+    margin: 0.3rem;
+    height: auto;
+    grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
+}
+.schools_container .heading {
+    text-decoration: none;
+    padding-top: 0;padding-bottom: 0.4rem;
+}
+@media (max-width:899px) {
+    .schools_container{
+        position: relative;
+        left:0;
+        width: 100%;
+    }
 }

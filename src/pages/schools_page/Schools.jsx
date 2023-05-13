@@ -1,6 +1,7 @@
 import React from 'react'
 import schooldata from "../../data/schools.json"
 import SchoolCard from '../../components/schools_card/SchoolCard'
+import "./schools.css"
 //import data from '../../data/data'
 
 function Schools() {
