@@ -1,11 +1,12 @@
 .schools_container{
     position:relative;
-    left: 10rem; top: 1.2rem;
+    left: 10rem; 
     padding: 0.2rem;
     display: grid;
     gap: 0.7rem;
-    margin: 0.3rem;
+    margin: 0.1rem;
     height: auto;
+    width: 80%;
     grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
 }
 .schools_container .heading {
@@ -17,5 +18,6 @@
         position: relative;
         left:0;
         width: 100%;
+
     }
 }

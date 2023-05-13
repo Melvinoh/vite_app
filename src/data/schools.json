@@ -58,5 +58,35 @@
         "img":"/pictures/smilygirl.jpg",
         "name":"school of geospacial engineering",
         "block":"block J"
+    },
+    {
+        "id":"11",
+        "img":"/pictures/content.jpg",
+        "name":"school of electrical engineering",
+        "block":"block E"
+    },
+    {
+        "id":"12",
+        "img":"/pictures/content.jpg",
+        "name":"school of electrical engineering",
+        "block":"block E"
+    },
+    {
+        "id":"13",
+        "img":"/pictures/mrform.jpg",
+        "name":"school of mechanical engineering",
+        "block":"block M"
+    },
+    {
+        "id":"14",
+        "img":"/pictures/darling.jpg",
+        "name":"school of Aeronotical engineering",
+        "block":"block S"
+    },
+    {
+        "id":"15",
+        "img":"/pictures/smilygirl.jpg",
+        "name":"school of geospacial engineering",
+        "block":"block J"
     }
 ]
