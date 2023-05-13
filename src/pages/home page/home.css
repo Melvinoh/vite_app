@@ -28,6 +28,8 @@ body{
 /* profile and calender wrapper*/
 .profile_wrapper{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap:0.3rem;
     margin: 0.3rem ;
     width: fit-content;
@@ -81,7 +83,7 @@ body{
     font-size: 0.6rem;
 }
 .react-datepicker__day-name,.react-datepicker__day{
-    width: 1.2rem;
+    max-width:1.2rem;
     line-height: 1.2rem;
     margin: 0.15rem;
     color: rgb(13, 43, 13);

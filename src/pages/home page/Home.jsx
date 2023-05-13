@@ -18,7 +18,7 @@ const Home = () => {
         <div className="profile">
           <h3 className="heading">my profile</h3>
           <div className="img">
-            <img src="/pictures/babygirl.jpg" alt="profile" srcset="" />
+            <img src="/pictures/rasterman.jpg" alt="profile" srcset="" />
           </div>
           <div className="content">
             <span>SCCI/00573/2020</span>

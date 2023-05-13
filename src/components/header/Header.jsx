@@ -13,7 +13,7 @@ const Header = (props) => {
     const [ProfilePop, setProfilePop] = useState(false)
   return ( 
     <>
-        <div className='container'>
+        <header className='container'>
             <div className="logo">
                 <h5 className="title">
                     SATUK
@@ -29,7 +29,7 @@ const Header = (props) => {
                 <BsPersonFill className={`icons  ${ProfilePop? "active" : ""}`}id='profile' onClick={()=>setProfilePop(!ProfilePop)} />
             </div>
            
-        </div>
+        </header>
         {ProfilePop && <div className="profile_popup">
             <div className="pop_items" onClick={props.openformfun}> student login </div>
             <div className="pop_items" onClick={props.openformfun} >admin login</div>
