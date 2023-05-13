@@ -1,0 +1,5 @@
+.pic img {
+    height: 100px;
+    width: 90%;
+    object-fit: cover;
+}

@@ -1,4 +1,3 @@
-*{
-    padding: 10px;
-    margin: 10px;
+.clubs_container{
+    grid-template-columns: repeat( auto-fit, minmax(6rem, 1fr) );
 }

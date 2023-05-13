@@ -5,8 +5,7 @@
   height:100%;
   position: relative;
   top:3.9rem;
-  scroll-padding: 0.2rem;
-  
+
 }
 .heading{
   font-family: 'Trebuchet MS';
@@ -15,12 +14,32 @@
   font-size: 0.8rem;
   padding: 0.3rem;
 }
+
+.grid{
+  position:relative;
+  left: 10rem; 
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.7rem;
+  margin: 0.1rem;
+  height: auto;
+  background-color: white;
+  width: 82%;
+  place-items: center;
+ 
+}
+
 /* media queries */
 
-@media (max-width:768px) {
+@media (max-width:899px) {
   .app_container{
     flex-direction: column;
-  
   }
-  
+  .grid{
+    position: relative;
+    left:0;
+    width: 99%;
+  }
 }
+  
+

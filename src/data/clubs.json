@@ -1,0 +1,92 @@
+[
+    {
+        "id":"1",
+        "img":"/pictures/rotaract.jpg",
+        "title":"rotarct",
+        "room":"room E"
+    },
+    {
+        "id":"2",
+        "img":"/pictures/rasterman.jpg",
+        "title":"ICT",
+        "room":"room E"
+    },
+    {
+        "id":"3",
+        "img":"/pictures/customercare.PNG",
+        "title":"Diplomacy",
+        "room":"room M"
+    },
+    {
+        "id":"4",
+        "img":"/pictures/developer.jpg",
+        "title":"Scout movement",
+        "room":"room S"
+    },
+    {
+        "id":"5",
+        "img":"/pictures/student 1.jpg",
+        "title":"civil engineering",
+        "room":"room J"
+    },
+    {
+        "id":"6",
+        "img":"/pictures/mrform.jpg",
+        "title":"Dance club ",
+        "room":"room E"
+    },
+    {
+        "id":"7",
+        "img":"/pictures/content.jpg",
+        "title":"live Art",
+        "room":"room E"
+    },
+    {
+        "id":"8",
+        "img":"/pictures/mrform.jpg",
+        "title":"music club",
+        "room":"room M"
+    },
+    {
+        "id":"9",
+        "img":"/pictures/Capture14.PNG",
+        "title":"journalism club",
+        "room":"room S"
+    },
+    {
+        "id":"10",
+        "img":"/pictures/homespic.jpg",
+        "title":"enviroment club",
+        "room":"room J"
+    },
+    {
+        "id":"11",
+        "img":"/pictures/coolboy.jpg",
+        "title":"chemical science",
+        "room":"room E"
+    },
+    {
+        "id":"12",
+        "img":"/pictures/mbogi.jpg",
+        "title":"Karate club",
+        "room":"room E"
+    },
+    {
+        "id":"13",
+        "img":"/pictures/rasterman.jpg",
+        "title":"GYM CLUB",
+        "room":"room M"
+    },
+    {
+        "id":"14",
+        "img":"/pictures/babygirl.jpg",
+        "title":"spoken word",
+        "room":"room S"
+    },
+    {
+        "id":"15",
+        "img":"/pictures/smilygirl.jpg",
+        "title":"leadership club",
+        "room":"hype masters & Djs"
+    }
+]
