@@ -1,12 +1,10 @@
-.app_container{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  height:100%;
+.appwrapper{
   position: relative;
-  top:3.9rem;
-
+  top:3.4rem;
+  min-height: 100vh;
+  height: 100%;
 }
+
 .heading{
   font-family: 'Trebuchet MS';
   color: rgb(10, 115, 10);
@@ -32,8 +30,9 @@
 /* media queries */
 
 @media (max-width:899px) {
-  .app_container{
-    flex-direction: column;
+  .appwrapper{
+    position: relative;
+    top:3.9rem;
   }
   .grid{
     position: relative;

@@ -1,3 +1,4 @@
+
 .schools_container{
     grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
 }
@@ -5,13 +6,39 @@
     text-decoration: none;
     padding-top: 0;padding-bottom: 0.4rem;
 }
-
-
-@media (max-width:899px) {
-    .schools_container{
-        position: relative;
-        left:0;
-        width: 99%;
-
-    }
+.school_tabs{
+    width:90%;
+    margin: 0.5rem auto;
+    z-index: 900;
 }
+.school_tabs .tabs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    position: relative ;top: 1px;
+    z-index: 1;
+}
+hr{
+    z-index: -1;
+}
+.school_tabs .tab{
+    color: rgb(133, 130, 130);
+    font-family: 'Trebuchet MS',;
+    text-align: center;
+    padding: 0.3rem;
+ 
+}
+.school_tabs .tab:hover{
+    color : green;
+    cursor: pointer;
+}
+.school_tabs .tab{
+    border: solid 1px green ;
+    border-bottom: none;
+    border-collapse: collapse;
+    border-bottom: none;
+    color: green;
+    background-color: rgba(242, 249, 239, 0.952);
+}
+
+

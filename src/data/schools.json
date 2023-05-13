@@ -3,90 +3,105 @@
         "id":"1",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
+        "facultyid":"fee001",
         "block":"block E"
     },
     {
         "id":"2",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
+        "facultyid":"fee002",
         "block":"block E"
     },
     {
         "id":"3",
         "img":"/pictures/mrform.jpg",
         "name":"school of mechanical engineering",
+        "facultyid":"fee003",
         "block":"block M"
     },
     {
         "id":"4",
         "img":"/pictures/darling.jpg",
         "name":"school of Aeronotical engineering",
+        "facultyid":"fee001",
         "block":"block S"
     },
     {
         "id":"5",
         "img":"/pictures/smilygirl.jpg",
         "name":"school of geospacial engineering",
+        "facultyid":"fee002",
         "block":"block J"
     },
     {
         "id":"6",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
+        "facultyid":"fee003",
         "block":"block E"
     },
     {
         "id":"7",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
+        "facultyid":"fee001",
         "block":"block E"
     },
     {
         "id":"8",
         "img":"/pictures/mrform.jpg",
         "name":"school of mechanical engineering",
+        "facultyid":"fee002",
         "block":"block M"
     },
     {
         "id":"9",
         "img":"/pictures/darling.jpg",
         "name":"school of Aeronotical engineering",
+        "facultyid":"fee003",
         "block":"block S"
     },
     {
         "id":"10",
         "img":"/pictures/smilygirl.jpg",
         "name":"school of geospacial engineering",
+        "facultyid":"fee001",
         "block":"block J"
     },
     {
         "id":"11",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
+        "facultyid":"fee002",
         "block":"block E"
     },
     {
         "id":"12",
         "img":"/pictures/content.jpg",
         "name":"school of electrical engineering",
-        "block":"block E"
+        "block":"block E",
+        "facultyid":"fee003"
     },
     {
         "id":"13",
         "img":"/pictures/mrform.jpg",
         "name":"school of mechanical engineering",
+        "facultyid":"fee001",
         "block":"block M"
     },
     {
         "id":"14",
         "img":"/pictures/darling.jpg",
         "name":"school of Aeronotical engineering",
+        "facultyid":"fee002",
         "block":"block S"
     },
     {
         "id":"15",
         "img":"/pictures/smilygirl.jpg",
         "name":"school of geospacial engineering",
+        "facultyid":"fee003",
         "block":"block J"
     }
 ]

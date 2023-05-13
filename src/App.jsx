@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css"
 import Header from './components/header/Header'
+import Search from './components/search/Search'
 import  Login from './components/login_form/Login'
 import { Outlet, RouterProvider, } from 'react-router'
 import Navbar from './components/navbar/Navbar'
@@ -36,10 +37,14 @@ function App() {
       return (
         <>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
-          <div className="app_container">
-            <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
-            <Outlet />
+          <div className="appwrapper">
+          <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
+            <Search/>
+            <div className="app_container">
+              <Outlet />
+            </div>
           </div>
+         
           <Login  isOpen={openform} closefun={CloseformHandler}/>
         </>
       )

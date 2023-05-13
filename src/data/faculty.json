@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "facultyid":"fee001",
+        "img":"/pictures/content.jpg",
+        "name":"faculty of built enviroment and engineering",
+        "block":"block E"
+    },
+    {
+        "id":"2",
+        "facultyid":"fee002",
+        "img":"/pictures/content.jpg",
+        "name":"faculty of applied sciences and technology",
+        "block":"block f"
+    },
+    {
+        "id":"3",
+        "facultyid":"fee003",
+        "img":"/pictures/content.jpg",
+        "name":"faculty of built enviroment and engineering",
+        "block":"block E"
+    }
+]

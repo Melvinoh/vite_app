@@ -8,8 +8,13 @@ const ClubsCard = ({cards}) => {
           <div className="pic">
             <img src={cards.img} alt="" />
           </div>
-         
           <p className="name">{cards.title}</p>
+          <div className="details">
+            <h4>{cards.block}</h4>
+            <p>{cards.room}</p>
+            <p>{cards.clubrep}</p>
+            <p>{cards.date}</p>  
+          </div>
         </div>
     </Link>
   )

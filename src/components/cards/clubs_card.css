@@ -1,5 +1,27 @@
+.clubs_cards{
+    position:relative;
+}
 .pic img {
     height: 100px;
-    width: 90%;
     object-fit: cover;
+    width: 100%;
+}
+.clubs_cards .details{
+    background-color: rgba(23, 31, 23, 0.635);
+    position: absolute;
+    top: 0;left: 0;right: 0;
+    height: 100px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    font-weight: 100;
+    opacity: 0;
+    overflow-y:hidden;
+}
+
+.clubs_cards .details:hover{
+    opacity:1;
 }
