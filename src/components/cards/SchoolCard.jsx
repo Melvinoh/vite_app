@@ -9,10 +9,10 @@ const SchoolCard = ({items}) => {
         <div className="schoolpic">
             <img src={items.img} alt="" />
         </div>
-        <div className="heading">
+        <div className="heading ">
             <span>{items.name}</span>
         </div>
-        <div className="block">
+        <div className="block link" >
             <span>{items.block}</span>
         </div>
       </div>

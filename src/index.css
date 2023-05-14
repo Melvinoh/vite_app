@@ -18,7 +18,10 @@ body{
   scroll-behavior: smooth;
   scroll-padding: 0.1rem;
 }
-
+.link{
+  text-decoration: none;
+  color: black;
+}
 *{
   margin: 0;
   padding:0;

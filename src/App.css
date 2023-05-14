@@ -15,14 +15,14 @@
 
 .grid{
   position:relative;
-  left: 10rem; 
+  left: 10.7rem; 
   padding: 0.5rem;
   display: grid;
   gap: 0.7rem;
   margin: 0.1rem;
   height: auto;
   background-color: white;
-  width: 82%;
+  width: 83%;
   place-items: center;
  
 }
