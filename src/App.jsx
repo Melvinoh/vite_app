@@ -14,6 +14,7 @@ import TukSoko from './pages/tuk soko/TukSoko';
 import Leaders from './pages/leadership_page/schools_page/Leaders';
 import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports/Sports';
+import School from './pages/single school/School.jsx';
 
 function App() {
 //hook state for nav openinig and close
@@ -38,7 +39,7 @@ function App() {
         <>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
           <div className="appwrapper">
-          <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
+            <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
             <Search/>
             <div className="app_container">
               <Outlet />
@@ -64,8 +65,16 @@ function App() {
             element : <Clubs />
           },
           {
+            path : "/clubs:id",
+            element : <Clubs />
+          },
+          {
             path : "/schools",
             element : <Schools />
+          },
+          {
+            path : "/schools/:id",
+            element : <School />
           },
           {
             path : "/tuk_soko",
@@ -76,11 +85,19 @@ function App() {
             element : <Leaders />
           },
           {
+            path : "/leadership/:id",
+            element : <Leaders />
+          },
+          {
             path : "/gallery",
             element : <Gallery />
           },
           {
             path : "/sports",
+            element : <Sports />
+          },
+          {
+            path : "/sports/:id",
             element : <Sports />
           }
         ]

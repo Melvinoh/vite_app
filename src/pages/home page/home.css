@@ -83,7 +83,7 @@ body{
     font-size: 0.6rem;
 }
 .react-datepicker__day-name,.react-datepicker__day{
-    max-width:1.2rem;
+    width:1.2rem;
     line-height: 1.2rem;
     margin: 0.15rem;
     color: rgb(13, 43, 13);
