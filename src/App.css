@@ -12,13 +12,19 @@
   font-size: 0.8rem;
   padding: 0.3rem;
 }
+.heading_1{
+  font-family: 'Trebuchet MS';
+}
+input{
+  outline: none;
+}
 
 .grid{
   position:relative;
   left: 10.7rem; 
   padding: 0.5rem;
   display: grid;
-  gap: 0.7rem;
+  gap: 1.5rem;
   margin: 0.1rem;
   height: auto;
   background-color: white;

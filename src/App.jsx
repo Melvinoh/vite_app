@@ -15,6 +15,8 @@ import Leaders from './pages/leadership_page/schools_page/Leaders';
 import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports/Sports';
 import School from './pages/single school/School.jsx';
+import Club_details from './pages/single_club/Club_details';
+
 
 function App() {
 //hook state for nav openinig and close
@@ -65,8 +67,8 @@ function App() {
             element : <Clubs />
           },
           {
-            path : "/clubs:id",
-            element : <Clubs />
+            path : "/clubs/:id",
+            element : <Club_details />
           },
           {
             path : "/schools",

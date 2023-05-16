@@ -1,0 +1,50 @@
+[
+    {
+        "date":"13/03/2023",
+        "name":"muturi melvin",
+        "time":" 2min ago",
+        "content":" Material Design is a design system built and supported by Google design",
+        "profile_pic":"/pictures/coolboy.jpg",
+        "reactions":[
+            "/pictures/customercare.PNG",
+            "/pictures/rasterman.jpg",
+            "/pictures/mrform.jpg"
+        ]
+    },
+    {
+        "date":"13/03/2023",
+        "name":"priscah adhis",
+        "time":" 45min ago",
+        "content":"the quick brown fox jumped over the lazy dog materialdesign ia a design system built and supported by google design",
+        "profile_pic":"/pictures/babygirl.jpg",
+        "reactions":[
+            "/pictures/smilygirl.jpg",
+            "/pictures/rasterman.jpg",
+            "/pictures/darling.jpg"
+        ]
+    },
+    {
+        "date":"13/03/2023",
+        "name":"judy gathoni",
+        "time":" 3hr ago",
+        "content":" Material Design is a design system built and supported by Google design",
+        "profile_pic":"/pictures/smilygirl.jpg",
+        "reactions":[
+            "/pictures/content.jpg",
+            "/pictures/student 1.jpg",
+            "/pictures/mrform.jpg"
+        ]
+    },
+    {
+        "date":"13/03/2023",
+        "name":"kelvin githu",
+        "time":" 4hr ago",
+        "content":" iwe giza baridi na upepo, iwe mvua na mshesho,penzi lako kwangu joto joto, my desire we nipe dawa mwoyo wangu unashituka. shida ni umekolea penzini, shida nii upo moyoni wee. nakupenda wee nakutaka wee kwako cjiwezi ooh my love, Material Design is a design system built and supported by Google design",
+        "profile_pic":"/pictures/rasterman.jpg",
+        "reactions":[
+            "/pictures/babygirl.jpg",
+            "/pictures/coolboy.jpg",
+            "/pictures/mrform.jpg"
+        ]
+    }
+]

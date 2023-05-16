@@ -17,7 +17,7 @@ const Home = () => {
       <div className="profile_wrapper">
         <div className="profile">
           <h3 className="heading">my profile</h3>
-          <div className="img">
+          <div className="prof-pic">
             <img src="/pictures/rasterman.jpg" alt="profile" srcset="" />
           </div>
           <div className="content">

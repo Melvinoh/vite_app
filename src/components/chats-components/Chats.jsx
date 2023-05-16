@@ -3,34 +3,23 @@ import "./chats.css"
 import {BiLike} from "react-icons/bi"
 import {BsShare,BsSend} from "react-icons/bs"
 import {AiOutlineMessage} from "react-icons/ai"
-const Chats = () => {
+const Chats = ({chats}) => {
   return (
     <>
-    <div className="chats_wrapper">
-        <div className="chat_title">
-            <div className="ttwrap title">
-                <div>
-                    <img src="/pictures/mbogi.jpg" alt="img" />
-                </div>
-                <span>rotaract club </span>
-            </div>
-            <span className="date">13/02/2023</span>
-        </div>
         <div className="chats_container">
             <div className="chat-header">
                 <div className="wrapp">
-                    <img src="/pictures/coolboy.jpg" alt="img" />
+                    <img src={chats.profile_pic} alt="img" />
                     <div className="name">
-                        <span>muturi melvin</span>
-                        <span>4hrs</span>
+                        <span>{chats.name}</span>
+                        <span>{chats.time}</span>
                     </div>
                 </div>
                 <div className="poststatus"> posted an update</div>
             </div>
             <div className="content">
                 <p>
-                    Material Design is a design system built 
-                    and supported by Google design
+                    {chats.content}
                 </p>
                 <div className="reactions">
                     <div className="emojis">
@@ -40,9 +29,9 @@ const Chats = () => {
                     </div>
                     <div className="persons">
                         <span className="persons">reacted by </span>
-                        <img src="/pictures/mrform.jpg" alt="IMG" />
-                        <img src="/pictures/rasterman.jpg" alt="IMG" />
-                        <img src="/pictures/babygirl.jpg" alt="IMG" />
+                        <img src={chats.reactions[0]} alt="IMG" />
+                        <img src={chats.reactions[1]}alt="IMG" />
+                        <img src={chats.reactions[2]}alt="IMG" />
                         <span className="extra">+4 comments</span>
                     </div>
                 </div>
@@ -61,13 +50,12 @@ const Chats = () => {
                     </div>
                 </div>
                 <div className="form-content">
-                    <div className="form-pp"><img src="/pictures/rasterman.jpg" alt="" /></div>
+                    <div className="form-pp"><img src={chats.profile_pic} alt="" /></div>
                     <input type="text" placeholder='write a comment'/>
                     <div className="ci"><BsSend/></div>
                 </div>
             </div>
         </div>
-    </div>
     </>
    
     

@@ -1,12 +1,5 @@
 
-.chats_wrapper{
-    background-color: white;
-    padding: 0.7rem;
-    margin: 0.4rem;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
-    color: grey;
-}
+
 .chat_title{
     display: flex;
     gap: 0.3rem;
@@ -30,6 +23,7 @@
     border-radius: 0.7rem;
     flex-direction: column;
     padding: 0.6rem 0.3rem;
+    margin: 0.7rem 0.3rem;
     gap: 0.3rem;
 }
 .chat-header{
@@ -112,6 +106,7 @@
 }
 .form-content input{
     border: none;
+    outline: none;
     margin: 0;
     width: 79%;
     margin: 0.2rem;

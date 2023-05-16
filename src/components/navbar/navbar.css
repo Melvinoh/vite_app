@@ -13,7 +13,7 @@
     min-width: fit-content;
     animation-name: navAnimation;
     animation-duration: 0.7s;
-    z-index: 900; 
+    z-index: 100; 
     position: fixed;
 }
 .nav_item{
