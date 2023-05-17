@@ -16,6 +16,7 @@ import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports/Sports';
 import School from './pages/single school/School.jsx';
 import Club_details from './pages/single_club/Club_details';
+import Noticepage from './components/notifications/Noticepage';
 
 
 function App() {
@@ -101,6 +102,10 @@ function App() {
           {
             path : "/sports/:id",
             element : <Sports />
+          },
+          {
+            path : "home/Notices",
+            element : <Noticepage />
           }
         ]
       }

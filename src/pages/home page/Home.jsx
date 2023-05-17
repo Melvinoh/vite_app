@@ -4,6 +4,7 @@ import { TbBellRinging2Filled } from 'react-icons/tb'
 import "react-datepicker/dist/react-datepicker.css";
 import "./home.css"
 import Slider from '../../components/slider/Slider';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -37,36 +38,36 @@ const Home = () => {
     </div>
     <div className="notice_wrapper">
       <div className="elements">
-     <h5 className="heading">notice board</h5>
+        <h5 className="heading">notice board</h5>
       </div>
-      <div className="elements">
+      <Link to="Notices" className="elements">
         <img src="/pictures/customercare.PNG" alt="" />
         <div className="text">
           <span>tuk admission notification</span>
           <TbBellRinging2Filled />
         </div>
-      </div>
-      <div className="elements">
+      </Link>
+      <Link  to="Notices" className="elements">
         <img src="/pictures/darling.jpg" alt="" />
         <div className="text">
          <span>clubs notification</span>
          <TbBellRinging2Filled />
         </div>
-      </div>
-      <div className="elements">
+      </Link>
+      <Link to="Notices" className="elements">
         <img src="/pictures/mrform.jpg" alt="" />
         <div className="text">
           <span> sports notification</span>
           <TbBellRinging2Filled />
         </div>
-      </div>
-      <div className="elements">
+      </Link>
+      <Link  to="Notices"className="elements">
         <img src="/pictures/mrform.jpg" alt="" />
         <div className="text">
           <span> sports notification</span>
           <TbBellRinging2Filled />
         </div>
-      </div>
+      </Link>
     </div>
   </div>
   )
