@@ -12,8 +12,11 @@
   font-size: 0.8rem;
   padding: 0.3rem;
 }
-.heading_1{
+.sub-heading{
   font-family: 'Trebuchet MS';
+  color: rgb(28, 125, 28);
+  font-size: 0.9rem;
+
 }
 input{
   outline: none;

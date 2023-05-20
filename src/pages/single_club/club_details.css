@@ -16,6 +16,24 @@
     flex-direction: column;
     gap: 0.5rem;
     color: grey;
+
+}
+.chat_title{
+    display: flex;
+    gap: 0.3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.ttwrap{
+    display: flex;
+    gap: 0.3rem;
+    font-style: italic;
+    align-items: center;
+}
+.ttwrap img{
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
 }
 .club_wrapper{
     position: relative;left: 0;

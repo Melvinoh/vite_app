@@ -7,14 +7,16 @@
 .n-img img{
     object-fit: cover;
     height: 155px;
-    width: 100%;
+    width: 98%;
+    margin: 0.1rem auto;
 
 }
 .n-overlay{
     text-align: center;
     position: absolute;top:0;
     height: 155px;
-    width: 100%;
+    width: 98%;
+    margin: 0.1rem auto;
     color: white;
     display: flex;
     font-style: italic;
@@ -28,26 +30,31 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 95%;
+    margin: 0.2rem auto;
 }
 .icon{
     color: green;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .n-content_container{
+    font-size: 0.7rem;
     display: flex;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: rgb(246, 249, 252);
     padding: 0.7rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    border-radius: 0.3rem;
+    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
 }
 .content-wrap{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.2rem;
 }
 .i{
-    width:90%;
+    width:95%;
     color: grey;
     font-size: 0.55rem;
     margin: 0.1rem auto;

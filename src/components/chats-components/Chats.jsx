@@ -8,27 +8,27 @@ const Chats = ({chats}) => {
     <>
         <div className="chats_container">
             <div className="chat-header">
-                <div className="wrapp">
+                <div className="left">
                     <img src={chats.profile_pic} alt="img" />
-                    <div className="name">
+                    <div className="sub-heading">
                         <span>{chats.name}</span>
-                        <span>{chats.time}</span>
+                        <span className='time'>{chats.time}</span>
                     </div>
                 </div>
-                <div className="poststatus"> posted an update</div>
+                <div className="right"> posted an update</div>
             </div>
             <div className="content">
                 <p>
                     {chats.content}
                 </p>
-                <div className="reactions">
+                <div className="pp-reactions">
                     <div className="emojis">
                         <span role="img" aria-label="smile">😊</span>
                         <span role="img" aria-label="heart">❤️</span>
                         <BiLike className="ci"/>
                     </div>
-                    <div className="persons">
-                        <span className="persons">reacted by </span>
+                    <div className="pics">
+                        <span className="pics">reacted by </span>
                         <img src={chats.reactions[0]} alt="IMG" />
                         <img src={chats.reactions[1]}alt="IMG" />
                         <img src={chats.reactions[2]}alt="IMG" />
@@ -37,22 +37,22 @@ const Chats = ({chats}) => {
                 </div>
                 <div className="react">
                     <div className="share">
-                        <BiLike className="ci"/>
+                        <BiLike className="icons"/>
                         <span>like</span>
                     </div>
                     <div className="share">
-                        <AiOutlineMessage className="ci"/>
+                        <AiOutlineMessage className="icons"/>
                         <span>comment</span>
                     </div>
                     <div className="share">
-                        <BsShare className="ci"/>
+                        <BsShare className="icons"/>
                         <span>share</span>
                     </div>
                 </div>
-                <div className="form-content">
-                    <div className="form-pp"><img src={chats.profile_pic} alt="" /></div>
+                <div className="comment-box">
+                    <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
                     <input type="text" placeholder='write a comment'/>
-                    <div className="ci"><BsSend/></div>
+                    <div className="send-btn"><BsSend/></div>
                 </div>
             </div>
         </div>

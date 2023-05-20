@@ -1,22 +1,4 @@
 
-
-.chat_title{
-    display: flex;
-    gap: 0.3rem;
-    justify-content: space-between;
-    align-items: center;
-}
-.ttwrap{
-    display: flex;
-    gap: 0.3rem;
-    font-style: italic;
-    align-items: center;
-}
-.ttwrap img{
-    width: 40px;
-    height: 40px;
-    border-radius: 0.5rem;
-}
 .chats_container{
     background-color:#F6F6F7;
     display: flex;
@@ -33,14 +15,23 @@
     gap: 0.7rem;
     font-style: italic;
 }
-.wrapp{
+.chat-header .left{
     display: flex;
     gap: 0.3rem;
 }
-.chat-header img{
+.chat-header .left img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+.chat-header .left .sub-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.chat-header .left .sub-heading .time{
+    color: grey;
+    font-size: 0.7rem;
 }
 .chat-header .name{
     display: flex;
@@ -55,21 +46,21 @@
     flex-direction: column;
     gap: 0.7rem;
 }
-.chats_container .content .reactions{
+.chats_container .content .pp-reactions{
     display: flex;
     flex-direction: column;
 
 }
-.chats_container .content .reactions .emojis{
+.chats_container .content .pp-reactions .emojis{
     font-size: larger;
 }
-.persons{
+.chats_container .content .pp-reactions .pics{
     display: flex;
     gap: 0.4rem;
     align-items: center;
 
 }
-.persons img{
+.pics img{
     width: 25px;height: 25px;
     object-fit: cover;
 }
@@ -79,14 +70,15 @@
     justify-content: space-between;
 }
 .react .share{
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .react .share span {
     margin: 0.4rem;
 }
-.form-content{
+.comment-box{
     display: flex;
     border: solid rgb(53, 245, 53) 1px;
     height: 30px;
@@ -95,16 +87,15 @@
     justify-content: space-around;
     background-color: white;
     align-items: center;
-    padding: 0.3rem;
-    
+    padding: 0.3rem;   
 }
-.form-pp img{
+.comment-pp img{
     width: 25px;
     height: 25px;margin-top: 6px;
     object-fit: cover;
     border-radius: 50%;
 }
-.form-content input{
+.comment-box input{
     border: none;
     outline: none;
     margin: 0;
@@ -112,8 +103,12 @@
     margin: 0.2rem;
     background-color: white;
 }
-.ci{
+.chats_container .content .icons{
     color: rgb(25, 163, 25);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
+}
+.send-btn{
+    font-size: 0.8rem;
+    color: rgb(25, 163, 25);
 }
