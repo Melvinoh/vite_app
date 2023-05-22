@@ -1,0 +1,41 @@
+
+.course_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: solid 1px rgb(28, 218, 28);
+    margin: 0.4rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    flex:1;
+}
+.course_container .details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.3rem;
+    margin: 0.2rem ;
+    background-color: white;
+}
+.cr-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 2fr) );
+    place-content: center;
+   padding: 0.5rem;
+}
+.cr-wrapper .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: center;
+    align-items: center;
+}
+.cr-wrapper .ld-card_wrapper{
+    width: auto;
+    background-color:#fbffff ;
+}
+.event-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}

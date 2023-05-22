@@ -1,0 +1,136 @@
+[
+    {   
+        "id":"1",
+        "img":"/pictures/coolboy.jpg",
+        "name":"Muchoki Kirera",
+        "position":"Satuk Chair",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"2",
+        "img":"/pictures/customercare.PNG",
+        "name":"brech rachael",
+        "position":"Satuk vice Chair",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"3",
+        "img":"/pictures/mrform.jpg",
+        "name":"Mani peter",
+        "position":"finance secretary",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"4",
+        "img":"/pictures/student 1.jpg",
+        "name":"harrison bonface",
+        "position":"secretary general",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"5",
+        "img":"/pictures/homespic.jpg",
+        "name":"Mercy wairimu",
+        "position":"Gender & welfare",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"6",
+        "img":"/pictures/rasterman.jpg",
+        "name":"oundo barasa",
+        "position":"Academic secretary",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"7",
+        "img":"/pictures/developer.jpg",
+        "name":"okiri ongeto",
+        "position":"sports & soscieties",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"8",
+        "img":"/pictures/content.jpg",
+        "name":"Muchoki Kirera",
+        "position":"Satuk Chair",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"9",
+        "img":"/pictures/darling.jpg",
+        "name":"Muchoki Kirera",
+        "position":"Satuk Chair",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"10",
+        "img":"/pictures/babygirl.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SCIT",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"11",
+        "img":"/pictures/student 1.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SCIT",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"12",
+        "img":"/pictures/coolboy.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SCIT rep",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"13",
+        "img":"/pictures/smilygirl.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SCIT rep",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"14",
+        "img":"/pictures/rasterman.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SCIT rep",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    },
+   
+    {   
+        "id":"15",
+        "img":"/pictures/mrform.jpg",
+        "name":"Muchoki Kirera",
+        "position":"SSS REP",
+        "tel":"+254 098 789",
+        "year":"year 5"
+    }
+]

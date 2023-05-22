@@ -1,0 +1,99 @@
+/* styles for schools page */
+.schools_container{
+    grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
+}
+.schools-wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-top: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 0.2rem;
+}
+.schools-wrapper .heading{
+    width:90%;
+    text-align: center;
+    background-color:#F7F7F9;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    font-style: italic;margin: 0.3rem auto;
+}
+
+.schools_container .heading {
+    text-decoration: none;
+    padding-top: 0;padding-bottom: 0.4rem;
+}
+.school_tabs{
+    width:90%;
+    margin: 0.5rem auto;
+    z-index: 10;
+}
+.school_tabs .tabs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    position: relative ;top: 1px;
+    z-index: 1;
+}
+hr{
+    z-index: -1;
+}
+.school_tabs .tab{
+    color: rgb(133, 130, 130);
+    font-family: 'Trebuchet MS',;
+    text-align: center;
+    padding: 0.3rem 0.9rem;
+ 
+}
+.school_tabs .tab:hover{
+    color : green;
+    cursor: pointer;
+}
+.school_tabs #fast{
+    border: solid 1px green ;
+    border-bottom: none;
+    border-collapse: collapse;
+    border-bottom: none;
+    color: green;
+    background-color: rgba(242, 249, 239, 0.952);
+}
+
+/* styles for single school page */
+
+.school-container{
+    display: flex;
+    padding: 0.4rem;
+    height:100vh;
+}
+.sh-left,.sh-right{
+    flex: 1;
+}
+
+@media (min-width:899px) {
+    .school-container{
+        position: relative;
+        display: flex;
+        left: 10.5rem;
+        width: calc(100vw - 10.5rem);
+    }   
+}
+@media (max-width:470px) {
+    .schools_container{
+        padding: 0.3rem 1.3rem;
+        gap: 1rem;
+    }
+   
+    /* .school-container{
+        width: 200vw;
+    } */
+    .sh-left{
+        flex: 100;
+
+    }
+    /* .sh-right{
+        flex:100;
+    } */
+}
+
+

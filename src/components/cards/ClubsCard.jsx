@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./clubs_card.css"
+import "./cards.css"
 const ClubsCard = ({cards}) => {
   return (
     <Link  to={cards.id} className='clubs_cards link'>
@@ -13,6 +13,8 @@ const ClubsCard = ({cards}) => {
             <h4>{cards.block}</h4>
             <p>{cards.room}</p>
             <p>{cards.clubrep}</p>
+            <p>{cards.field}</p>
+            <p>{cards.sportrep}</p>
             <p>{cards.date}</p>  
           </div>
         </div>

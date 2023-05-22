@@ -1,0 +1,15 @@
+/* container  & wrapper*/
+.leaders_container{
+    padding: 0.1rem;
+    margin: 0.1rem;text-align: center;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.leaders_container .name{
+    font-size: 1.5rem;
+}
+.leaders_wrapper{
+    grid-template-columns: repeat(auto-fit , minmax(6rem , 1fr));
+}

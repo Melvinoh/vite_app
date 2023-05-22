@@ -1,0 +1,70 @@
+/* events style css only */
+
+.events{
+    display: flex ;
+    flex-direction: column;
+    background-color: #F7F7F9;
+    margin: 0.2rem auto;
+    padding: 0.5rem;
+    width: 90%;
+}
+.events .content_box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    background-color: #f7f7f9;
+    border-radius: 0.3rem;
+}
+.events .content_box img{
+    width: 35px;
+    height: 40px;
+    border-radius: 0.3rem;
+    
+}
+.events .content_box:hover{
+    cursor: pointer;
+    background-color: #EAF6EA;
+    border: solid 1px rgb(27, 205, 27);
+}
+.events .content_box .tt{
+    display: flex;
+    flex-direction: column;
+}
+.events .content_box .tt .date{
+    color: grey;
+    font-size: 0.7rem;
+}
+.events .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 95%;
+    margin: 0.1rem auto;
+    background-color: #F7F7F9;
+    border: solid ipx green;
+    border-top: none;
+}
+.events .content p{
+    width: 95%;
+    margin: 0.1rem auto;
+}
+.events .content .bottom{
+   color: grey;
+   font-size: 0.7rem;
+}
+
+
+/* events + calendar style sheets */
+.ec-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+.ev-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}

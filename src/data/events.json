@@ -1,0 +1,58 @@
+[
+    {
+        "id":"1",
+        "name":"meet and greet",
+        "content":[
+            "first years elcoming ",
+            "A design concept is what you need when time crunch doesn't allow for a complete process",
+            "tuesdays at 3pm ",
+            "main hall"
+        ],
+        "date":"13/02/2022"
+    },
+    {
+        "id":"2",
+        "name":"cyber secirity",
+        "content":[
+            "cyber security boot camp ",
+            "A design concept is what you need when time crunch doesn't allow for a complete process",
+            "tuesdays at 3pm ",
+            "main hall"
+        ],
+        "date":"11/03/2023"
+    },
+    {
+        "id":"3",
+        "name":"microsoft talk",
+        "content":[
+            "microsoft data science ",
+            "A design concept is what you need when time crunch doesn't allow for a complete process",
+            "tuesdays at 3pm ",
+            "main hall"
+        ],
+        "date":"14/03/2023"
+    },
+    {
+        "id":"4",
+        "name":"women in tech",
+        "content":[
+            "what it take to be a woman in tech ",
+            "A design concept is what you need when time crunch doesn't allow for a complete process",
+            "tuesdays at 3pm ",
+            "main hall"
+        ],
+        "date":"1/04/2023"
+    },
+
+    {
+        "id":"5",
+        "name":"engineers board meet",
+        "content":[
+            "upgrade of engineering practice  ",
+            "A design concept is what you need when time crunch doesn't allow for a complete process",
+            "mondays at 3pm ",
+            "main hall"
+        ],
+        "date":"13/02/2022"
+    }
+]

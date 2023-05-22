@@ -10,23 +10,24 @@ const Schools = () =>{
   
   
   return (
-    <>
-    <div className="school_tabs">
+    <div className="schools-wrapper">
+      <div className="school_tabs">
         <div className="tabs">
           <span className='tab' id='fast'>FAST</span>
           <span className='tab' id='febe'>FEBE</span>
           <span className='tab' id='fsss'>FSSS</span>
         </div>
-        <hr />
-    </div>
-     
+          <hr />
+      </div>
+      <div className="heading">
+        <span>fucalty of biult enviroment</span>
+      </div>
       <div className="schools_container grid">
           {sdata.map(data =>(
             <SchoolCard items={data} key={data.id}/>
         ))}
       </div>  
-      
-    </>
+    </div>
    
   )
 }

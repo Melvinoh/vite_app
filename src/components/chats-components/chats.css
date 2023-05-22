@@ -1,4 +1,4 @@
-
+/* header sections */
 .chats_container{
     background-color:#F6F6F7;
     display: flex;
@@ -39,6 +39,8 @@
     gap: 0.2rem;
     
 }
+
+/* body / content section */
 .chats_container .content{
     width: 87%;
     margin: 0.2rem auto;
@@ -64,6 +66,7 @@
     width: 25px;height: 25px;
     object-fit: cover;
 }
+/* people reaction section */
 .react{
     margin-top: 0.4rem;
     display: flex;
@@ -78,6 +81,8 @@
 .react .share span {
     margin: 0.4rem;
 }
+
+/* write a comment (bottom)*/
 .comment-box{
     display: flex;
     border: solid rgb(53, 245, 53) 1px;

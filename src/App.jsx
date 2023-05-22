@@ -8,14 +8,15 @@ import Navbar from './components/navbar/Navbar'
 import { useState } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home page/Home';
-import Clubs from './pages/clubs _page/Clubs';
-import Schools from './pages/schools_page/Schools';
+import Clubs from './pages/clubs pages/Clubs';
+import SingleClub_pg from './pages/clubs pages/SingleClub_Pg';
+import Schools from './pages/school pages/Schools';
 import TukSoko from './pages/tuk soko/TukSoko';
-import Leaders from './pages/leadership_page/schools_page/Leaders';
+import Leaders from './pages/leadership_page/leaders pages/Leaders';
 import Gallery from './pages/gallery/Gallery';
-import Sports from './pages/sports/Sports';
-import School from './pages/single school/School.jsx';
-import Club_details from './pages/single_club/Club_details';
+import Sports from './pages/sports pages/Sports';
+import Sport from './pages/sports pages/SingleSport_Pg';
+import SchoolSchool_Pg from './pages/school pages/SingleSchool_Pg.jsx';
 import Noticepage from './components/notifications/Noticepage';
 
 
@@ -69,7 +70,7 @@ function App() {
           },
           {
             path : "/clubs/:id",
-            element : <Club_details />
+            element : <SingleClub_pg/>
           },
           {
             path : "/schools",
@@ -77,7 +78,7 @@ function App() {
           },
           {
             path : "/schools/:id",
-            element : <School />
+            element : <SchoolSchool_Pg />
           },
           {
             path : "/tuk_soko",
@@ -101,7 +102,7 @@ function App() {
           },
           {
             path : "/sports/:id",
-            element : <Sports />
+            element : <Sport />
           },
           {
             path : "home/Notices",

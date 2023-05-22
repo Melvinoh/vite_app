@@ -1,5 +1,4 @@
 import React from 'react'
-
 function Slidecard({item}) {
   return (
     <div className="slide_card">

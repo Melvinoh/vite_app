@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./schoolcard.css"
+import "./cards.css"
 
 const SchoolCard = ({items}) => {
   return (
@@ -9,7 +9,7 @@ const SchoolCard = ({items}) => {
         <div className="schoolpic">
             <img src={items.img} alt="" />
         </div>
-        <div className="heading ">
+        <div className="names">
             <span>{items.name}</span>
         </div>
         <div className="block link" >

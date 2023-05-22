@@ -1,0 +1,31 @@
+[
+    {
+        "id":"1",
+        "img":"/pictures/content.jpg",
+        "name":"peter lon kong",
+        "tel":"+254 789 089 756",
+        "year": "year: 4"
+    },
+    {
+        "id":"2",
+        "img":"/pictures/smilygirl.jpg",
+        "name":"Amani Ashley",
+        "tel":"+254 789 089 756",
+        "year": "year: 3"
+    },
+    {
+        "id":"3",
+        "img":"/pictures/student 1.jpg",
+        "name":"joshua omwami",
+        "tel":"+254 789 089 756",
+        "year": "year: 2"
+    },
+    {
+        "id":"4",
+        "img":"/pictures/darling.jpg",
+        "name":"elizabeth joki",
+        "tel":"+254 789 089 756",
+        "year": "year: 1"
+    }
+]
+      
