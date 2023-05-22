@@ -56,6 +56,10 @@
     padding: 0.8rem;
     border-radius: 0.5rem;
 }
+.sh-tab_content .item:hover{
+    background-color: #EAF6EA;
+    cursor: pointer;
+}
 .content-header{
     display: flex;
     flex-wrap: wrap;

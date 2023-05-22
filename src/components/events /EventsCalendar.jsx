@@ -9,8 +9,8 @@ const EventsCalendar = () => {
   return (
    
     <div className="ec-container">
-        <span className='heading'>calendar</span>
        <div className="cd-wrapper">
+            <span className='heading'>calendar</span>
             <DatePicker  selectsRange
             inline/>
        </div>

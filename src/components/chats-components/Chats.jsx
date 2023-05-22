@@ -18,6 +18,7 @@ const Chats = ({chats}) => {
                 <div className="right"> posted an update</div>
             </div>
             <div className="content">
+                <img src="" alt="" />
                 <p>
                     {chats.content}
                 </p>
@@ -37,7 +38,10 @@ const Chats = ({chats}) => {
                 </div>
                 <div className="react">
                     <div className="share">
-                        <BiLike className="icons"/>
+                        
+                        <BiLike className="icons">
+                            <input type="radio" name="like" id="like" />
+                        </BiLike>
                         <span>like</span>
                     </div>
                     <div className="share">

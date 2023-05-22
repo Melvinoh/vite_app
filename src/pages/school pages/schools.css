@@ -69,6 +69,18 @@ hr{
 .sh-left,.sh-right{
     flex: 1;
 }
+.back{
+    display: flex;
+    gap: 0.4rem;
+    margin: 0.2rem;
+    align-items: center;
+    width: fit-content;
+    color: grey;
+    cursor: pointer;
+}
+.back:hover{
+    color: rgb(28, 128, 28);
+}
 
 @media (min-width:899px) {
     .school-container{
@@ -76,24 +88,25 @@ hr{
         display: flex;
         left: 10.5rem;
         width: calc(100vw - 10.5rem);
+        
     }   
+    .back{
+        display: none;
+     }  
 }
 @media (max-width:470px) {
     .schools_container{
         padding: 0.3rem 1.3rem;
         gap: 1rem;
     }
-   
-    /* .school-container{
-        width: 200vw;
-    } */
     .sh-left{
-        flex: 100;
+        flex: 100%;
+    }
+    .sh-left.active{
+       
+        display: none;
 
     }
-    /* .sh-right{
-        flex:100;
-    } */
-}
-
+   
+} 
 
