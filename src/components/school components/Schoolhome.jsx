@@ -30,11 +30,11 @@ const Schoolhome = (props) => {
                         <span>Masters </span>
                     </div>
                     <div className="sh-tab_content" onClick={props.fun}>
-                        <span className={`item ${props.open? 'active' : ''}`}>btech construction managment</span>
-                        <span className={`item ${props.open? 'active' : ''}`}>btech real estate</span>
-                        <span className={`item ${props.open? 'active' : ''}`}>btech architecture</span>
-                        <span className={`item ${props.open? 'active' : ''}`}>btech urban planning</span>
-                        <span className={`item ${props.open? 'active' : ''}`}>btech civil construction</span>
+                        <span className={`item `}>btech construction managment</span>
+                        <span className={`item `}>btech real estate</span>
+                        <span className={`item `}>btech architecture</span>
+                        <span className={`item `}>btech urban planning</span>
+                        <span className={`item `}>btech civil construction</span>
                     </div>
                 </div>
             </div>
