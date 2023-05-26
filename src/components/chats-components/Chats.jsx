@@ -1,9 +1,15 @@
 import React from 'react'
+import {useState} from 'react'
 import "./chats.css"
 import {BiLike} from "react-icons/bi"
-import {BsShare,BsSend} from "react-icons/bs"
+import {BsShare,BsSend,BsThreeDotsVertical} from "react-icons/bs"
 import {AiOutlineMessage} from "react-icons/ai"
 const Chats = ({chats}) => {
+
+    const [OpenAction, setOpenAction] = useState(false)
+    const handleaction = () =>{
+        setOpenAction(!OpenAction)
+    }
   return (
     <>
         <div className="chats_container">
@@ -15,7 +21,15 @@ const Chats = ({chats}) => {
                         <span className='time'>{chats.time}</span>
                     </div>
                 </div>
-                <div className="right"> posted an update</div>
+                <div className="right" > 
+                    <BsThreeDotsVertical onClick={handleaction}/>
+                    <div className={`actions-p ${OpenAction ? 'active' : ''}`}>
+                        <span>update</span>
+                        <span>delete</span>
+                        <span>hide</span>
+                    </div>
+                </div>
+
             </div>
             <div className="content">
                 <img src="" alt="" />
@@ -52,6 +66,18 @@ const Chats = ({chats}) => {
                         <BsShare className="icons"/>
                         <span>share</span>
                     </div>
+                </div>
+                <div className="r-comments">
+                    <div className="img"><img src="/pictures/customercare.PNG" alt="" /></div>
+                   <div className=''>
+                        <div className="r-content">
+                            <h6>bill eilliams comment</h6>
+                            <p> 4hr ago</p>
+                        </div>
+                        <p className="p">
+                            happy birthday bro man!
+                        </p>
+                   </div>
                 </div>
                 <div className="comment-box">
                     <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>

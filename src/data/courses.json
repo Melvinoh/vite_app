@@ -1,0 +1,35 @@
+[
+    {   
+        "id":"1",
+        "course":"btech",
+        "names":[
+            "btech construction management",
+            "btech building technology",
+            "BSC architecture",
+            "btech urban planning",
+            "btech real estate"
+        ]
+    },
+    {   
+        "id":"2",
+        "course":"diploma",
+        "names":[
+            "diploma construction management",
+            "diploma building technology",
+            "diploma architecture",
+            "diploma urban planning",
+            "diploma real estate"
+        ]
+    },
+    {   
+        "id":"3",
+        "course":"Masters",
+        "names":[
+            "Masters construction management",
+            "Masters building technology",
+            "Masters architecture",
+            "Masters urban planning",
+            "Masters real estate"
+        ]
+    }
+]

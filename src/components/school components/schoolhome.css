@@ -41,21 +41,41 @@
 }
 .sh-tab_heading{
     display: flex;
+    flex-direction: row;
     gap: 0.3rem;
     color: rgb(166, 162, 162);
     justify-content: space-around;
 }
+.sh-tab_heading .tab{
+    padding: 0.1rem 0.5rem;
+    margin: 0.3rem;
+
+}
+.sh-tab_heading .tab.active{
+    color: white;
+    text-decoration: underline;
+    background-color: rgb(31, 127, 31);
+    border-radius: 0.2rem;
+}
+
 .sh-tab_content{
     gap: 0.5rem;
     width: 85%;
     margin: 0.3rem auto;
     justify-content: center;
+    
 }
+/* .sh-tab_content{
+    animation-name: tab_animation;
+    animation-duration: 300s;
+} */
+
 .sh-tab_content .item,.content-wrapper{
     background-color: rgb(238, 240, 242);
     padding: 0.8rem;
     border-radius: 0.5rem;
 }
+
 .sh-tab_content .item:hover{
     background-color: #EAF6EA;
     cursor: pointer;
@@ -84,4 +104,16 @@
     font-style: italic;
     color: rgb(61, 152, 61);
     text-decoration: underline;
+}
+@keyframes tab_animation{
+    from{
+        opacity: 0;
+        transform: scale(0);
+        transition: all 300s ease;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transition: all 300s ease;
+    }
 }

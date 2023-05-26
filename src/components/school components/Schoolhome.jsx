@@ -1,9 +1,12 @@
 import React from 'react'
+import {useState} from 'react'
 import { FiDownload } from 'react-icons/fi'
 import "./schoolhome.css"
+import cdata from "../../data/courses.json"
 
 const Schoolhome = (props) => {
-   
+    const [ActiveTab, setActiveTab] = useState(0)
+
   return (
     <>
         <div className="sh_wrapper">
@@ -23,20 +26,28 @@ const Schoolhome = (props) => {
                 <div className="heading">
                     <span>courses</span>
                 </div>
-                <div className="sh-tab_container">
-                    <div className="sh-tab_heading">
-                        <span>btech courses</span>
-                        <span>Diploma </span>
-                        <span>Masters </span>
-                    </div>
-                    <div className="sh-tab_content" onClick={props.fun}>
-                        <span className={`item `}>btech construction managment</span>
-                        <span className={`item `}>btech real estate</span>
-                        <span className={`item `}>btech architecture</span>
-                        <span className={`item `}>btech urban planning</span>
-                        <span className={`item `}>btech civil construction</span>
-                    </div>
-                </div>
+                
+                    <div className="sh-tab_container">
+                        <div className={`sh-tab_heading`}>
+                            {
+                                cdata.map((data,index) =>(
+                                    <span className={`tab ${ActiveTab === index ? 'active' : ''}`} onClick={()=>setActiveTab(index)}>{data.course}</span>
+                                ))
+                            }
+                        </div>
+                        <div className={`sh-tab_content ` } key={cdata.id} onClick={props.fun}>
+                            <span className={`item `}>{cdata[ActiveTab].names[0]}</span>
+                            <span className={`item `}>{cdata[ActiveTab].names[1]}</span>
+                            <span className={`item `}>{cdata[ActiveTab].names[2]}</span>
+                            <span className={`item `}>{cdata[ActiveTab].names[3]}</span>
+                            <span className={`item `}>{cdata[ActiveTab].names[4]}</span>
+                           
+                            {/* <span className={`item `}>{data.course}</span> */}
+                        </div>
+                    </div>           
+    
+                {}
+                
             </div>
             <div className="sh-container 2">
                 <div className="heading">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState , useEffect } from 'react'
 import "./clubs.css"
+import ComposeForm from '../../components/compose form/ComposeForm'
 import Chats from '../../components/chats-components/Chats'
 import clubchats from "../../data/chats-clubs.json"
 import EventsCalendar from '../../components/events /EventsCalendar'
@@ -53,6 +54,10 @@ const Club_details = () => {
             </div>
             <div className="cl-right">
                 <EventsCalendar/>
+            </div>
+            <div className="cp-modal">
+                <ComposeForm/>
+
             </div>
         </div>
      

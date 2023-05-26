@@ -108,12 +108,13 @@
 }
 @media (max-width:480px) {
     .cl-left{
-        flex: 100%;
+        display: none;
     }
     .cl-left.active{
         display: none;
     }
+    .cp-modal{
+        flex: 100%;
+    }
   
-
-    
 }

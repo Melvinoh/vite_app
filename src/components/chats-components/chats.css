@@ -7,6 +7,7 @@
     padding: 0.6rem 0.3rem;
     margin: 0.7rem 0.3rem;
     gap: 0.3rem;
+    position: relative;
 }
 .chat-header{
     padding: 0.2rem;
@@ -14,6 +15,7 @@
     justify-content: space-between;
     gap: 0.7rem;
     font-style: italic;
+   
 }
 .chat-header .left{
     display: flex;
@@ -39,6 +41,45 @@
     gap: 0.2rem;
     
 }
+.chat-header .right{
+    display: flex;
+    flex-direction: column;
+    color: green;
+    font-size: 0.9rem;
+    cursor: pointer;
+  
+    
+}
+.chat-header .right .actions-p{
+    display: none;
+    color: grey;
+    font-style: normal;
+    flex-direction: column;
+    gap: 0.4rem;
+    background-color: white;
+    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    position: absolute;
+    right: 15px;top: 26px;
+    
+}
+.chat-header .right .actions-p span{
+    background-color: rgb(228, 254, 228);
+    padding: 0.1rem 0.6rem;
+    box-shadow:rgba(116, 115, 115, 0.527) 0.02rem 0.15rem 0.1rem ;
+
+}
+.chat-header .right .actions-p span:hover{
+    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.04rem 0.1rem ;
+    color: green;
+}
+
+.chat-header .right .actions-p.active{
+    display: flex;
+}
+
+
 .icon{
     cursor: pointer;
 }
@@ -119,4 +160,24 @@
 .send-btn{
     font-size: 0.8rem;
     color: rgb(25, 163, 25);
+}
+.r-comments{
+    display: flex;
+    gap: 0.4rem;
+    width: 90%;
+    margin: 0.1rem auto;
+}
+.r-comments img{
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+    border-radius: 50%;
+
+}
+.r-content{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-around;
+    
 }
