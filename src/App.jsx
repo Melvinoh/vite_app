@@ -3,7 +3,7 @@ import "./App.css"
 import Header from './components/header/Header'
 import Search from './components/search/Search'
 import  Login from './components/login_form/Login'
-import { Outlet, RouterProvider, } from 'react-router'
+import { Outlet, RouterProvider,Navigate } from 'react-router'
 import Navbar from './components/navbar/Navbar'
 import { useState } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
@@ -18,6 +18,8 @@ import Sports from './pages/sports pages/Sports';
 import Sport from './pages/sports pages/SingleSport_Pg';
 import SchoolSchool_Pg from './pages/school pages/SingleSchool_Pg.jsx';
 import Noticepage from './components/notifications/Noticepage';
+import Landing from './components/landin page/Landing';
+
 
 
 function App() {
@@ -54,11 +56,28 @@ function App() {
         </>
       )
     }
+    const current_user = true
+
+    const ProtectedRoute = ({children}) =>{
+      if (!current_user) {
+        return( <Navigate  to="/satuk" />)
+      }
+      return children;
+    }
+
 //router
     const Router = createBrowserRouter([
       {
+        path : "/satuk",
+        element:<Landing/>,
+      },
+      {
         path : "/",
-        element : <Layout />,
+        element : (
+          <ProtectedRoute>
+            <Layout />
+          </ProtectedRoute>
+        ),
         children : [
           {
             path : "/home",

@@ -55,6 +55,19 @@
 .cl-right{
     flex: 1;
 }
+.cp-modal{
+    position: fixed;
+    top: 0;right: 0;
+    background-color: rgba(39, 40, 39, 0.242);
+    height: 100vh;width: 100vw;
+    margin: auto;
+    z-index: 100; 
+    display: none;
+}
+.cp-modal.active{
+    display: none;
+}
+
 .chats_wrapper{
     background-color: white;
     width: 96%;
@@ -86,6 +99,7 @@
     border-radius: 0.5rem;
 }
 
+
 @media (min-width:899px) {
     .cl-left{
         scroll-behavior: smooth;
@@ -108,13 +122,11 @@
 }
 @media (max-width:480px) {
     .cl-left{
-        display: none;
+       flex: 100%;
     }
     .cl-left.active{
         display: none;
     }
-    .cp-modal{
-        flex: 100%;
-    }
+   
   
 }
