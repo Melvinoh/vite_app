@@ -4,7 +4,7 @@ import {IoCloseCircleOutline} from 'react-icons/io5';
 
 function Signup(props) {
   return (
-    <div className={`sign_up ${props.isOpen ? "active" : "" }`}>
+    <div className={`login_modal ${props.isOpen ? "active" : "" }`}>
         <form action="" className="form">
             <IoCloseCircleOutline className='close_button' onClick={props.closefun}/>
             <span className="title">sign_up</span>

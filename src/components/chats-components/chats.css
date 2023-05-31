@@ -6,7 +6,7 @@
     flex-direction: column;
     padding: 0.6rem 0.3rem;
     margin: 0.7rem 0.3rem;
-    gap: 0.3rem;
+    gap: 0.9rem;
     position: relative;
 }
 .chat-header{
@@ -95,7 +95,7 @@
 .chats_container .content .pp-reactions{
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
 
 }
@@ -133,12 +133,18 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .react .share span {
     margin: 0.4rem;
 }
 
 /* write a comment (bottom)*/
+.comment-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
 .comment-box{
     display: flex;
     border: solid rgb(53, 245, 53) 1px;

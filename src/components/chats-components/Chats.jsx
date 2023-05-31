@@ -10,6 +10,10 @@ const Chats = ({chats}) => {
     const handleaction = () =>{
         setOpenAction(!OpenAction)
     }
+    const [OpenComments, setOpenComments] = useState(false)
+    const Commentaction = () =>{
+        setOpenComments(!OpenComments)
+    }
   return (
     <>
         <div className="chats_container">
@@ -63,7 +67,7 @@ const Chats = ({chats}) => {
                         </BiLike>
                         <span>like</span>
                     </div>
-                    <div className="share">
+                    <div className="share"  onClick={Commentaction}>
                         <AiOutlineMessage className="icons"/>
                         <span> comment</span>
                     </div>
@@ -72,23 +76,27 @@ const Chats = ({chats}) => {
                         <span>share</span>
                     </div>
                 </div>
-                <div className="comment-box">
-                    <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
-                    <input type="text" placeholder='write a comment'/>
-                    <div className="send-btn"><BsSend/></div>
-                </div>
-                <div className="r-comments">
-                    <div className="img"><img src="/pictures/customercare.PNG" alt="" /></div>
-                   <div className=''>
-                        <div className="r-content">
-                            <h6>bill eilliams comment</h6>
-                            <p> 4hr ago</p>
+                {OpenComments &&
+                 <div className="comment-wrapper">
+                    <div className="comment-box">
+                        <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
+                        <input type="text" placeholder='write a comment'/>
+                        <div className="send-btn"><BsSend/></div>
+                    </div>
+                    <div className="r-comments">
+                        <div className="img"><img src="/pictures/customercare.PNG" alt="" /></div>
+                        <div className=''>
+                            <div className="r-content">
+                                <h6>bill eilliams comment</h6>
+                                <p> 4hr ago</p>
+                            </div>
+                            <p className="p">
+                                happy birthday bro man!
+                            </p>
                         </div>
-                        <p className="p">
-                            happy birthday bro man!
-                        </p>
-                   </div>
-                </div>
+                    </div>
+                 </div>
+                }
             </div>
         </div>
     </>

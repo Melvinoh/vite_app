@@ -38,8 +38,14 @@ function App() {
       const OpenformHandler = ()=>{
         setOpenform(!openform)
       };
+
+      const[openSignup ,setOpenSignup] = useState(false);
+      const OpensignupHandler = ()=>{
+        setOpenSignup(!openSignup)
+      };
       const CloseformHandler = ()=>{
         setOpenform(false)
+        setOpenSignup(false)
       };
 // layout 
     const Layout = () => {
@@ -58,7 +64,7 @@ function App() {
         </>
       )
     }
-    const current_user = true
+    const current_user = false;
 
     const ProtectedRoute = ({children}) =>{
       if (!current_user) {
@@ -73,8 +79,8 @@ function App() {
         path : "/satuk",
         element:(
           <>
-            <Landing  openformfun={OpenformHandler}/>
-            {!openform && <Signup  isOpen={openform} closefun={CloseformHandler}/>}
+            <Landing  openformfun={OpenformHandler} signup={OpensignupHandler}/>
+            <Signup  isOpen={openSignup} closefun={CloseformHandler}/>
             <Login  isOpen={openform} closefun={CloseformHandler}/>
           </>
         ),

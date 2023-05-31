@@ -66,51 +66,35 @@
     gap: 0.4rem;
     align-items: center;
     cursor: pointer;
+   
 }
 .l-btn{
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     text-align: center;
     width: fit-content;
     margin: auto;
     cursor: pointer;
+    font-size: 1rem;
 }
-.l-btn span{
-    background-color: rgb(13, 191, 13);
+.l-btn .lg{
+    background-color: rgb(59, 157, 59);
     color: rgba(255, 255, 255, 0.701);
-    padding: 0.3rem 0.9rem;
-    border-radius: 0.5rem;
+    padding:  1rem 2.5rem;
+    border-radius: 1rem;
+}
+.l-btn .sp{
+    border:solid 1px rgb(38, 231, 38);
+    color: rgba(255, 255, 255, 0.701);
+    padding:  1rem 2.5rem;
+    border-radius: 1rem;
 }
 .login_modal{
     background-color: #33343239;
     top:3.8rem; 
     height: 95vh;
 }
-/* .about{
-    padding: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    width:85%;
-    padding: 0.4rem;
-    margin: 0.3rem auto;gap:0.5rem;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(242, 246, 250);
-    border-radius: 0.5rem;
-    box-shadow: inset;
 
-}
-.about img{
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-   
-  
-}
-.about .content{
-width: 50%;
-  flex: 1 1fr 30%;
-} */
 @media (max-width:555px) {
     .l-heading{
         font-size:0.9rem;

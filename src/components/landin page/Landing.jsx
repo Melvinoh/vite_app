@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 import "./Landing.css"
 
 
-const Landing = ({openformfun}) => {
+const Landing = ({openformfun , signup}) => {
   return (
     <div className="landing-container">
         <img src="/pictures/content.jpg" alt="img"/>
@@ -29,8 +29,8 @@ const Landing = ({openformfun}) => {
                     ready for public display.Fixed price. One week. 
                 </p>
                 <div className="l-btn">
-                    <span onClick={openformfun}>login</span>
-                    <span onClick={openformfun}>signup</span>
+                    <span className='lg' onClick={openformfun}>login</span>
+                    <span className='sp' onClick={signup}>signup</span>
                 </div>
             </div>
            
