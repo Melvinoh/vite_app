@@ -2,12 +2,12 @@ import React from 'react'
 import "./login.css";
 import {IoCloseCircleOutline} from 'react-icons/io5';
 
-function Login(props) {
+function Signup(props) {
   return (
-    <div className={`login_modal ${props.isOpen ? "active" : "" }`}>
+    <div className={`sign_up ${props.isOpen ? "active" : "" }`}>
         <form action="" className="form">
             <IoCloseCircleOutline className='close_button' onClick={props.closefun}/>
-            <span className="title"> login</span>
+            <span className="title">sign_up</span>
             <div className="login_form">
                 <div className="form_elements">
                     <label htmlFor="username">username</label>
@@ -18,14 +18,19 @@ function Login(props) {
                     <input type="text" name='reg_n.o' />
                 </div>   
                 <div className="form_elements">
+                    <label htmlFor="username">email</label>
+                    <input type="text" name='email' />
+                </div>
+                    
+                <div className="form_elements">
                     <label htmlFor="username">password</label>
                     <input type="password" name='password' />
                 </div>
             </div>
-            <button>login as admin</button>
+            <button>Register</button>
         </form>
     </div>
   )
 }
 
-export default Login
+export default Signup

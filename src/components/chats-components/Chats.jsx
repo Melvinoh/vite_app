@@ -36,14 +36,19 @@ const Chats = ({chats}) => {
                 <p>
                     {chats.content}
                 </p>
+                <hr />
                 <div className="pp-reactions">
+                  
                     <div className="emojis">
-                        <span role="img" aria-label="smile">😊</span>
-                        <span role="img" aria-label="heart">❤️</span>
-                        <BiLike className="ci"/>
+                        <div className='emoji'>
+                            <span role="img" aria-label="smile">😊</span>
+                            <span role="img" aria-label="heart">❤️</span>
+                            <BiLike className="ci"/>
+                        </div>
+                        <span>+24 likes</span>
                     </div>
                     <div className="pics">
-                        <span className="pics">reacted by </span>
+                        {/* <span className="pics">reacted by </span> */}
                         <img src={chats.reactions[0]} alt="IMG" />
                         <img src={chats.reactions[1]}alt="IMG" />
                         <img src={chats.reactions[2]}alt="IMG" />
@@ -60,12 +65,17 @@ const Chats = ({chats}) => {
                     </div>
                     <div className="share">
                         <AiOutlineMessage className="icons"/>
-                        <span>comment</span>
+                        <span> comment</span>
                     </div>
                     <div className="share">
                         <BsShare className="icons"/>
                         <span>share</span>
                     </div>
+                </div>
+                <div className="comment-box">
+                    <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
+                    <input type="text" placeholder='write a comment'/>
+                    <div className="send-btn"><BsSend/></div>
                 </div>
                 <div className="r-comments">
                     <div className="img"><img src="/pictures/customercare.PNG" alt="" /></div>
@@ -78,11 +88,6 @@ const Chats = ({chats}) => {
                             happy birthday bro man!
                         </p>
                    </div>
-                </div>
-                <div className="comment-box">
-                    <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
-                    <input type="text" placeholder='write a comment'/>
-                    <div className="send-btn"><BsSend/></div>
                 </div>
             </div>
         </div>

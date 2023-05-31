@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 import "./Landing.css"
 
 
-const Landing = () => {
+const Landing = ({openformfun}) => {
   return (
     <div className="landing-container">
         <img src="/pictures/content.jpg" alt="img"/>
@@ -16,7 +16,7 @@ const Landing = () => {
                         <span className=""> student association of tuk</span>
                     </div>
                 </div>
-                <div className="home-btn">
+                <div className="home-btn" onClick={openformfun}>
                     <span>home</span>
                     <AiOutlineArrowRight/>
                 </div>
@@ -29,8 +29,8 @@ const Landing = () => {
                     ready for public display.Fixed price. One week. 
                 </p>
                 <div className="l-btn">
-                    <span>login</span>
-                    <span>signup</span>
+                    <span onClick={openformfun}>login</span>
+                    <span onClick={openformfun}>signup</span>
                 </div>
             </div>
            
@@ -38,14 +38,17 @@ const Landing = () => {
 
             </div>
         </div>
-        <div className="about">
-            <h4>about us</h4>
-            <p>
-                A design concept is what you need when time crunch doesn't allow for a complete process.
-                This is where Conceptzilla comes in handy. We design up to four main screens of your product, 
-                ready for public display.Fixed price. One week. 
-            </p>
-        </div>
+        {/* <div className="about">
+            <div className="content">
+                <h4>everything at your reach</h4>
+                <p>
+                    A design concept is what you need when time crunch doesn't allow for a complete process.
+                    This is where Conceptzilla comes in handy. We design up to four main screens of your product, 
+                    ready for public display.Fixed price. One week. 
+                </p>
+           </div>
+           <img src="/pictures/homespic.jpg" alt="" />
+        </div> */}
 
     </div>
   )
