@@ -64,7 +64,7 @@ function App() {
         </>
       )
     }
-    const current_user = false;
+    const current_user = true;
 
     const ProtectedRoute = ({children}) =>{
       if (!current_user) {

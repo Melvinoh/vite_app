@@ -1,6 +1,7 @@
 import React from 'react'
-import ClubsCard from '../../components/cards/ClubsCard'
-import cdata from"../../data/clubs.json"
+//import ClubsCard from '../../components/cards/ClubsCard'
+import Myclubs from '../../components/cards/Myclubs'
+//import cdata from"../../data/clubs.json"
 import "./clubs.css";
 
 function Clubs() {
@@ -9,11 +10,9 @@ function Clubs() {
       <div className="heading">
         <span> clubs and society</span>
       </div>
-      <div className="clubs_container grid">
-      {cdata.map((cdata)=>(
-        <ClubsCard cards={cdata} key={cdata.id}/>
-      ))}
-    </div>
+      <div className="clubs_container">
+        <Myclubs/>
+      </div>
 
     </div>
     
