@@ -1,7 +1,7 @@
 import React from 'react'
 import Reviews from '../../components/cards/Reviews';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "swiper/css/bundle";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./reg.css";
@@ -40,7 +40,7 @@ const ClubReg = () => {
       <div className="reviews">
         <Swiper
           effect={"coverflow"}
-          grabCursor={true}
+          grabCursor={false}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{
@@ -55,26 +55,24 @@ const ClubReg = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <Reviews/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            <Reviews/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            <Reviews/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            <Reviews/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            <Reviews/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            <Reviews/>
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
+          
         </Swiper>
       </div>
     </div>
