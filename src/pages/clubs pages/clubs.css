@@ -15,10 +15,7 @@
     font-style: italic;
     text-align: center;
 }
-.clubs_container{
-    grid-template-columns: repeat( auto-fit, minmax(6rem, 1fr) );
-    gap: 0.6rem;
-}
+
 
 /* single club page css styles */
 .club_tabs{
@@ -109,7 +106,7 @@
     .cl-right{
         flex: 1;
     }
-    .club_container{
+    .clubs_container{
         padding: 0.2rem;
         position: relative;
         left:10.5rem;

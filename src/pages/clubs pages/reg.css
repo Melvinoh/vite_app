@@ -1,0 +1,68 @@
+.rev-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: aliceblue;
+    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
+}
+.revcontent{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.rev-container img{
+    width: 100px;
+    height: 100px;
+}
+.prof-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 95%;
+    margin: auto;
+    background-color: aliceblue;
+    border: solid 1px rgb(50, 194, 50);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+hr{
+    width: 100%;
+}
+
+.prof-box .top{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.4rem;
+}
+.prof-box .top img{
+    width: 100px;
+    height: 100px;
+    flex: 1;
+}
+.prof-box .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem 0;
+}
+.prof-box .bottom .wrapper div{
+    display: flex;
+    justify-content: space-between;
+}
+.prof-box .bottom .wrapper p{
+    width: 90%;
+    margin: auto;
+}
+.prof-content{
+    width: 100px;
+    display: flex;
+
+    flex: 2;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.myslider img{
+    width: 100px;
+    height: 100px;
+}
