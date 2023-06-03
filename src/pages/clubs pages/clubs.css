@@ -24,3 +24,9 @@
     padding: 0.3rem;
 
 }
+@media (min-width:899px) {
+    .clubs-wrapper{
+        left: 10.5rem;
+        width: calc(100vh - 11rem);
+    }
+}

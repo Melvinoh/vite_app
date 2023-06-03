@@ -14,7 +14,7 @@ const Non_members = () => {
   return (
   <>
     <div className='sub-heading Nb-heading'> Rotaract club</div>
-    <div className="non-members_container">
+    <div className="Nb_container">
       <div className="Nb-left">
       <div className="prof-box">
         <div className="top">

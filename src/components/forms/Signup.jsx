@@ -10,12 +10,20 @@ function Signup(props) {
             <span className="title">sign_up</span>
             <div className="form_components">
                 <div className="form_elements">
+                    <label htmlFor="username">first name</label>
+                    <input type="text" name='fname' />
+                </div>
+                <div className="form_elements">
+                    <label htmlFor="username">second name</label>
+                    <input type="text" name='sname' />
+                </div>
+                <div className="form_elements">
                     <label htmlFor="username">username</label>
                     <input type="text" name='username' />
                 </div>
                 <div className="form_elements">
                     <label htmlFor="username">reg n.o</label>
-                    <input type="text" name='reg_n.o' />
+                    <input type="text" name='regno' />
                 </div>   
                 <div className="form_elements">
                     <label htmlFor="username">email</label>
