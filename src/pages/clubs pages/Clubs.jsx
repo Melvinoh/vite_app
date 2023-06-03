@@ -1,16 +1,10 @@
 import React from 'react'
-//import ClubsCard from '../../components/cards/ClubsCard'
-import Myclubs from '../../components/cards/Myclubs'
-//import cdata from"../../data/clubs.json"
-import "./clubs.css";
 import { Link } from 'react-router-dom'
 import sportdata from "../../data/sports.json"
 import Card1 from '../../components/cards/Card1'
 import Card2 from '../../components/cards/Card2'
 import Card3 from '../../components/cards/Card3'
 import Card4 from '../../components/cards/Card4'
-
-
 
 function Clubs() {
   return (
@@ -21,7 +15,7 @@ function Clubs() {
       <div className="clubs_container">
         <div className='clubs-box'>
           <div className="card4-box">
-              <span className='title'> my clubs</span>
+              <span className='sub-heading'> my clubs</span>
               <div className="card4-wrapper">
                   <Card4/>
                   <Card4/>
@@ -33,7 +27,7 @@ function Clubs() {
           </div>
           <div className="card2-box">
               <div className="ft">
-                  <span className='title'>featured clubs</span>
+                  <span className='sub-heading'>featured clubs</span>
               </div>
               <div className="cd2-wrapper">
                   <Card2/>

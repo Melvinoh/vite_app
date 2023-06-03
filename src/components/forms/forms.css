@@ -1,8 +1,8 @@
 /* modal styles */
-.login_modal{
+.form_modal{
     position: fixed;
     top:3.15rem; 
-    background-color: #333432dc;
+    background-color: #3334325e;
     width: 100%;
     height:100vh;
     padding: 1rem;
@@ -13,7 +13,7 @@
     
 }
 
-.login_modal.active{
+.form_modal.active{
     display: block;
 }
 .sign_up.active{
@@ -53,7 +53,7 @@
 
 /* form elements*/
 
-.login_form{
+.form_components{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -90,6 +90,38 @@ button{
     box-shadow: none;
 }
 
+
+/* registration form styles */
+
+.regform-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+    width: 95%;
+    margin: 0.4rem auto;
+    background-color: white;
+    padding: 0.5rem;
+}
+.regform-wrapper .inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.regform-wrapper .inputs input{
+    width: 65%;
+}
+.regform-wrapper .btn{
+    width: fit-content;
+    padding: 0.3rem 1rem;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
 /*@ key frames */
 
 @keyframes form_animation {
@@ -104,3 +136,4 @@ button{
         transition: translate 500s , opacity 1s;
     }
 }
+

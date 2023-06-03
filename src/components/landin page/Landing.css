@@ -80,18 +80,18 @@
 .l-btn .lg{
     background-color: rgb(59, 157, 59);
     color: rgba(255, 255, 255, 0.701);
-    padding:  1rem 2.5rem;
+    padding:  0.5rem 2.0rem;
     border-radius: 1rem;
 }
 .l-btn .sp{
     border:solid 1px rgb(38, 231, 38);
     color: rgba(255, 255, 255, 0.701);
-    padding:  1rem 2.5rem;
+    padding:  0.5rem 2.0rem;
     border-radius: 1rem;
 }
-.login_modal{
+.form_modal{
     background-color: #33343239;
-    top:3.8rem; 
+    top:3.9rem; 
     height: 95vh;
 }
 

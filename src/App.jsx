@@ -2,8 +2,6 @@ import React from 'react'
 import "./App.css"
 import Header from './components/header/Header'
 import Search from './components/search/Search'
-import  Login from './components/login_form/Login'
-// import  Signup from './components/login_form/Signup'
 import { Outlet, RouterProvider,Navigate } from 'react-router'
 import Navbar from './components/navbar/Navbar'
 import { useState } from 'react';
@@ -20,7 +18,8 @@ import Sport from './pages/sports pages/SingleSport_Pg';
 import SchoolSchool_Pg from './pages/school pages/SingleSchool_Pg.jsx';
 import Noticepage from './components/notifications/Noticepage';
 import Landing from './components/landin page/Landing';
-import Signup from './components/login_form/Signup'
+import Signup from './components/forms/Signup'
+import Login from './components/forms/Login'
 
 
 
