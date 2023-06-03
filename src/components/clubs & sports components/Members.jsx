@@ -5,6 +5,7 @@ import EventsCalendar from '../../components/events /EventsCalendar'
 import chats from "../../data/chats-clubs.json"
 import { useState ,useEffect} from 'react'
 import {BsPenFill} from 'react-icons/bs';
+import "./singlepages.css";
 
 const Members = ({}) => {
 

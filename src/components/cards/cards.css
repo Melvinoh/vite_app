@@ -273,3 +273,21 @@
     margin: 0.5rem;
 
 }
+/* awards card styles */
+.awards{
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.3rem;
+    width: 95%;
+    align-items: center;
+
+}
+.awards img{
+    width: 70px;
+    height: 90px;
+    aspect-ratio: 1;
+    object-fit: fill;
+}
+.awards .awards-content{
+    flex: 1.5;
+}

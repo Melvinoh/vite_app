@@ -1,20 +1,21 @@
 import React from 'react'
-import Reviews from '../../components/cards/Reviews';
+import Reviews from '../cards/Reviews';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./reg.css";
+import "./singlepages.css";
 import { EffectCoverflow, Pagination } from "swiper";
-import Card1 from '../../components/cards/Card1';
-import Registration from '../../components/forms/Registration';
+import Card1 from '../cards/Card1';
+import Awardscard from '../cards/Awardscard';
+import Registration from '../forms/Registration';
 
 const Non_members = () => {
   return (
-    <>
-    <div className='sub-heading cl-heading'> Rotaract club</div>
-    <div className="clubreg">
-      <div className="clreg-left">
+  <>
+    <div className='sub-heading Nb-heading'> Rotaract club</div>
+    <div className="non-members_container">
+      <div className="Nb-left">
       <div className="prof-box">
         <div className="top">
           <img src="/pictures/mbogi.jpg" alt="" />
@@ -111,55 +112,33 @@ const Non_members = () => {
         </div>
       </div>
       </div>
-      <div className="clreg-right">
+      <div className="Nb-right">
         <Registration/>
+
         <div className="awards-wrapper">
           <span className='sub-heading'>awards</span>
-          <div className="awards">
-            <img src="/pictures/trophy-1.png" alt="img" />
-            <div className="awards-content">
-              <span className="sub-heading">regionals festival</span>
-              <p>
-                A design concept is what you need when time crunch doesn't allow for a complete process. 
-              </p>
-            </div>
-          </div>
-          <div className="awards">
-            <img src="/pictures/trophy-2.png" alt="img" />
-            <div className="awards-content">
-              <span  className="sub-heading">regionals festival</span>
-              <p>
-                A design concept is what you need when time crunch doesn't allow for a complete process. 
-              </p>
-            </div>
-          </div>
-          <div className="awards">
-            <img src="/pictures/trophy-png-4.png" alt="img" />
-            <div className="awards-content">
-              <span className="sub-heading">ball games festival </span>
-              <p>
-                A design concept is what you need when time crunch doesn't allow for a complete process. 
-              </p>
-              </div>
-            </div>
-          </div>
-          <div className="card1-box">
-            <div className='sub-heading'>
-                <span>recomended clubs</span>
-            </div>
-            <div className="cd1-wrapper">
-              <Card1/>
-              <Card1/>
-              <Card1/>
-              <Card1/>
-              <Card1/>
-            </div>
-          </div> 
+          <Awardscard/>
+          <Awardscard/>
+          <Awardscard/>
         </div>
+        
+        <div className="card1-box">
+          <div className='sub-heading'>
+              <span>recomended clubs</span>
+          </div>
+          <div className="cd1-wrapper">
+            <Card1/>
+            <Card1/>
+            <Card1/>
+            <Card1/>
+            <Card1/>
+          </div>
+        </div> 
       </div>
-    </>
+    </div>
+  </>
    
-      )
+)
 }
 
 export default Non_members
