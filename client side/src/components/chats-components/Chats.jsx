@@ -33,7 +33,6 @@ const Chats = ({chats}) => {
                         <span>hide</span>
                     </div>
                 </div>
-
             </div>
             <div className="content">
                 <img src="" alt="" />

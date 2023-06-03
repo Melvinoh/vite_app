@@ -7,9 +7,6 @@ const Sport = () => {
     <>
       <Members/>
     </>
-  
- 
   )
 }
-
 export default Sport

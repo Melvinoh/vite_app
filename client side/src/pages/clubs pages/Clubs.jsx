@@ -47,11 +47,8 @@ function Clubs() {
                     <Card1/>
                     <Card1/>
                     <Card1/>
-              
               </div>
           </div> 
-        
-
           <div className="card3-box">
             <div className="sub-heading">
                 <span>Clubs by categories</span>
@@ -79,7 +76,6 @@ function Clubs() {
                             <Card3 cards={data} key={data.id}/>
                         ))
                     }
-
                 </div>
             </div>
             <div className="cd3">
@@ -92,7 +88,6 @@ function Clubs() {
                             <Card3 cards={data} key={data.id}/>
                         ))
                     }
-
                 </div>
             </div>
           </div>

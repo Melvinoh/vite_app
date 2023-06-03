@@ -10,7 +10,6 @@ const Card1 = () => {
             <span>musicclub </span>
         </div>
     </div>
-    
   )
 }
 
