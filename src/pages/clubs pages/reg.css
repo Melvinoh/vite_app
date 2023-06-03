@@ -1,24 +1,7 @@
-.rev-container{
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    justify-content: center;
-    border-radius: 0.5rem;
-    align-items: center;
-    background-color: white;
-    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
-}
-/* .revcontent{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-} */
-.rev-container img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
+
+
+
+/* clubs landing page style */
 .cl-heading{
     font-size: 1.2rem;
     text-align: center;
@@ -46,6 +29,10 @@
     flex-direction: column;
     gap: 0.4rem;
 }
+
+
+/*clubs profile styles */
+
 .prof-box{
     display: flex;
     flex-direction: column;
@@ -58,10 +45,6 @@
     padding: 0.4rem 0.2rem;
     border-radius: 0.2rem;
 }
-hr{
-    width: 100%;
-}
-
 .prof-box .top{
     display: flex;
     flex-wrap: wrap;
@@ -95,13 +78,11 @@ hr{
     flex-direction: column;
     gap: 0.1rem;
 }
-.reviews{
-    padding: 0.5rem;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.551);
-    margin: 0.5rem;
 
-}
+
+/* swiper slider styles */
+
+
 .mySwiper{
     margin-top: 0.5rem;
 }
@@ -119,8 +100,6 @@ hr{
     padding: 0.5rem ;
     margin: 0.3rem ;
     border-radius: 0.4rem;
-
-
 }
 .cl-leaders .leaders_wrapper{
     display: flex;
@@ -129,29 +108,8 @@ hr{
     width: 95%;
     justify-content: center;
 }
-.regform-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 2.1rem;
-    width: 95%;
-    margin: 0.4rem auto;
-    background-color: white;
-    padding: 0.5rem;
 
-   
-}
-.regform-wrapper .inputs{
-    display: flex;
-    justify-content: space-between;
-}
-.regform-wrapper .inputs input{
-    width: 65%;
-}
-.regform-wrapper .btn{
-    width: fit-content;
-    padding: 0.3rem 1rem;
-    margin: auto;
-}
+/* awards components styles */
 
 .awards-wrapper{
     display: flex;
@@ -163,7 +121,6 @@ hr{
     margin:0.5rem auto;
 
 }
-
 .awards{
     display: flex;
     gap: 0.4rem;
@@ -182,7 +139,7 @@ hr{
     flex: 1.5;
 }
 
-
+/* media queries */
 
 @media (min-width:899px) {
     .clubreg{

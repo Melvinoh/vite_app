@@ -2,26 +2,21 @@
 .form_modal{
     position: fixed;
     top:3.15rem; 
-    background-color: #3334325e;
+    background-color: #33343233;
     width: 100%;
     height:100vh;
     padding: 1rem;
     border-radius: 0.2rem;
     margin:0.1rem;
     display: none;
-    z-index: 200;
-    
+    z-index: 200; 
 }
 
 .form_modal.active{
     display: block;
 }
-.sign_up.active{
-    display: block;
-}
 
 /* form styles */
-
 .form{
     display: flex;
     width: 75%;
@@ -80,6 +75,7 @@ input{
     border-radius: 0.3rem;
     font-size: 0.6rem;
     padding: 0.3rem;
+    outline: none;
 }
 button{
     padding: 0.3rem 0.5rem;
@@ -113,6 +109,80 @@ button{
     width: fit-content;
     padding: 0.3rem 1rem;
     margin: auto;
+}
+
+/* compose form  styles */
+
+.compose{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    width: 80%;
+    max-width: 40rem;
+    height: fit-content;
+    background-color: white;
+    margin:  10rem auto ;
+    position: relative;
+    animation-name: form_animation;
+    animation-duration: 1s;
+}
+
+.compose .icons{
+    position:absolute;right: 0;top:0;
+    cursor: pointer;
+}
+.c-heading{
+    display: flex;
+    justify-content: space-between;
+    margin:0.3rem ;
+    align-items: center;
+}
+.c-heading .tt{
+    display: flex;
+    gap: 0.5rem;
+}
+.c-heading img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+.c-in{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem;
+    justify-content: space-between;
+}
+.c-in input ,textarea{
+    width: 75%;
+    border: solid 1px rgb(48, 171, 48);
+    outline: none;
+}
+.btn{
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    color: white;
+    background-color: green;
+    max-width: fit-content;
+    margin: 0.2rem auto;
+}
+.img-preview{
+    width: fit-content;
+    margin: 0.1rem auto;
+    display: none;
+}
+
+.img-preview img{
+    width: 100px;
+    height: 100px;
+    
+}
+@media (max-width:480px) {
+    .compose{
+        width: 90%;
+    }
 }
 
 

@@ -3,7 +3,8 @@ import { useState , useEffect } from 'react'
 import "./clubs.css"
 import clubchats from "../../data/chats-clubs.json"
 // import Regmember from './Regmember'
-import ClubReg from './ClubReg'
+import Non_members from './Non_members'
+import Members from './Members'
 const Club_details = () => {
     const chatdata = clubchats
     const [OpenTab, setOpenTab] = useState(false)
@@ -23,13 +24,19 @@ const Club_details = () => {
         setOpenTab(false)
         setIsActive(true)
     }
+    const [OpenCompose, setOpenCompose] = useState(false)
+    const opencomposeform  = ()=>{
+      setOpenCompose(!OpenCompose)
+    }
+    const closecompose = () =>{
+      setOpenCompose(false)
+    }
   return (
   <>
-    {/* <Regmember chatdata={chatdata} OpenTab={OpenTab} IsActive={IsActive} close={close} handleopen={handleopen} handleswitch={handleswitch} setclose={setclose}/> */}
-    <ClubReg/>
+    <Members/>
   </>
     
-    )
+  )
 }
 
 export default Club_details

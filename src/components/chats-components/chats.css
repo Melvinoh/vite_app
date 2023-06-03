@@ -1,6 +1,6 @@
 /* header sections */
 .chats_container{
-    background-color:#F6F6F7;
+    background-color:white;
     display: flex;
     border-radius: 0.7rem;
     flex-direction: column;

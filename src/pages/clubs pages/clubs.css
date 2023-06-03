@@ -27,7 +27,7 @@
 
 
 /* single club page css styles */
-.club_tabs{
+.tabs-wrapper{
     display: flex;
     justify-content: space-around;
     padding: 0.5rem;
@@ -35,87 +35,43 @@
     margin: 0.2rem;
     color: rgb(24, 77, 24);
 }
-.club_tabs .tabs{
+.tabs-wrapper .tabs{
     padding: 0.1rem 1rem;
 }
-.club_tabs .tabs.active {
+.tabs-wrapper .tabs.active {
     padding: 0.1rem 1rem;
     background-color: rgb(25, 119, 25);
     color: white;
     border-radius: 0.5rem;
-
 }
-.club_container{
+.Members_container{
     position: relative;left: 0;
     width: 100vw;
     padding: 0.2rem;
 }
-.club_content-box{
+.Mb_content-box{
     display: flex;
-   
 }
-
-.cl-left{
+.Mb-left{
     flex: 1.6 ;
 }
-.cl-right{
+.Mb-right{
     flex: 1;
 }
-.cp-modal{
-    position: fixed;
-    top: 0;right: 0;
-    background-color: rgba(39, 40, 39, 0.242);
-    height: 100vh;width: 100vw;
-    margin: auto;
-    z-index: 100; 
-    display: none;
-}
-.cp-modal.active{
-    display: none;
-}
 
-.chats_wrapper{
-    background-color: white;
-    width: 96%;
-    padding: 0.3rem 0.3rem;
-    margin: 0.3rem;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    color: grey;
 
-}
-.chat_title-box{
-    display: flex;
-    gap: 0.2rem;
-    justify-content: space-between;
-    align-items: center;
-}
-.chat_title-box .title{
-    display: flex;
-    gap: 0.3rem;
-    font-style: italic;
-    align-items: center;
-}
-.chat_title-box .title img{
-    width: 40px;
-    height: 40px;
-    border-radius: 0.5rem;
-}
 
 
 @media (min-width:899px) {
-    .cl-left{
+    .Mb-left{
         scroll-behavior: smooth;
         scroll-padding: 0.1rem;
-        flex: 2;
-    }
-    .cl-right{
         flex: 1;
     }
-    .clubs_container{
+    .Mb-right{
+        flex: 1;
+    }
+    .Members_container{
         padding: 0.2rem;
         position: relative;
         left:10.5rem;
@@ -124,15 +80,15 @@
     }
 }
 @media (max-width:480px) {
-    .cl-left{
+    .Mb-left{
        flex: 100%;
     }
-    .cl-left.active{
+    .Mb-left.active{
         display: none;
     }
 }
 @media (min-width:480px){
-    .club_tabs{
+    .tabs-wrapper{
         display: none;
     }   
 }
