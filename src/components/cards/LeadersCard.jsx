@@ -9,8 +9,8 @@ const LeadersCard = ({leader}) => {
             <div className="content">
                 <span>{leader.name}</span>
                 <span>{leader.position}</span>
-                {/* <span>{leader.year}</span>
-                <span>{leader.tel}</span> */}
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>

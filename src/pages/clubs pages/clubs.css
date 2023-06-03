@@ -16,6 +16,15 @@
     text-align: center;
 }
 
+.clubs-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 0.2rem;
+    padding: 0.3rem;
+
+}
+
 
 /* single club page css styles */
 .club_tabs{
