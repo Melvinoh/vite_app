@@ -19,8 +19,8 @@ const Schools = () =>{
         </div>
           <hr />
       </div>
-      <div className="heading">
-        <span>fucalty of biult enviroment</span>
+      <div className="heading1">
+        <span>fucalty of applied sciences and technology </span>
       </div>
       <div className="schools_container grid">
           {sdata.map(data =>(

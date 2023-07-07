@@ -25,7 +25,7 @@
     padding-top: 0;padding-bottom: 0.4rem;
 }
 .school_tabs{
-    width:90%;
+    width:98%;
     margin: 0.5rem auto;
     z-index: 10;
 }
@@ -64,7 +64,12 @@ hr{
 .school-container{
     display: flex;
     padding: 0.4rem;
-    height:100vh;
+    font-size: 1rem;
+ 
+}
+.school-container::-webkit-scrollbar{
+    width: 0.2px;
+    background-color: greenyellow;
 }
 .sh-left,.sh-right{
     flex: 1;
@@ -83,12 +88,13 @@ hr{
 }
 
 @media (min-width:899px) {
-    .school-container{
+    .schools-wrapper,.school-container{
         position: relative;
         display: flex;
-        left: 10.5rem;
-        width: calc(100vw - 10.5rem);
-        
+        gap: 0.5rem;
+        left: 10.7rem;
+        width:85vw; 
+     
     }   
     .back{
         display: none;

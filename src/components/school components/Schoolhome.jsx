@@ -10,7 +10,7 @@ const Schoolhome = (props) => {
   return (
     <>
         <div className="sh_wrapper">
-            <div className="name">school of built enviroment</div>
+            <div className="heading1">school of built enviroment</div>
             <div className="sh-profiles">
                 <div className="img_wrapper">
                     <img src="/pictures/mbogi.jpg" alt="img" />
@@ -23,7 +23,7 @@ const Schoolhome = (props) => {
                 </div>
             </div>
             <div className="sh-container 1">
-                <div className="heading">
+                <div className="heading2">
                     <span>courses</span>
                 </div>
                 
@@ -50,7 +50,7 @@ const Schoolhome = (props) => {
                 
             </div>
             <div className="sh-container 2">
-                <div className="heading">
+                <div className="heading2">
                     <span> notice board </span>
                 </div>
                 <div className="sh-tab_container">
@@ -90,7 +90,7 @@ const Schoolhome = (props) => {
                 </div>
             </div>
             <div className="sh-container 3">
-                <div className="heading">
+                <div className="heading2">
                     <span>leaders</span>
                 </div>
                 <div className="ld-card_container">

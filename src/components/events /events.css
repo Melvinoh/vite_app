@@ -7,6 +7,7 @@
     margin: 0.2rem auto;
     padding: 0.5rem;
     width: 90%;
+    box-shadow: 0.1rem 0.1rem 1.7rem rgba(128, 128, 128, 0.122);
 }
 .events .content_box{
     display:flex;

@@ -8,7 +8,7 @@ const Courses = () => {
   return (
   <div className="course_container">
     <div className="header">
-        <span className='sub-heading'>btech construction managemrnt</span>
+        <span className='heading2'>btech construction managemrnt</span>
     </div>
     <div className="details">
         <span>department : biulding tech</span>
@@ -17,7 +17,7 @@ const Courses = () => {
         <span>tel : +254 114 567 908</span>
     </div>  
     <div className="class_reps-container">
-        <div className="heading">
+        <div className="heading3">
             <span>class representatives</span>
         </div>
         <div className="cr-wrapper">
@@ -37,7 +37,7 @@ const Courses = () => {
      
     </div>
     <div className="event-wrapper">
-        <div className="sub-heading">
+        <div className="heading3">
             <span>top events</span>
         </div>
         { events.map(data => (<Events item={data} key={data.id}/>))}

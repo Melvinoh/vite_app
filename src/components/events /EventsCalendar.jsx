@@ -15,7 +15,7 @@ const EventsCalendar = () => {
             inline/>
        </div>
        <div className="ev-wrapper">
-        <span className="sub-heading"> top events</span>
+        <span className="heading3"> top events</span>
         {
             events.map(data =>(
                 <Events item={data} key={data.id}/>

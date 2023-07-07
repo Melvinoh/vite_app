@@ -94,9 +94,9 @@ button{
     flex-direction: column;
     gap: 2.1rem;
     width: 95%;
-    margin: 0.4rem auto;
+    margin: 0.6rem auto;
     background-color: white;
-    padding: 0.5rem;
+    padding: 2rem;
 }
 .regform-wrapper .inputs{
     display: flex;

@@ -21,7 +21,7 @@ const Chats = ({chats}) => {
                 <div className="left">
                     <img src={chats.profile_pic} alt="img" />
                     <div className="sub-heading">
-                        <span>{chats.name}</span>
+                        <span className='heading3'>{chats.name}</span>
                         <span className='time'>{chats.time}</span>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ import Registration from '../forms/Registration';
 const Non_members = () => {
   return (
   <>
-    <div className='sub-heading Nb-heading'> Rotaract club</div>
+    <div className='heading1 Nb-heading'> Rotaract club</div>
     <div className="Nb_container">
       <div className="Nb-left">
       <div className="prof-box">
@@ -30,7 +30,7 @@ const Non_members = () => {
         <hr />
         <div className="bottom">
           <div className="wrapper">
-            <h6 className='heading'>if you want fun here it is ! </h6>
+            <h6 className='heading3'>if you want fun here it is ! </h6>
             <p>
               the quick brown fox jumped over the lazy dog
               the quick brown fox jumped over the lazy dog
@@ -44,7 +44,7 @@ const Non_members = () => {
       </div>
 
       <div className="reviews">
-        <div><span className=' sub-heading'>Reviews</span></div>
+        <div><span className=' heading2'>Reviews</span></div>
         <Swiper
           effect={"coverflow"}
           grabCursor={false}
@@ -83,7 +83,7 @@ const Non_members = () => {
       </div>
 
       <div className="cl-leaders">
-        <span className='sub-heading'>club leaders</span>
+        <span className='heading2'>club leaders</span>
         <div className="leaders_wrapper">
           <div className="ld-card_wrapper">
               <img src="/pictures/mrform.jpg" alt="img" />
@@ -116,14 +116,14 @@ const Non_members = () => {
         <Registration/>
 
         <div className="awards-wrapper">
-          <span className='sub-heading'>awards</span>
+          <span className='heading2'>awards</span>
           <Awardscard/>
           <Awardscard/>
           <Awardscard/>
         </div>
         
         <div className="card1-box">
-          <div className='sub-heading'>
+          <div className='heading2'>
               <span>recomended clubs</span>
           </div>
           <div className="cd1-wrapper">

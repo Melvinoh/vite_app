@@ -3,7 +3,7 @@ import React from 'react'
 const Registration = () => {
   return (
     <div className="regform-wrapper">
-        <span className='sub-heading'>registration form</span>
+        <span className='heading2'>registration form</span>
         <div className="inputs">
           <label htmlFor="fname"> first name</label>
           <input type="text" name='fname' />

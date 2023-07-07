@@ -5,17 +5,18 @@ import Card1 from '../../components/cards/Card1'
 import Card2 from '../../components/cards/Card2'
 import Card3 from '../../components/cards/Card3'
 import Card4 from '../../components/cards/Card4'
+import "./clubs.css"
 
 function Clubs() {
   return (
     <div className="clubs-wrapper">
-        <div className="heading">
+        <div className="heading1">
             <span> clubs and society</span>
         </div>
         <div className="clubs_container">
             <div className='clubs-box'>
                 <div className="card4-box">
-                <span className='sub-heading'> my clubs</span>
+                <span className='heading2'> my clubs</span>
                 <div className="card4-wrapper">
                     <Card4/>
                     <Card4/>
@@ -27,7 +28,7 @@ function Clubs() {
                 </div>
                 <div className="card2-box">
                 <div className="ft">
-                    <span className='sub-heading'>featured clubs</span>
+                    <span className='heading2'>featured clubs</span>
                 </div>
                 <div className="cd2-wrapper">
                     <Card2/>
@@ -37,7 +38,7 @@ function Clubs() {
                 </div>
                 </div>
                 <div className="card1-box">
-                <div className='sub-heading'>
+                <div className='heading2'>
                     <span>recomended clubs</span>
                 </div>
                 <div className="cd1-wrapper">
@@ -50,11 +51,11 @@ function Clubs() {
                 </div>
                 </div> 
                 <div className="card3-box">
-                    <div className="sub-heading">
+                    <div className="heading2">
                         <span>Clubs by categories</span>
                     </div>
                     <div className="cd3">
-                        <div className='heading'>
+                        <div className='heading3'>
                             <span >academics</span>
                         </div>
                         <div className="cd3-wrapper grid">
@@ -67,7 +68,7 @@ function Clubs() {
                         </div>
                     </div>
                     <div className="cd3">
-                        <div className='heading'>
+                        <div className='heading3'>
                             <span >services</span>
                         </div>
                         <div className="cd3-wrapper grid">
@@ -79,7 +80,7 @@ function Clubs() {
                         </div>
                     </div>
                     <div className="cd3">
-                        <div className='heading'>
+                        <div className='heading3'>
                             <span >artistic</span>
                         </div>
                         <div className="cd3-wrapper grid">

@@ -9,6 +9,7 @@
     gap: 1.7rem;
     background-color: #ebfeeb81;
     border: solid  #4ECB71 1px;
+    height: 91vh;
     width: 10vw;
     min-width: fit-content;
     animation-name: navAnimation;

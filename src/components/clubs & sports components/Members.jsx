@@ -40,7 +40,7 @@ const Members = ({}) => {
             <ComposeForm isOpen={OpenCompose} close={closecompose}/>
         </div>
         <div className='Members_container'>
-            <h4 className="heading">
+            <h4 className="heading1">
                 rotaract club
             </h4>
             <div className="tabs-wrapper">
