@@ -4,15 +4,17 @@ import leaders from "../../../data/leaders.json"
 import "./leaders.css"
 function Leaders() {
   return (
-   <div className="leaders_container">
-      <span className="heading"> Satuk leadership</span>
-      <div className="leaders_wrapper grid">
-        {
-          leaders.map(data =>(<LeadersCard key={data.id} leader={data}/>))
-        }
+    <div className="wrapper-con">
+      <div className="leaders_container">
+        <span className="heading"> Satuk leadership</span>
+        <div className="leaders_wrapper grid">
+          {
+            leaders.map(data =>(<LeadersCard key={data.id} leader={data}/>))
+          }
+        </div>
       </div>
-   </div>
-  )
+    </div>
+  ) 
 }
 
 export default Leaders

@@ -5,12 +5,14 @@ import "./sports.css";
 
 function Sports() {
   return (
-    <div className="sports_container grid" >
-      {
-        sportdata.map(data =>(
-          <Card3 cards={data} key={data.id}/>
-        ))
-      }
+    <div className="wrapper-con">
+      <div className="sports_container grid" >
+        {
+          sportdata.map(data =>(
+            <Card3 cards={data} key={data.id}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
