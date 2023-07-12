@@ -4,11 +4,6 @@
   min-height: 100vh;
   height: 100%;
 }
-.app_container{
-  display: flex;
-  gap: 0.6rem;
-  width: 100vw;
-}
 
 .heading1{
   font-family: 'Trebuchet MS';
