@@ -5,8 +5,8 @@ import "./leaders.css"
 function Leaders() {
   return (
     <div className="wrapper-con">
-      <div className="leaders_container">
-        <span className="heading"> Satuk leadership</span>
+      <div className="leaders-wrapper">
+        <span className="heading1"> Satuk leadership</span>
         <div className="leaders_wrapper grid">
           {
             leaders.map(data =>(<LeadersCard key={data.id} leader={data}/>))

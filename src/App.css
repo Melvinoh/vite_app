@@ -1,8 +1,7 @@
 .appwrapper{
   position: relative;
   top:3.4rem;
-  min-height: 100vh;
-  height: 100%;
+
 }
 
 .heading1{
@@ -48,13 +47,22 @@ input{
  
 }
 .wrapper-con{
-  position: relative;
-  left: 0;
-  margin: 0;
+  flex: 1;
+  margin: 0.5rem;
+  width: min(100%,90%);
 }
 
 /* media queries */
 
+.app_container{
+  position: relative;
+  display: flex;
+  gap: 0.1rem;
+  padding: 0.4rem;
+}
+.app_container::-webkit-scrollbar{
+  width: 0;
+}
 @media (max-width:899px) {
   .appwrapper{
     position: relative;
@@ -64,12 +72,11 @@ input{
     position: relative;
     left:0;
     width: 99%;
-    
   }
   .wrapper-con{
     position: relative;
-    left:10.5rem;
-    width: calc(100vw - 10.5rem);
+    left:0;
+    width: calc(100vw - 11.5rem);
     margin: 0;
   }
 }

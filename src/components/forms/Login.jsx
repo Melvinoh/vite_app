@@ -2,31 +2,27 @@ import React from 'react'
 import { useState, useContext} from 'react';
 import "./forms.css";
 import {IoCloseCircleOutline} from 'react-icons/io5';
-import { authContext, useAuthContext } from '../../context/AuthenticationContext';
+import { AuthContext } from '../../context/AuthContext.jsx';
 
 function Login(props) {
+  const {loginForm, userContent} = useContext(AuthContext);
 
-    const{LoginSubmit} = useState(authContext);
+  const [Inputs, setInputs] = useState({
+    username: "",
+    password:""
+  })
+  const handlechange = (e) =>{
+   
+    setInputs( (prev) => ({...prev, [e.target.name]:e.target.value}) )
+    console.log(Inputs);
 
-   
-    const [Error, setError] = useState(null)
-    const [LoginInputs, setLoginInputs] = useState({
-        regno:"",
-        password:"",
-    })
-    const handleChange = (e) =>{
-        setLoginInputs((prev) => ({...prev, [e.target.name]:e.target.value }))
-    }
-    
-    const handleSubmit = async (e) =>{
-      try {
-        e.preventDefault();
-        await LoginSubmit(LoginInputs)
-      } catch (err) {
-        setError(err);
-      }
-    }
-   
+  }
+  const handleSubmit = async(e) =>{
+    e.preventDefault()
+     await loginForm(Inputs)
+
+  }
+  
   return (
     <div className={`form_modal ${props.isOpen ? "active" : "" }`}>
         <form action="" className="form">
@@ -35,11 +31,11 @@ function Login(props) {
             <div className="form_components">
                 <div className="form_elements">
                     <label htmlFor="regno">username</label>
-                    <input type="text" name='username' onChange={handleChange}/>
+                    <input type="text" name='username' onChange={handlechange}/>
                 </div>   
                 <div className="form_elements">
                     <label htmlFor="password">password</label>
-                    <input type="password" name='password'onChange={handleChange} />
+                    <input type="password" name='password'onChange={handlechange} />
                 </div>
                 {Error && Error}
             </div>
@@ -48,5 +44,4 @@ function Login(props) {
     </div>
   )
 }
-
 export default Login

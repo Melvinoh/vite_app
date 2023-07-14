@@ -61,7 +61,7 @@
 }
 
 .cd3-wrapper{
-    grid-template-columns: repeat( auto-fit, minmax(5rem, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(4.5rem, 1fr) );
     position: relative;
     left: 0;
 }
@@ -232,7 +232,6 @@
     margin: 0.3rem auto;
 }
 .ld-card_wrapper{
-    width: fit-content;
     padding: 0.3rem;
     margin: 0.3rem;
     border-radius: 0.2rem;
@@ -244,7 +243,8 @@
 }
 .ld-card_wrapper img{
     width: 100px;
-    height: 100px;
+    height: 120px;
+    
 }
 .ld-card_wrapper .content{
     display: flex;

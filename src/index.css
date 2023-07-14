@@ -15,9 +15,11 @@
   -webkit-text-size-adjust: 100%;
 }
 body::-webkit-scrollbar{
-  width:0.2rem;
+  width:0;
 }
 body{
+  width: min(100%,1440px);
+  margin-inline: auto;
   scroll-behavior: smooth;
   scroll-padding: 0.1rem;
 }

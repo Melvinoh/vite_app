@@ -52,9 +52,10 @@ function App() {
         <>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
           <div className="appwrapper">
-            <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
+            
             <Search/>
             <div className="app_container">
+              <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
               <Outlet />
             </div>
           </div>

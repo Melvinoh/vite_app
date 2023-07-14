@@ -7,7 +7,7 @@ body{
     width: fit-content;
     position: relative;
     display: grid ;
-    place-content: center;
+    place-items: center;
 }
 
 
@@ -177,8 +177,8 @@ body{
 }
 @media (min-width:899px) {
     .home_container{
-        left: 10.5rem;
-        width: 99%;
+        width: 95%;
+        margin: 0.2rem auto;
         display: block;
     }
     .slider_wrapper,.react-multi-carousel-list,.notice_wrapper{

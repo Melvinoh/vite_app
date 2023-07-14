@@ -1,11 +1,13 @@
 /* clubs.jsx css styles */
-.clubs-wrapper{
+.clubs-wrapper, .sports-wrapper,.leaders-wrapper, .schools-wrapper{
     display:flex;
     flex-direction: column;
-    gap: 0.2rem;
-    margin: 0;
+    gap: 0.3rem;
+    width: min(100%,100%);
+    margin: 0.2rem auto;
     padding: 0.5rem;
     background-color: white;
+    border-radius: 0.2rem;
 }
 .clubs-wrapper .heading{
     background-color: #F7F7F7;
@@ -13,7 +15,6 @@
     border-radius: 0.5rem;
     font-style: italic;
     font-size: 1rem;
- 
 }
 
 .clubs-box{
@@ -22,37 +23,12 @@
     gap: 0.7rem;
     margin: 0.2rem;
     padding: 0.3rem;
+}
 
-}
-.wrapper-con{
-    left: 0;
-    width: 100vw;
-  }
-@media (min-width:899px) {
-    .wrapper-con{
-        position: relative;
-        left:8.5rem;
-        width: 85.5vw;
-        margin: 0.9rem 0.7rem;
-    }
-    .clubs-wrapper{
-        width: 90%;
-        margin: auto;
-        padding: 1.5rem;
-     }
-}
 @media (min-width:1128px) {
-    .clubs-wrapper{
-        width: 95%;
-        margin: auto;
-        padding: 1.5rem;
-     }
      .Members_container{
         width:95%;
         margin: auto;
        
-    }
-     .wrapper-con{
-        left:10.5rem;
     }
 }
