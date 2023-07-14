@@ -11,17 +11,19 @@ const School = () => {
   }
   return (
     <>
-    <div className="school-container">
-      <div className={`sh-left ${ OpenCourse ? 'active' : ''}`}>
-       
-        <Schoolhome open={OpenCourse} fun={openhandler}/>
-      </div>
-      <div className="sh-right">
-       <div className="back">
-        <MdArrowBack/>
-        <span className='' onClick={openhandler}> back</span>
-       </div>
-        <Courses/>
+    <div className="wrapper-con">
+      <div className="school-container">
+        <div className={`sh-left ${ OpenCourse ? 'active' : ''}`}>
+        
+          <Schoolhome open={OpenCourse} fun={openhandler}/>
+        </div>
+        <div className="sh-right">
+        <div className="back">
+          <MdArrowBack/>
+          <span className='' onClick={openhandler}> back</span>
+        </div>
+          <Courses/>
+        </div>
       </div>
     </div>
     </>

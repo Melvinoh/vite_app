@@ -10,7 +10,7 @@ const EventsCalendar = () => {
    
     <div className="ec-container">
        <div className="cd-wrapper">
-            <span className='heading'>calendar</span>
+            <span className='heading3'>calendar</span>
             <DatePicker  selectsRange
             inline/>
        </div>

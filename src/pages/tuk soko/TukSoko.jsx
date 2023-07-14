@@ -2,7 +2,11 @@ import React from 'react'
 
 function TukSoko() {
   return (
-    <div>TukSoko</div>
+    <div className="wrapper-con">
+
+       <h1 className='heading1'>Tuk Soko</h1>
+    </div>
+   
   )
 }
 

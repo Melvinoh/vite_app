@@ -20,10 +20,10 @@ const Courses = () => {
         <div className="heading3">
             <span>class representatives</span>
         </div>
-        <div className="cr-wrapper">
+        <div className="cr-wrapper grid">
             {reps.map( data => (
-            <div className="ld-card_container" key={data.id}>
-                <div className="ld-card_wrapper">
+            <div className="ld-card_wrapper" key={data.id}>
+                <div className="ld-card_container">
                     <img src="/pictures/mrform.jpg" alt="img" />
                     <div className="content">
                         <span>{data.name} </span>
@@ -36,7 +36,7 @@ const Courses = () => {
         </div>
      
     </div>
-    <div className="event-wrapper">
+    <div className="ev-wrapper">
         <div className="heading3">
             <span>top events</span>
         </div>

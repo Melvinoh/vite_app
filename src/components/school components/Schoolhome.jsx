@@ -89,12 +89,12 @@ const Schoolhome = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="sh-container 3">
+            <div className="sh-container">
                 <div className="heading2">
                     <span>leaders</span>
                 </div>
-                <div className="ld-card_container">
-                    <div className="ld-card_wrapper">
+                <div className="ld-card_wrapper">
+                    <div className="ld-card_container">
                         <img src="/pictures/mrform.jpg" alt="img" />
                         <div className="content">
                             <span>congress man </span>
@@ -102,7 +102,7 @@ const Schoolhome = (props) => {
                             <span className='button'>view profile</span>
                         </div>
                     </div>
-                    <div className="ld-card_wrapper">
+                    <div className="ld-card_container">
                         <img src="/pictures/customercare.PNG" alt="img" />
                         <div className="content">
                             <span>congress lady </span>

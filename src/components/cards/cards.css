@@ -20,8 +20,8 @@
 
 /* school cards style */
 
-.schoolcard_container{
-    max-width: 200px;
+.schoolcard_container,.card4-container{
+    max-width: 150px;
     display: flex;
     flex-direction: column;
     padding: 0.4rem;
@@ -39,7 +39,7 @@
     color: rgb(39, 95, 39);
     font-family: 'Trebuchet MS';
 }
-.schoolcard_container:hover{
+.schoolcard_container:hover,.card4-container:hover{
     cursor: pointer;
     background-color:#f0feef; ;
 }
@@ -52,6 +52,15 @@
 
 
 /* card3 clubs and sports (cd3 styles)*/
+
+.card4-box,.card2-box,.card3-box,.card1-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 0.5rem 0;
+    height: fit-content;
+
+}
 .cd3{
     display: flex;
     flex-direction: column;
@@ -62,8 +71,6 @@
 
 .cd3-wrapper{
     grid-template-columns: repeat( auto-fit, minmax(4.5rem, 1fr) );
-    position: relative;
-    left: 0;
 }
 .card3-container{
     position:relative;
@@ -178,34 +185,15 @@
 
 /* card 4 styleshit */
 
-.card4-box,.card2-box,.card3-box,.card1-box{
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    padding: 0.5rem 0;
-    height: fit-content;
 
-}
 .card4-wrapper{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(6.2rem, 1fr) );
-    gap: 0.8rem;
+    gap: 0.9rem;
     width: 95%;
     margin: auto;
     place-items: center;
     padding: 0.3rem 0.6rem;
-
-}
-.card4-container{
-    display: flex;
-    max-width: 200px;
-    flex-direction: column;
-    border-radius: 0.2rem;
-    gap: 0.1rem;
-    padding: 0.3rem;
-    width: 100%;
-    background-color: rgb(245, 251, 254);
-    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
 }
 .card4-container img{
     width:100%;
@@ -224,25 +212,26 @@
 
 
 /* leaders card */
-.ld-card_container{
+.ld-card_wrapper{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     height: fit-content;  
     margin: 0.3rem auto;
 }
-.ld-card_wrapper{
+.ld-card_container{
     padding: 0.3rem;
     margin: 0.3rem;
     border-radius: 0.2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    background-color: aliceblue;
+    gap: 0.6rem;
+    background-color: rgba(240, 248, 255, 0.732);
+    text-align: center;
     box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
 }
 .ld-card_wrapper img{
-    width: 100px;
+    width: 110px;
     height: 120px;
     
 }
