@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import sportdata from "../../data/sports.json"
+import clubsData from "../../data/clubs.json"
 import Card1 from '../../components/cards/Card1'
 import Card2 from '../../components/cards/Card2'
 import Card3 from '../../components/cards/Card3'
 import Card4 from '../../components/cards/Card4'
+import LeadersCard from '../../components/cards/LeadersCard'
 import "./clubs.css"
 
 function Clubs() {
@@ -18,13 +20,10 @@ function Clubs() {
                 <div className='clubs-box'>
                     <div className="card4-box">
                     <span className='heading2'> my clubs</span>
-                    <div className="card4-wrapper">
-                        <Card4/>
-                        <Card4/>
-                        <Card4/>
-                        <Card4/>
-                        <Card4/>
-                        <Card4/>
+                    <div className="card4-wrapper grid">
+                        {
+                            clubsData.map(data =>(<LeadersCard key={data.id} item={data}/>))
+                        }
                     </div>
                     </div>
                     <div className="card2-box">
@@ -32,7 +31,9 @@ function Clubs() {
                         <span className='heading2'>featured clubs</span>
                     </div>
                     <div className="cd2-wrapper">
-                        <Card2/>
+                        {
+                            clubsData.map(data =>(<Card2 key={data.id} item2={data}/>))
+                        }
                         <Card2/>
                         <Card2/>
                         <Card2/>

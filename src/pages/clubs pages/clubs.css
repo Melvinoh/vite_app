@@ -3,32 +3,16 @@
     display:flex;
     flex-direction: column;
     gap: 0.3rem;
-    width: min(100%,100%);
+    width: min(100%,95%);
     margin: 0.2rem auto;
     padding: 0.5rem;
     background-color: white;
     border-radius: 0.5rem;
 }
-.clubs-wrapper .heading{
-    background-color: #F7F7F7;
-    padding: 0.4rem;
-    border-radius: 0.5rem;
-    font-style: italic;
-    font-size: 1rem;
-}
-
 .clubs-box{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     margin: 0.2rem;
     padding: 0.3rem;
-}
-
-@media (min-width:1128px) {
-     .Members_container{
-        width:95%;
-        margin: auto;
-       
-    }
 }

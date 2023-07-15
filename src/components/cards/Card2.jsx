@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card2 = () => {
+const Card2 = (iz) => {
   return (
     <div className="cd2-container">
         <div className="cd2-pic">

@@ -118,6 +118,7 @@ body{
     font-size: 0.9rem;
     font-family:  'Arial ';
     font-style: italic;
+    width: 100%;
 }
 .notice_wrapper .elements{
     position: relative;
@@ -154,7 +155,8 @@ body{
     }
     .notice_wrapper{
         position: relative;
-        top: -20rem;left: 0rem;
+        top: -23rem;left: -17.5vw;
+        justify-content: flex-start;
     }
     .react-datepicker__day-name,.react-datepicker__day{
         width: 3.5vw;
@@ -191,5 +193,23 @@ body{
     }
     .profile_wrapper{
         margin :0.3rem;
+
+    }
+    .slider-profile{
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    .notice_wrapper{
+        position: relative;
+        top: -20rem;left: 3vw;
+    }
+}
+@media (min-width:1213px) {
+    .notice_wrapper{
+        position: relative;
+        top: -19rem;left: 6vw;
     }
 }

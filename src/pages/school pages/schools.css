@@ -43,6 +43,9 @@ hr{
     display: flex;
     padding: 0.1rem;
     font-size: 1rem;
+    width: 95%;
+    margin: auto;
+    gap: 0.9rem;
  
 }
 .sh-left,.sh-right{

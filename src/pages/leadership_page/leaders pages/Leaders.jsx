@@ -9,7 +9,7 @@ function Leaders() {
         <span className="heading1"> Satuk leadership</span>
         <div className="leaders_wrapper grid">
           {
-            leaders.map(data =>(<LeadersCard key={data.id} leader={data}/>))
+            leaders.map(data =>(<LeadersCard key={data.id} item={data}/>))
           }
         </div>
       </div>

@@ -2,7 +2,7 @@
     {
         "id":"1",
         "img":"/pictures/rotaract.jpg",
-        "title":"rotarct",
+        "name":"rotarct",
         "block": "block c",
         "room":"room c21",
         "clubrep":"emily 0724356765",
@@ -11,7 +11,7 @@
     {
         "id":"2",
         "img":"/pictures/Capture14.PNG",
-        "title":"ICT",
+        "name":"ICT",
         "block": "block d",
         "room":"room d2",
         "clubrep":"emily 0724356765",
@@ -20,7 +20,7 @@
     {
         "id":"3",
         "img":"/pictures/customercare.PNG",
-        "title":"Diplomacy",
+        "name":"Diplomacy",
         "block": "block q ",
         "room":"room q4",
         "clubrep":"emily 0724356765",
@@ -29,7 +29,7 @@
     {
         "id":"4",
         "img":"/pictures/developer.jpg",
-        "title":"Scout club",
+        "name":"Scout club",
         "block": "block s",
         "room":"room S22",
         "clubrep":"emily 0724356765",
@@ -38,7 +38,7 @@
     {
         "id":"5",
         "img":"/pictures/student 1.jpg",
-        "title":"civil club",
+        "name":"civil club",
         "block": "block n",
         "room":"room n10",
         "clubrep":"emily 0724356765",
@@ -47,7 +47,7 @@
     {
         "id":"6",
         "img":"/pictures/mrform.jpg",
-        "title":"Dance club ",
+        "name":"Dance club ",
         "block": "block u",
         "room":"room u22",
         "clubrep":"emily 0724356765",
@@ -56,7 +56,7 @@
     {
         "id":"7",
         "img":"/pictures/content.jpg",
-        "title":"live Art",
+        "name":"live Art",
         "block": "block M",
         "room":"room M21",
         "clubrep":"emily 0724356765",
@@ -65,7 +65,7 @@
     {
         "id":"8",
         "img":"/pictures/mrform.jpg",
-        "title":"music club",
+        "name":"music club",
         "block": "block E",
         "room":"room E13",
         "clubrep":"emily 0724356765",
@@ -75,7 +75,7 @@
     {
         "id":"9",
         "img":"/pictures/Capture14.PNG",
-        "title":"journalism",
+        "name":"journalism",
         "block": "block R",
         "room":"room R15",
         "clubrep":"emily 0724356765",
@@ -84,160 +84,11 @@
     {
         "id":"10",
         "img":"/pictures/homespic.jpg",
-        "title":"enviroment",
+        "name":"enviroment",
         "block": "block j",
         "room":"room J12",
         "clubrep":"emily 0724356765",
         "date":"tuesdays @ 2:30pm"
-
-    },
-    {
-        "id":"11",
-        "img":"/pictures/coolboy.jpg",
-        "title":"tech club",
-        "block": "block F",
-        "room":"room F12",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"12",
-        "img":"/pictures/mbogi.jpg",
-        "title":"Karate club",
-        "block": "block D",
-        "room":"room D32",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"13",
-        "img":"/pictures/rasterman.jpg",
-        "title":"gym club",
-        "block": "block Q",
-        "room":"room Q12",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"14",
-        "img":"/pictures/mrform.jpg",
-        "title":"poem art",
-        "block": "block C",
-        "room":"room C24",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"15",
-        "img":"/pictures/smilygirl.jpg",
-        "title":"mcs & Djs",
-        "block": "block Q",
-        "room":"room Q12",
-         "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-       
-    },
-    {
-        "id":"16",
-        "img":"/pictures/student 1.jpg",
-        "title":"civil club",
-        "block": "block n",
-        "room":"room n10",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"17",
-        "img":"/pictures/mrform.jpg",
-        "title":"Dance club ",
-        "block": "block u",
-        "room":"room u22",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"18",
-        "img":"/pictures/content.jpg",
-        "title":"live Art",
-        "block": "block M",
-        "room":"room M21",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"19",
-        "img":"/pictures/mrform.jpg",
-        "title":"music club",
-        "block": "block E",
-        "room":"room E13",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-       
-    },
-    {
-        "id":"20",
-        "img":"/pictures/Capture14.PNG",
-        "title":"journalism",
-        "block": "block R",
-        "room":"room R15",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"21",
-        "img":"/pictures/homespic.jpg",
-        "title":"enviroment",
-        "block": "block j",
-        "room":"room J12",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-
-    },
-    {
-        "id":"22",
-        "img":"/pictures/coolboy.jpg",
-        "title":"tech club",
-        "block": "block F",
-        "room":"room F12",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"23",
-        "img":"/pictures/mbogi.jpg",
-        "title":"Karate club",
-        "block": "block D",
-        "room":"room D32",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"24",
-        "img":"/pictures/rasterman.jpg",
-        "title":"Gym club",
-        "block": "block Q",
-        "room":"room Q12",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"25",
-        "img":"/pictures/mrform.jpg",
-        "title":"poem art",
-        "block": "block C",
-        "room":"room C24",
-        "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-    },
-    {
-        "id":"26",
-        "img":"/pictures/smilygirl.jpg",
-        "title":"mcs & Djs",
-        "block": "block Q",
-        "room":"room Q12",
-         "clubrep":"emily 0724356765",
-        "date":"tuesdays @ 2:30pm"
-       
     }
 
 ]
