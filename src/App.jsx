@@ -20,7 +20,7 @@ import Noticepage from './components/notifications/Noticepage';
 import Landing from './components/landin page/Landing';
 import Signup from './components/forms/Signup'
 import Login from './components/forms/Login'
-
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
 
 function App() {
@@ -46,10 +46,12 @@ function App() {
         setOpenform(false)
         setOpenSignup(false)
       };
-// layout 
+
+      const queryClient = new QueryClient();
+      // layout 
     const Layout = () => {
       return (
-        <>
+        <QueryClientProvider client={queryClient}>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
           <div className="appwrapper">
             
@@ -59,9 +61,8 @@ function App() {
               <Outlet />
             </div>
           </div>
-         
           <Login  isOpen={openform} closefun={CloseformHandler}/>
-        </>
+        </QueryClientProvider>
       )
     }
     const current_user = true;

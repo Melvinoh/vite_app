@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import sportdata from "../../data/sports.json"
 import clubsData from "../../data/clubs.json"
 import Card1 from '../../components/cards/Card1'
 import Card2 from '../../components/cards/Card2'
 import Card3 from '../../components/cards/Card3'
-import Card4 from '../../components/cards/Card4'
 import LeadersCard from '../../components/cards/LeadersCard'
 import "./clubs.css"
+import { AuthContext } from '../../context/AuthContext'
+import { useQuery } from '@tanstack/react-query'
+import { makeRequest } from '../../../axios'
 
 function Clubs() {
+
+    const{sloading, error, data} = useQuery(['clubs'], () =>{
+        makeRequest.get('/getClubs').then((res)=>{
+            return res.data;
+        })
+    })
+
+    
   return (
     <div className='wrapper-con'>
         <div className="clubs-wrapper">

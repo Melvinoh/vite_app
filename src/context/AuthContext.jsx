@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
     const [UserContent, setUserContent] = useState({});
+    const [ClubsContent, setClubsContent] = useState({});
     const [Error, setError] = useState(null);
 
     const loginForm = async (Inputs) =>{
@@ -14,14 +15,23 @@ export const AuthContextProvider = ({children}) => {
             setUserContent(response.data)
             console.log(UserContent)
         } catch (err) {
-            setError(err.response.data)            
+            setError(err.response.data)           
         }
+    }
+    const getClubs = async () =>{
+        try {
+            const response = await axios.get("http://localhost:8800/api/clubs/getClubs");
+            setClubsContent(response.data);
+            console.log(setClubsContent)
+        } catch (err) {
+            setError(err.response.data)
+        }
+
     }
 
     return(
-        <AuthContext.Provider value={{loginForm, UserContent, Error}}>
+        <AuthContext.Provider value={{loginForm, UserContent, Error,getClubs}}>
             {children}
-
         </AuthContext.Provider>
     )
 
