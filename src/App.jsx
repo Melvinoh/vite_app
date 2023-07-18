@@ -54,7 +54,6 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
           <div className="appwrapper">
-            
             <Search/>
             <div className="app_container">
               <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
@@ -94,6 +93,10 @@ function App() {
           </ProtectedRoute>
         ),
         children : [
+          {
+            path : "/",
+            element : <Home />
+          },
           {
             path : "/home",
             element : <Home />

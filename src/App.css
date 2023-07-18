@@ -58,7 +58,6 @@ input{
   position: relative;
   display: flex;
   gap: 0.1rem;
-  padding: 0.4rem;
 }
 .app_container::-webkit-scrollbar{
   width: 0;

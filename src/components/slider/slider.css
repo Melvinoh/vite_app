@@ -2,8 +2,6 @@
     width: 100%;
     object-fit: cover;
     height:250px;
-    object-fit: cover;
-
 }
 .slider{
     position: relative;
@@ -28,7 +26,7 @@
 }
 @media (max-width:615px) {
     .slider img,.slider .text{
-        height: 135px;
+        height: 210px;
     }
     
 }

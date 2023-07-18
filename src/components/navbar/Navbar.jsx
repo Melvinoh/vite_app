@@ -13,7 +13,7 @@ function Navbar(props) {
     <div className={`nav_container ${(props.isOpen)? 'open' : ''}`} onClick={props.closefun} >
         <div className="nav-wrapper">
             <div className="navbar">
-                <Link to= "home" className="nav_item">
+                <Link to= "/" className="nav_item">
                     <VscHome className='nav_icons'/>
                     <span>home</span>
                 </Link>
