@@ -3,8 +3,6 @@ import { useState, useContext, } from 'react';
 import "./forms.css";
 import {IoCloseCircleOutline} from 'react-icons/io5';
 import { AuthContext } from '../../context/AuthContext.jsx';
-import useNavigate from react-router-com
-impo
 
 function Login(props) {
   const {loginForm, userContent, Error} = useContext(AuthContext);
