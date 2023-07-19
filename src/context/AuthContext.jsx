@@ -10,17 +10,20 @@ export const AuthContextProvider = ({children}) => {
     const [Error, setError] = useState(null);
 
     const loginForm = async (Inputs) =>{
+        
         try {
-            const response = await axios.get("http://localhost:8800/api/auth/login", Inputs)
+            console.log(Inputs)
+            const response = await axios.post("http://localhost:8800/api/auth/login", Inputs)
             setUserContent(response.data)
             console.log(UserContent)
+
         } catch (err) {
-            setError(err.response.data)           
+            setError(err.response.data)       
         }
     }
     const getClubs = async () =>{
         try {
-            const response = await axios.get("http://localhost:8800/api/clubs/getClubs");
+            const response = await axios.get("http://localhost:8800/api/clubs/getClubs", Inputs);
             setClubsContent(response.data);
             console.log(setClubsContent)
         } catch (err) {

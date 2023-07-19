@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Card3 = ({cards}) => {
-    console.log(cards)
   return (
     <Link  to={cards.id} className='card3-container link' key={cards.id}>
         <div className="card3-pic">

@@ -12,13 +12,16 @@ import { useQuery } from '@tanstack/react-query'
 import { makeRequest } from '../../../axios'
 
 function Clubs() {
+    const {getclubs} = useContext(AuthContext);
+
+    // getclubs();
 
     const{sloading, error, data} = useQuery(['clubs'], () =>{
-        makeRequest.get('/getClubs').then((res)=>{
+        return makeRequest.get('/getClubs').then((res)=>{
             return res.data;
         })
     })
-
+    console.log(data);
     
   return (
     <div className='wrapper-con'>
@@ -32,7 +35,7 @@ function Clubs() {
                     <span className='heading2'> my clubs</span>
                     <div className="card4-wrapper grid">
                         {
-                            clubsData.map(data =>(<LeadersCard key={data.id} item={data}/>))
+                            clubsData.map(data =>(<LeadersCard key={data.clubsID} item={data}/>))
                         }
                     </div>
                     </div>
@@ -72,7 +75,7 @@ function Clubs() {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    sportdata.map(data =>(
+                                    clubsData.map(data =>(
                                         <Card3 cards={data} key={data.id}/>
                                     ))
                                 }
