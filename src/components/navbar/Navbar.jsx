@@ -3,12 +3,23 @@ import "./navbar.css";
 import {VscHome} from 'react-icons/vsc';
 import {MdOutlineSchool , MdSportsTennis , MdOutlineShoppingBasket}from "react-icons/md";
 import {IoPeopleCircleOutline}from "react-icons/io5";
-import {GrGallery} from "react-icons/gr";
+import {TfiGallery} from "react-icons/tfi";
+import {BiLogOut} from "react-icons/bi";
 import {BsSuitClub} from "react-icons/bs";
-//link router
-import { Link } from 'react-router-dom';
-
+import { AuthContext } from '../../context/AuthContext.jsx';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext, useState } from "react";
+import axios from "axios";
 function Navbar(props) {
+    const {currentUser, logout} = useContext(AuthContext);
+    const [Err, setErr] = useState("");
+    const navigate = useNavigate()
+
+    const handleclick = async () =>{
+      await logout();
+      console.log(currentUser);
+      navigate("/satuk");
+    }
   return (
     <div className={`nav_container ${(props.isOpen)? 'open' : ''}`} onClick={props.closefun} >
         <div className="nav-wrapper">
@@ -42,19 +53,19 @@ function Navbar(props) {
                 </Link>
                 
                 <Link to= "gallery" className="nav_item">
-                    <GrGallery className='nav_icons'/>
+                    <TfiGallery className='nav_icons'/>
                     <span>gallery</span>
                 </Link>
             </div>
             <div className="navbar">
-                <Link to= "leadership" className="nav_item">
-                    <IoPeopleCircleOutline className='nav_icons'/>
+                <Link to ="leaders" className="nav_item" >   
+                    <img src={`/pictures/${currentUser.profile_pic}`}alt="profile" srcset="" className="navpic"/>              
                     <span>profile</span>
                 </Link>
-                <Link to= "gallery" className="nav_item">
-                    <GrGallery className='nav_icons'/>
+                <div to= "gallery" className="nav_item" onClick={handleclick}>
+                    <BiLogOut className='nav_icons'/>
                     <span>log out</span>
-                </Link>
+                </div>
             </div>
         </div>
         

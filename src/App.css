@@ -51,6 +51,7 @@ input{
   flex: 1;
   margin: 0.5rem;
   width: min(100%,90%);
+  height: 150vh;
 }
 
 /* media queries */

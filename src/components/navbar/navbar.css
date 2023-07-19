@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 85%;
+    height: 87%;
     max-width: 170px;
     background-color: #ebfeebf0;
     border: solid  #4ECB71 1px;
@@ -20,7 +20,7 @@
     margin: 0.4rem 0.1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.1rem;
     width: 100%;
     animation-name: navAnimation;
     animation-duration: 0.7s;
@@ -124,4 +124,9 @@
         transform: translate(0%);
         transition: opacity 300ms , transform 1s;
     }
+}
+.navpic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }

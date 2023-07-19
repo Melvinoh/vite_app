@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import DatePicker from "react-datepicker";
 import { TbBellRinging2Filled } from 'react-icons/tb'
 import "react-datepicker/dist/react-datepicker.css";
@@ -6,8 +6,12 @@ import "./home.css"
 import Slider from '../../components/slider/Slider';
 import { Link } from 'react-router-dom';
 
+import { AuthContext } from '../../context/AuthContext.jsx';
+
+
 
 const Home = () => {
+  const { currentUser} = useContext(AuthContext);
  
   return (
     <div className="wrapper-con">
@@ -18,18 +22,18 @@ const Home = () => {
           </div>
           <div className="profile_wrapper">
             <div className="profile">
-              <h3 className="heading">my profile</h3>
+              <h3 className="heading2">my profile</h3>
               <div className="prof-pic">
-                <img src="/pictures/rasterman.jpg" alt="profile" srcset="" />
+                <img src={`/pictures/${currentUser.profile_pic}`}alt="profile" srcset="" />
               </div>
               <div className="content">
-                <span>SCCI/00573/2020</span>
+                <span>{currentUser.regno}</span>
                 <span>school of computing</span>
                 <span>computer science</span>
               </div>
             </div>
             <div className="calendar">
-              <span>calendar</span>
+              <span className='heading3'>calendar</span>
               <DatePicker
                 selectsRange
                 inline
@@ -39,7 +43,7 @@ const Home = () => {
         </div>
         <div className="notice_wrapper">
           <div className="elements">
-            <h5 className="heading">notice board</h5>
+            <h5 className="heading2">notice board</h5>
           </div>
           <Link to="Notices" className="elements">
             <img src="/pictures/customercare.PNG" alt="" />

@@ -3,10 +3,12 @@ import { useState, useContext, } from 'react';
 import "./forms.css";
 import {IoCloseCircleOutline} from 'react-icons/io5';
 import { AuthContext } from '../../context/AuthContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 function Login(props) {
-  const {loginForm, userContent, Error} = useContext(AuthContext);
-
+  const {loginForm, currentUser, Error} = useContext(AuthContext);
+ 
+  const navigate = useNavigate()
   const [Inputs, setInputs] = useState({
     username: "",
     password:""
@@ -21,9 +23,7 @@ function Login(props) {
   const handleSubmit = async(e) =>{
     e.preventDefault()
      await loginForm(Inputs)
-     
-     const navigate = useNavigate()
-
+     navigate("/")
   }
   
   return (

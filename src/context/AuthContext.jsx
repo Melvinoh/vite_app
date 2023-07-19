@@ -5,22 +5,53 @@ import React from "react";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
-    const [UserContent, setUserContent] = useState({});
+
+    const[openform ,setOpenform] = useState(false);
+    const OpenformHandler = ()=>{
+      setOpenform(!openform)
+    };
+
+    const [currentUser, setCurrentUser] = useState(
+        JSON.parse(localStorage.getItem("user")) || null
+    );
     const [ClubsContent, setClubsContent] = useState({});
     const [Error, setError] = useState(null);
 
     const loginForm = async (Inputs) =>{
-        
         try {
             console.log(Inputs)
-            const response = await axios.post("http://localhost:8800/api/auth/login", Inputs)
-            setUserContent(response.data)
-            console.log(UserContent)
-
+            const response = await axios.post("http://localhost:8800/api/auth/login", Inputs, {
+                withCredentials: true,
+            })
+            setCurrentUser(response.data)
         } catch (err) {
-            setError(err.response.data)       
+            console.log(err)
+            setError()       
+        }
+
+        OpenformHandler();
+    }
+
+    
+
+    
+    useEffect(()=>{
+       if (currentUser){
+        localStorage.setItem("user", JSON.stringify(currentUser));
+       } 
+    },[currentUser]);
+    const logout = async () =>{
+        try {
+            await axios.get("http://localhost:8800/api/auth/logout");
+        } catch (err) {
+            console.log(err)
+            setError(err.response.data)  
+            setCurrentUser(false);
+            
         }
     }
+   
+
     const getClubs = async () =>{
         try {
             const response = await axios.get("http://localhost:8800/api/clubs/getClubs", Inputs);
@@ -29,11 +60,9 @@ export const AuthContextProvider = ({children}) => {
         } catch (err) {
             setError(err.response.data)
         }
-
     }
-
     return(
-        <AuthContext.Provider value={{loginForm, UserContent, Error,getClubs}}>
+        <AuthContext.Provider value={{loginForm, currentUser, setCurrentUser, logout, Error,getClubs}}>
             {children}
         </AuthContext.Provider>
     )

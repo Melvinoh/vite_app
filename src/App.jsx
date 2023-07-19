@@ -4,7 +4,7 @@ import Header from './components/header/Header'
 import Search from './components/search/Search'
 import { Outlet, RouterProvider,Navigate } from 'react-router'
 import Navbar from './components/navbar/Navbar'
-import { useState } from 'react';
+import { useState,useContext} from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home page/Home';
 import Clubs from './pages/clubs pages/Clubs';
@@ -20,7 +20,9 @@ import Noticepage from './components/notifications/Noticepage';
 import Landing from './components/landin page/Landing';
 import Signup from './components/forms/Signup'
 import Login from './components/forms/Login'
+import { AuthContext } from './context/AuthContext'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+
 
 
 function App() {
@@ -33,7 +35,7 @@ function App() {
       setOpenNav(false)
     }
 //hook state for form opening and close
-  const[openform ,setOpenform] = useState(false);
+      const[openform ,setOpenform] = useState(false);
       const OpenformHandler = ()=>{
         setOpenform(!openform)
       };
@@ -64,10 +66,10 @@ function App() {
         </QueryClientProvider>
       )
     }
-    const current_user = true;
-
+    
+    const {currentUser} = useContext(AuthContext);
     const ProtectedRoute = ({children}) =>{
-      if (!current_user) {
+      if (!currentUser) {
         return( <Navigate  to="/satuk" />)
       }
       return children;
