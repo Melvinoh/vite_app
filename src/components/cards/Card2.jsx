@@ -1,24 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const Card2 = (iz) => {
+const Card2 = ({item2}) => {
+    console.log(item2);
   return (
-    <div className="cd2-container">
+    <Link to={item2.ClubsID} className="cd2-container link">
         <div className="cd2-pic">
-            <img src="/pictures/developer.jpg" alt="" />
+            <img src={`/pictures/${item2.profile_pic}`} alt="" srcset="" />
         </div>
         <div className="cd2-content">
-            <h6>drama club</h6>
+            <h6>{item2.name}</h6>
             <p>
-                the quick brown fox jumped over the lazy dog 
-                na hili penzi la ukweli baby nipe tu na ukinikumbatia moyo unadunda pu pu
-                puuu
+               {item2.description}
             </p>
             <div>
-                <h6>block j</h6>
-                <h6>room 31</h6>
+                <h6>block : {item2.block}</h6>
+                <h6>room : {item2.room}</h6>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

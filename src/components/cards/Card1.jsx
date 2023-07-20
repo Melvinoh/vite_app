@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Card1 = () => {
+const Card1 = ({item2}) => {
   return (
-    <div className="cd1-container">
+    <Link to={item2.ClubsID} className="cd1-container">
         <div className="cd1-pic">
-            <img src="/pictures/customercare.PNG" alt="" />
+          <img src={`/pictures/${item2.profile_pic}`} alt="" srcset="" />
         </div>
         <div className="cd1-content">
-            <span>musicclub </span>
+            <span>{item2.name}</span>
         </div>
-    </div>
+    </Link>
   )
 }
 

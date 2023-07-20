@@ -54,7 +54,7 @@ export const AuthContextProvider = ({children}) => {
 
     const getClubs = async () =>{
         try {
-            const response = await axios.get("http://localhost:8800/api/clubs/getClubs", Inputs);
+            const response = await axios.get("http://localhost:8800/api/clubs/getClubs");
             setClubsContent(response.data);
             console.log(setClubsContent)
         } catch (err) {
@@ -62,7 +62,7 @@ export const AuthContextProvider = ({children}) => {
         }
     }
     return(
-        <AuthContext.Provider value={{loginForm, currentUser, setCurrentUser, logout, Error,getClubs}}>
+        <AuthContext.Provider value={{loginForm, currentUser, setCurrentUser, logout, Error,getClubs,ClubsContent}}>
             {children}
         </AuthContext.Provider>
     )

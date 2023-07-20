@@ -11,17 +11,26 @@ import { AuthContext } from '../../context/AuthContext'
 import { useQuery } from '@tanstack/react-query'
 import { makeRequest } from '../../../axios'
 
-function Clubs() {
-    const {getclubs} = useContext(AuthContext);
+const Clubs =  () => {  
+    const {getClubs, ClubsContent} = useContext(AuthContext);
+    
 
-    // getclubs();
 
-    const{sloading, error, data} = useQuery(['clubs'], () =>{
-        return makeRequest.get('/getClubs').then((res)=>{
-            return res.data;
-        })
-    })
-    console.log(data);
+    const{isloading, error, data} = useQuery(['clubs'], async () =>{
+
+        const response = await makeRequest.get('/getClubs');
+
+        return response.data
+        
+    });
+    if(isloading) return <div>loading...</div>
+
+    if (error) {
+        return <div> {error.message}</div>
+    }
+    if(!data) return <div> loading ... </div>
+
+
     
   return (
     <div className='wrapper-con'>
@@ -35,7 +44,7 @@ function Clubs() {
                     <span className='heading2'> my clubs</span>
                     <div className="card4-wrapper grid">
                         {
-                            clubsData.map(data =>(<LeadersCard key={data.clubsID} item={data}/>))
+                            data.map(Data =>(<LeadersCard key={Data.clubsID} item={Data}/>))
                         }
                     </div>
                     </div>
@@ -45,11 +54,8 @@ function Clubs() {
                     </div>
                     <div className="cd2-wrapper">
                         {
-                            clubsData.map(data =>(<Card2 key={data.id} item2={data}/>))
+                            data.map(data =>(<Card2 key={data.id} item2={data}/>))
                         }
-                        <Card2/>
-                        <Card2/>
-                        <Card2/>
                     </div>
                     </div>
                     <div className="card1-box">
@@ -57,12 +63,10 @@ function Clubs() {
                         <span>recomended clubs</span>
                     </div>
                     <div className="cd1-wrapper">
-                            <Card1/>
-                            <Card1/>
-                            <Card1/>
-                            <Card1/>
-                            <Card1/>
-                            <Card1/>
+                        {
+                            data.map(data =>(<Card1 key={data.id} item2={data}/>))
+                        }
+                           
                     </div>
                     </div> 
                     <div className="card3-box">
@@ -75,7 +79,7 @@ function Clubs() {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    clubsData.map(data =>(
+                                    data.map(data =>(
                                         <Card3 cards={data} key={data.id}/>
                                     ))
                                 }
@@ -88,7 +92,7 @@ function Clubs() {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    sportdata.map(data =>(
+                                    data.map(data =>(
                                         <Card3 cards={data} key={data.id}/>
                                     ))
                                 }
@@ -100,7 +104,7 @@ function Clubs() {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    sportdata.map(data =>(
+                                    data.map(data =>(
                                         <Card3 cards={data} key={data.id}/>
                                     ))
                                 }

@@ -10,30 +10,30 @@ import Card1 from '../cards/Card1';
 import Awardscard from '../cards/Awardscard';
 import Registration from '../forms/Registration';
 
-const Non_members = () => {
+const Non_members = ({items}) => {
+  console.log(items)
   return (
   <>
-    <div className='heading1 Nb-heading'> Rotaract club</div>
+    <div className='heading1 '> {items.name} club</div>
       <div className="Nb_container">
         <div className="Nb-left">
         <div className="prof-box">
           <div className="top">
-            <img src="/pictures/mbogi.jpg" alt="" />
+            <img src={`/pictures/${items.profile_pic}`} alt="" srcset="" />
             <div className="prof-content">
-              <span> name : rotaract club</span>
-              <span> block: j</span>
-              <span>room : j24</span>
-              <span>chair : emily</span>
-              <span>contacts : +2547890986</span>
+              <span> <b>name :</b>  {items.name}</span>
+              <span><b>block :</b>  {items.block}</span>
+              <span><b>room :</b>   {items.room}</span>
+              <span><b>chair :</b>   emily</span>
+              <span><b>tel :</b>  +2547890986</span>
             </div>
           </div>
           <hr />
           <div className="bottom">
             <div className="wrapper">
-              <h6 className='heading3'>if you want fun here it is ! </h6>
+              <h6 className='heading3'>codding is fun !</h6>
               <p>
-                the quick brown fox jumped over the lazy dog
-                the quick brown fox jumped over the lazy dog
+                {items.description}
               </p>
               <div>
                 <span>registratoion fee</span>
@@ -61,21 +61,6 @@ const Non_members = () => {
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <Reviews/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Reviews/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Reviews/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Reviews/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Reviews/>
-            </SwiperSlide>
             <SwiperSlide>
               <Reviews/>
             </SwiperSlide>
@@ -113,7 +98,7 @@ const Non_members = () => {
         </div>
         </div>
         <div className="Nb-right">
-          <Registration/>
+          <Registration clubid = {items.id} />
 
           <div className="awards-wrapper">
             <span className='heading2'>awards</span>
@@ -127,11 +112,10 @@ const Non_members = () => {
                 <span>recomended clubs</span>
             </div>
             <div className="cd1-wrapper">
-              <Card1/>
-              <Card1/>
-              <Card1/>
-              <Card1/>
-              <Card1/>
+              <Card1 item2 ={items}/>
+              <Card1 item2 ={items}/>
+              <Card1 item2 ={items}/>
+             
             </div>
           </div> 
         </div>
