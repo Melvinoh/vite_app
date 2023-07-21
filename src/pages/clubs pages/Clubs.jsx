@@ -8,14 +8,10 @@ import Card3 from '../../components/cards/Card3'
 import LeadersCard from '../../components/cards/LeadersCard'
 import "./clubs.css"
 import { AuthContext } from '../../context/AuthContext'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueries } from '@tanstack/react-query'
 import { makeRequest } from '../../../axios'
 
 const Clubs =  () => {  
-    const {getClubs, ClubsContent} = useContext(AuthContext);
-    
-
-
     const{isloading, error, data} = useQuery(['clubs'], async () =>{
 
         const response = await makeRequest.get('/getClubs');
@@ -30,6 +26,28 @@ const Clubs =  () => {
     }
     if(!data) return <div> loading ... </div>
 
+    
+    // const [clubs, myclubs] = useQueries([
+    //     { queryKey:['clubs'], queryFn:()=>makeRequest.get('/getClubs').then((res)=> res.data)},
+    //     { queryKey:['myclubs'], queryFn:()=>makeRequest.post('/myclubs').then((res)=> res.data)}
+    // ]);
+    // if(clubs.isLoading ||myclubs.isLoading ) return <div>loading ...</div>
+    // if(clubs.error ||myclubs.error ) return <div>Error :{clubs.error?.message || myclubs.error?.message }</div>
+    // if(!clubs || !myclubs) return <div>loading ...</div>
+
+    // const [clubsQuery, myClubsQuery] = useQueries([
+    //     { queryKey: ['clubs'], queryFn: () => makeRequest.get('/getClubs').then((response) => response.data) },
+    //     { queryKey: ['myclubs'], queryFn: () => makeRequest.get('/myclubs').then((response) => response.data) },
+    //   ]);
+    
+    //   if (clubsQuery.isLoading || myClubsQuery.isLoading) return <div>Loading...</div>;
+    
+    //   if (clubsQuery.error || myClubsQuery.error) {
+    //     return <div>Error: {clubsQuery.error?.message || myClubsQuery.error?.message}</div>;
+    //   }
+    
+    //   const allClubsData = clubsQuery.data || [];
+    //   const myClubsData = myClubsQuery.data || [];
 
     
   return (

@@ -98,7 +98,7 @@ const Non_members = ({items}) => {
         </div>
         </div>
         <div className="Nb-right">
-          <Registration clubid = {items.id} />
+          <Registration clubid = {items.ClubsID} />
 
           <div className="awards-wrapper">
             <span className='heading2'>awards</span>

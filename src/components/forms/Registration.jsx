@@ -1,6 +1,34 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
-const Registration = () => {
+const Registration = ({clubid}) => {
+ 
+  const [Regno, setRegno] = useState({clubid});
+  const [Error, setError] = useState(null);
+  const [Response, setResponse] = useState(null);
+  
+  const navigate = useNavigate()
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post("http://localhost:8800/api/clubs/clubreg",Regno);
+        setResponse(response.data)
+        
+      } catch (error) {
+        setError(error.response.data);
+        
+      }
+      navigate("/clubs"); 
+  } 
+    
+  const handleInputs = (e) =>{
+    setRegno( (prev) => ({...prev, [e.target.name]:e.target.value}) )
+
+  }
+  console.log(Regno);
+
   return (
     <div className="regform-wrapper">
         <span className='heading2'>registration form</span>
@@ -10,21 +38,26 @@ const Registration = () => {
         </div>
         <div className="inputs">
           <label htmlFor="sname"> Second name</label>
-          <input type="text" name='fname' />
+          <input type="text" name='sname' />
         </div>
         <div className="inputs">
           <label htmlFor="adm "> ADM no</label>
-          <input type="text" name='fname' />
+          <input type="text" name='regno' onChange={handleInputs} />
         </div>
         <div className="inputs">
           <label htmlFor="school"> school</label>
-          <input type="text" name='fname' />
+          <input type="text" name='school' />
         </div>
         <div className="inputs">
           <label htmlFor="course"> course name</label>
-          <input type="text" name='fname' />
+          <input type="text" name='course' />
         </div>
-        <button className='btn'>submit</button>
+        <div className="inputs">
+          <input type="hidden" name="clubid" value={clubid} />
+        </div>
+        {Error && Error}
+        {Response && Response}
+        <button className='btn' onClick={handleSubmit}>submit</button>
   </div>
   )
 }
