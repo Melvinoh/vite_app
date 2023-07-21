@@ -59,7 +59,7 @@ function Navbar(props) {
             </div>
             <div className="navbar">
                 <Link to ="leaders" className="nav_item" >   
-                    <img src={`/pictures/${currentUser.profile_pic}`}alt="profile" srcset="" className="navpic"/>              
+                    <img src={`/pictures/${currentUser.profile_pic}`}alt="profile"className="navpic"/>              
                     <span>profile</span>
                 </Link>
                 <div to= "gallery" className="nav_item" onClick={handleclick}>

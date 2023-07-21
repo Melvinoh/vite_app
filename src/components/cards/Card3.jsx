@@ -5,7 +5,7 @@ const Card3 = ({cards}) => {
   return (
     <Link  to={cards.ClubsID} className='card3-container link' key={cards.id}>
         <div className="card3-pic">
-          <img src={`/pictures/${cards.profile_pic}`} alt="" srcset="" />
+          <img src={`/pictures/${cards.profile_pic}`} alt="" />
         </div>
         <div className="card3-content">
             <p>{cards.name}</p>

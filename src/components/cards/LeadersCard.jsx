@@ -7,7 +7,7 @@ const LeadersCard = ({item}) => {
     <Link to={item.ClubsID}  className="ld-card_wrapper link">
       <div className="ld-card_container">
           <div className='img'>
-            <img src={`/pictures/${item.profile_pic}`}alt="" srcset="" />
+            <img src={`/pictures/${item.profile_pic}`}alt="" />
           </div>
           <div className="content">
               <span>{item.name}</span>

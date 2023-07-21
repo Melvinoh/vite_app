@@ -62,7 +62,7 @@ const Clubs =  () => {
                     <span className='heading2'> my clubs</span>
                     <div className="card4-wrapper grid">
                         {
-                            data.map(Data =>(<LeadersCard key={Data.clubsID} item={Data}/>))
+                            data.map(Data =>(<LeadersCard key={Data.ClubsID} item={Data}/>))
                         }
                     </div>
                     </div>
@@ -72,7 +72,7 @@ const Clubs =  () => {
                     </div>
                     <div className="cd2-wrapper">
                         {
-                            data.map(data =>(<Card2 key={data.id} item2={data}/>))
+                            data.map(data =>(<Card2 key={data.ClubsID} item2={data}/>))
                         }
                     </div>
                     </div>
@@ -82,7 +82,7 @@ const Clubs =  () => {
                     </div>
                     <div className="cd1-wrapper">
                         {
-                            data.map(data =>(<Card1 key={data.id} item2={data}/>))
+                            data.map(data =>(<Card1 key={data.ClubsID} item2={data}/>))
                         }
                            
                     </div>
@@ -98,7 +98,7 @@ const Clubs =  () => {
                             <div className="cd3-wrapper grid">
                                 {
                                     data.map(data =>(
-                                        <Card3 cards={data} key={data.id}/>
+                                        <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }
 
@@ -111,7 +111,7 @@ const Clubs =  () => {
                             <div className="cd3-wrapper grid">
                                 {
                                     data.map(data =>(
-                                        <Card3 cards={data} key={data.id}/>
+                                        <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }
                             </div>
@@ -123,7 +123,7 @@ const Clubs =  () => {
                             <div className="cd3-wrapper grid">
                                 {
                                     data.map(data =>(
-                                        <Card3 cards={data} key={data.id}/>
+                                        <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }
                             </div>
