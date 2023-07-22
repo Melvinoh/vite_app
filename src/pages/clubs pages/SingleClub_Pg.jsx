@@ -1,22 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import Members from '../../components/clubs & sports components/Members'
 import Non_members from '../../components/clubs & sports components/Non_members'
 import { useContext } from 'react'
-
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-
+import { AuthContext } from '../../context/AuthContext'
 const Club_details = () => {
+  const queryClient = useQueryClient();
   const {id} = useParams();
 
-  const {isLoading , data , error} = useQuery(["myClubs"], async () =>{
+ 
+  const myclubs = queryClient.getQueryData(['myclubs']);
+  console.log(myclubs)
+  const [Myclubs, setMyclubs] = useState(JSON.parse(localStorage.getItem("myclub")) || myclubs)
+  console.log(Myclubs)
+  useEffect(()=>{
+      if (myclubs){
+       localStorage.setItem("myclub", JSON.stringify(Myclubs));
+      } 
+   },[Myclubs]);
+  
+  
+  console.log(Myclubs.length);
+  for (let i = 0; i < Myclubs.length; i++) {
+    if(Myclubs[i].ClubsID  == id ){
+      var clubMember = Myclubs[i].ClubsID;
+    }
+  }
+  console.log(clubMember);
+
+
+  const {isLoading , data , error} = useQuery(["singleclubs"], async () =>{
     const response = await axios.get(`http://localhost:8800/api/clubs/getClubsID/${id}`);
     return response.data;
   });
   if (isLoading) return <div> loading ...</div>
   if (error) return <div>{error}</div>
 
+  if(clubMember){
+    return (
+      <div className='wrapper-con'>
+         <Members key={data.id} items={data}/>
+      </div>
+    )
+  }
 
   return (
   <div className='wrapper-con'>

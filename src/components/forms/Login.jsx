@@ -16,9 +16,7 @@ function Login(props) {
   const handlechange = (e) =>{
    
     setInputs( (prev) => ({...prev, [e.target.name]:e.target.value}) )
-    console.log(Inputs);
-
-
+    
   }
   const handleSubmit = async(e) =>{
     e.preventDefault()

@@ -10,13 +10,12 @@ const ComposeForm = ({close, isOpen}) => {
             < IoIosClose className='icons' onClick={close}/>
             <div className="c-heading">
                 <div  className='tt'>
-                    <h5>writing a post to : </h5>
-                    <span>rotaract club</span>
+                    <span className='heading2'> posting to: rotaract club</span>
                 </div>
                 <img src="/pictures/content.jpg" alt="img" />
             </div>
             <div className="c-form">
-                <form action="">
+                <form action="c-form1">
                     <input type="hidden" name="" value="muturi melvin"/>
                     <input type="hidden" name="" value="reg number"/>
                     <input type="hidden" name="" value="reg number"/>

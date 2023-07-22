@@ -17,7 +17,6 @@ function Navbar(props) {
 
     const handleclick = async () =>{
       await logout();
-      console.log(currentUser);
       navigate("/satuk");
     }
   return (

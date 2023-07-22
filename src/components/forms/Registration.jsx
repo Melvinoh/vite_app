@@ -17,17 +17,20 @@ const Registration = ({clubid}) => {
         setResponse(response.data)
         
       } catch (error) {
-        setError(error.response.data);
-        
+        setError(error.response.data); 
       }
-      navigate("/clubs"); 
+      
+      if(!Error){
+        navigate("/clubs"); 
+      }
+      
   } 
     
   const handleInputs = (e) =>{
     setRegno( (prev) => ({...prev, [e.target.name]:e.target.value}) )
 
   }
-  console.log(Regno);
+
 
   return (
     <div className="regform-wrapper">

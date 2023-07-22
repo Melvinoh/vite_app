@@ -7,7 +7,7 @@ import { useState ,useEffect} from 'react'
 import {BsPenFill} from 'react-icons/bs';
 import "./singlepages.css";
 
-const Members = ({}) => {
+const Members = ({items}) => {
 
     const [OpenTab, setOpenTab] = useState(false)
     const [IsActive, setIsActive] = useState(false)
@@ -40,9 +40,7 @@ const Members = ({}) => {
             <ComposeForm isOpen={OpenCompose} close={closecompose}/>
         </div>
         <div className='Members_container'>
-            <h4 className="heading1">
-                rotaract club
-            </h4>
+            <h4 className="heading1">{items.name}</h4>
             <div className="tabs-wrapper">
                 <span className={`tabs  ${IsActive ? 'active' : '' }`} onClick={handleswitch}>posts</span>
                 <span className={`tabs  ${OpenTab ? 'active' : ''}`} onClick={handleopen}> events</span>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext ,useState} from 'react'
 import { Link } from 'react-router-dom'
 import sportdata from "../../data/sports.json"
 import clubsData from "../../data/clubs.json"
@@ -8,48 +8,34 @@ import Card3 from '../../components/cards/Card3'
 import LeadersCard from '../../components/cards/LeadersCard'
 import "./clubs.css"
 import { AuthContext } from '../../context/AuthContext'
-import { useQuery, useQueries } from '@tanstack/react-query'
-import { makeRequest } from '../../../axios'
+import {  useQueries, useQueryClient } from '@tanstack/react-query'
+import { makeRequest } from '../../../axios';
 
-const Clubs =  () => {  
-    const{isloading, error, data} = useQuery(['clubs'], async () =>{
 
-        const response = await makeRequest.get('/getClubs');
 
-        return response.data
-        
+const Clubs =  () => { 
+    const queryClient = useQueryClient();
+    const {currentUser} = useContext(AuthContext)
+
+    const regno = {regno:currentUser.regno};
+    const [ clubsQuery, myClubsQuery] = useQueries({
+        queries:[
+            {
+                queryKey:['clubs'],
+                queryFn: () => makeRequest.get("/getClubs").then((res)=> res.data)
+            },
+            {
+                queryKey:['myclubs'],
+                queryFn: () => makeRequest.post("/myclubs",regno).then((res)=> res.data)
+            },
+        ],
+        queryClient,
     });
-    if(isloading) return <div>loading...</div>
 
-    if (error) {
-        return <div> {error.message}</div>
-    }
-    if(!data) return <div> loading ... </div>
+    if(clubsQuery.isLoading || myClubsQuery.isLoading) return <div>loading ...</div> 
+    if(clubsQuery.error|| myClubsQuery.error) return <div>{ myClubsQuery.error.message.data}</div> 
+    if(!myClubsQuery) return <div>you are not a member of any clubs yet </div>
 
-    
-    // const [clubs, myclubs] = useQueries([
-    //     { queryKey:['clubs'], queryFn:()=>makeRequest.get('/getClubs').then((res)=> res.data)},
-    //     { queryKey:['myclubs'], queryFn:()=>makeRequest.post('/myclubs').then((res)=> res.data)}
-    // ]);
-    // if(clubs.isLoading ||myclubs.isLoading ) return <div>loading ...</div>
-    // if(clubs.error ||myclubs.error ) return <div>Error :{clubs.error?.message || myclubs.error?.message }</div>
-    // if(!clubs || !myclubs) return <div>loading ...</div>
-
-    // const [clubsQuery, myClubsQuery] = useQueries([
-    //     { queryKey: ['clubs'], queryFn: () => makeRequest.get('/getClubs').then((response) => response.data) },
-    //     { queryKey: ['myclubs'], queryFn: () => makeRequest.get('/myclubs').then((response) => response.data) },
-    //   ]);
-    
-    //   if (clubsQuery.isLoading || myClubsQuery.isLoading) return <div>Loading...</div>;
-    
-    //   if (clubsQuery.error || myClubsQuery.error) {
-    //     return <div>Error: {clubsQuery.error?.message || myClubsQuery.error?.message}</div>;
-    //   }
-    
-    //   const allClubsData = clubsQuery.data || [];
-    //   const myClubsData = myClubsQuery.data || [];
-
-    
   return (
     <div className='wrapper-con'>
         <div className="clubs-wrapper">
@@ -62,7 +48,7 @@ const Clubs =  () => {
                     <span className='heading2'> my clubs</span>
                     <div className="card4-wrapper grid">
                         {
-                            data.map(Data =>(<LeadersCard key={Data.ClubsID} item={Data}/>))
+                            Array.isArray(myClubsQuery.data) ? (myClubsQuery.data.map( (data) => <LeadersCard key={data.ClubID} item={data} /> )) : (<div>{myClubsQuery.data}</div>)
                         }
                     </div>
                     </div>
@@ -72,7 +58,7 @@ const Clubs =  () => {
                     </div>
                     <div className="cd2-wrapper">
                         {
-                            data.map(data =>(<Card2 key={data.ClubsID} item2={data}/>))
+                            clubsQuery.data?.slice(6).map(data =>(<Card2 key={data.ClubsID} item2={data}/>))
                         }
                     </div>
                     </div>
@@ -82,7 +68,7 @@ const Clubs =  () => {
                     </div>
                     <div className="cd1-wrapper">
                         {
-                            data.map(data =>(<Card1 key={data.ClubsID} item2={data}/>))
+                            clubsQuery.data?.map(data =>(<Card1 key={data.ClubsID} item2={data}/>))
                         }
                            
                     </div>
@@ -97,7 +83,7 @@ const Clubs =  () => {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    data.map(data =>(
+                                    clubsQuery.data?.map(data =>(
                                         <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }
@@ -110,7 +96,7 @@ const Clubs =  () => {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    data.map(data =>(
+                                    clubsQuery.data?.map(data =>(
                                         <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }
@@ -122,7 +108,7 @@ const Clubs =  () => {
                             </div>
                             <div className="cd3-wrapper grid">
                                 {
-                                    data.map(data =>(
+                                    clubsQuery.data?.map(data =>(
                                         <Card3 cards={data} key={data.ClubsID}/>
                                     ))
                                 }

@@ -23,7 +23,8 @@
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.3",
     "react-router-dom": "^6.11.0",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "xtypejs": "^0.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

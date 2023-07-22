@@ -11,7 +11,7 @@ import Awardscard from '../cards/Awardscard';
 import Registration from '../forms/Registration';
 
 const Non_members = ({items}) => {
-  console.log(items)
+
   return (
   <>
     <div className='heading1 '> {items.name} club</div>
@@ -19,7 +19,7 @@ const Non_members = ({items}) => {
         <div className="Nb-left">
         <div className="prof-box">
           <div className="top">
-            <img src={`/pictures/${items.profile_pic}`} alt="" srcset="" />
+            <img src={`/pictures/${items.profile_pic}`} alt=""/>
             <div className="prof-content">
               <span> <b>name :</b>  {items.name}</span>
               <span><b>block :</b>  {items.block}</span>

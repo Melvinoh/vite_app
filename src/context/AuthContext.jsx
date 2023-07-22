@@ -1,6 +1,8 @@
 import {createContext, useEffect, useState } from "react";
 import axios from "axios";
 import React from "react";
+import { useQueryClient } from "@tanstack/react-query";
+
 
 export const AuthContext = createContext();
 
@@ -19,7 +21,6 @@ export const AuthContextProvider = ({children}) => {
 
     const loginForm = async (Inputs) =>{
         try {
-            console.log(Inputs)
             const response = await axios.post("http://localhost:8800/api/auth/login", Inputs, {
                 withCredentials: true,
             })
@@ -30,16 +31,13 @@ export const AuthContextProvider = ({children}) => {
         }
 
         OpenformHandler();
-    }
-
-    
-
-    
+    }    
     useEffect(()=>{
        if (currentUser){
         localStorage.setItem("user", JSON.stringify(currentUser));
        } 
     },[currentUser]);
+    
     const logout = async () =>{
         try {
             await axios.get("http://localhost:8800/api/auth/logout");

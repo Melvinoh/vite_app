@@ -154,6 +154,7 @@
 }
 .Mb_content-box{
     display: flex;
+    height: 150vh;
 }
 .Mb-left{
     flex: 1;
