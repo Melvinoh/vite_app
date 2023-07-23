@@ -3,28 +3,26 @@ import {IoIosClose} from 'react-icons/io'
 import "./forms.css"
 
 
-const ComposeForm = ({close, isOpen}) => {
+const ComposeForm = ({close, isOpen, items, id}) => {
   return (
     <div className={`form_modal ${isOpen ? "active" : "" }`}>
         <div className="compose">
             < IoIosClose className='icons' onClick={close}/>
             <div className="c-heading">
                 <div  className='tt'>
-                    <span className='heading2'> posting to: rotaract club</span>
+                    <span className='heading2'> posting to:  {items.name}</span>
                 </div>
-                <img src="/pictures/content.jpg" alt="img" />
+                <img src={`/pictures/${items.profile_pic}`} alt=""/> 
             </div>
             <div className="c-form">
                 <form action="c-form1">
-                    <input type="hidden" name="" value="muturi melvin"/>
-                    <input type="hidden" name="" value="reg number"/>
-                    <input type="hidden" name="" value="reg number"/>
+                    <input type="hidden" name="clubID" value={id}/>
                     <div className="c-in">
                         <label for="image"> image :</label>
                         <input type="file"  name="image"/>
                     </div>
                     <div className="img-preview">
-                        <img src="/pictures/babygirl.jpg" alt="" />
+                        <img src={`/pictures/${items.profile_pic}`} alt=""/>
                     </div>
                     <div className="c-in">
                         <label for="heading"> heading :</label>

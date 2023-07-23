@@ -6,8 +6,10 @@ import chats from "../../data/chats-clubs.json"
 import { useState ,useEffect} from 'react'
 import {BsPenFill} from 'react-icons/bs';
 import "./singlepages.css";
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 
-const Members = ({items}) => {
+const Members = ({items,id}) => {
 
     const [OpenTab, setOpenTab] = useState(false)
     const [IsActive, setIsActive] = useState(false)
@@ -33,11 +35,19 @@ const Members = ({items}) => {
     const closecompose = () =>{
       setOpenCompose(false)
     }
+    console.log(id);
+    const ID = {'clubid': id}
+    const {isLoading, error, data} = useQuery(['post'], async ()=>{
+        const response = await axios.post("http://localhost:8800/api/posts/getPost", ID)
+        return response.data;
+    })
+    if (isLoading) return <div>loading ...</div>
+    if (error) return <div>{error.message}</div>
 
   return (
     <>
         <div className="form-modal">
-            <ComposeForm isOpen={OpenCompose} close={closecompose}/>
+            <ComposeForm isOpen={OpenCompose} close={closecompose} items={items} id={id}/>
         </div>
         <div className='Members_container'>
             <h4 className="heading1">{items.name}</h4>

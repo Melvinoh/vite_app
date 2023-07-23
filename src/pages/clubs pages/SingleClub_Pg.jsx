@@ -13,7 +13,7 @@ const Club_details = () => {
  
   const myclubs = queryClient.getQueryData(['myclubs']);
   console.log(myclubs)
-  const [Myclubs, setMyclubs] = useState(JSON.parse(localStorage.getItem("myclub")) || myclubs)
+  const [Myclubs, setMyclubs] = useState(myclubs || JSON.parse(localStorage.getItem("myclub")))
   console.log(Myclubs)
   useEffect(()=>{
       if (myclubs){
@@ -28,20 +28,17 @@ const Club_details = () => {
       var clubMember = Myclubs[i].ClubsID;
     }
   }
-  console.log(clubMember);
-
 
   const {isLoading , data , error} = useQuery(["singleclubs"], async () =>{
     const response = await axios.get(`http://localhost:8800/api/clubs/getClubsID/${id}`);
     return response.data;
   });
-  if (isLoading) return <div> loading ...</div>
+  if (isLoading) return <div> loading ... </div>
   if (error) return <div>{error}</div>
-
   if(clubMember){
     return (
       <div className='wrapper-con'>
-         <Members key={data.id} items={data}/>
+         <Members key={data.id} items={data} id={id}/>
       </div>
     )
   }
