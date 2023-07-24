@@ -14,7 +14,7 @@ const Club_details = () => {
   const myclubs = queryClient.getQueryData(['myclubs']);
   console.log(myclubs)
   const [Myclubs, setMyclubs] = useState(myclubs || JSON.parse(localStorage.getItem("myclub")))
-  console.log(Myclubs)
+  
   useEffect(()=>{
       if (myclubs){
        localStorage.setItem("myclub", JSON.stringify(Myclubs));

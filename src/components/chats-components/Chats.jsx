@@ -4,6 +4,9 @@ import "./chats.css"
 import {BiLike} from "react-icons/bi"
 import {BsShare,BsSend,BsThreeDotsVertical} from "react-icons/bs"
 import {AiOutlineMessage} from "react-icons/ai"
+import moment from "moment"
+
+
 const Chats = ({chats}) => {
 
     const [OpenAction, setOpenAction] = useState(false)
@@ -19,10 +22,10 @@ const Chats = ({chats}) => {
         <div className="chats_container">
             <div className="chat-header">
                 <div className="left">
-                    <img src={chats.profile_pic} alt="img" />
+                    <img src={`/pictures/${chats.profile_pic}`} alt=""  />
                     <div className="sub-heading">
-                        <span className='heading3'>{chats.name}</span>
-                        <span className='time'>{chats.time}</span>
+                        <span className='heading3'>{chats.fname}  {chats.sname}</span>
+                        <span className='time'>{moment(chats.createdAt).fromNow()}</span>
                     </div>
                 </div>
                 <div className="right" > 
@@ -37,7 +40,7 @@ const Chats = ({chats}) => {
             <div className="content">
                 <img src="" alt="" />
                 <p>
-                    {chats.content}
+                    {chats.desc}
                 </p>
                 <hr />
                 <div className="pp-reactions">
@@ -52,9 +55,9 @@ const Chats = ({chats}) => {
                     </div>
                     <div className="pics">
                         {/* <span className="pics">reacted by </span> */}
-                        <img src={chats.reactions[0]} alt="IMG" />
+                        {/* <img src={chats.reactions[0]} alt="IMG" />
                         <img src={chats.reactions[1]}alt="IMG" />
-                        <img src={chats.reactions[2]}alt="IMG" />
+                        <img src={chats.reactions[2]}alt="IMG" /> */}
                         <span className="extra">+4 comments</span>
                     </div>
                 </div>

@@ -22,11 +22,11 @@ const Clubs =  () => {
         queries:[
             {
                 queryKey:['clubs'],
-                queryFn: () => makeRequest.get("/getClubs").then((res)=> res.data)
+                queryFn: () => makeRequest.get("/clubs/getClubs").then((res)=> res.data)
             },
             {
                 queryKey:['myclubs'],
-                queryFn: () => makeRequest.post("/myclubs",regno).then((res)=> res.data)
+                queryFn: () => makeRequest.post("/clubs/myclubs",regno).then((res)=> res.data)
             },
         ],
         queryClient,

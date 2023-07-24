@@ -6,7 +6,7 @@ import chats from "../../data/chats-clubs.json"
 import { useState ,useEffect} from 'react'
 import {BsPenFill} from 'react-icons/bs';
 import "./singlepages.css";
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 
 const Members = ({items,id}) => {
@@ -35,12 +35,15 @@ const Members = ({items,id}) => {
     const closecompose = () =>{
       setOpenCompose(false)
     }
-    console.log(id);
-    const ID = {'clubid': id}
+
+    const ID = {'clubid':id}
+   
+    
     const {isLoading, error, data} = useQuery(['post'], async ()=>{
         const response = await axios.post("http://localhost:8800/api/posts/getPost", ID)
         return response.data;
     })
+   
     if (isLoading) return <div>loading ...</div>
     if (error) return <div>{error.message}</div>
 
@@ -59,7 +62,7 @@ const Members = ({items,id}) => {
             <div className="Mb_content-box">
                 <div className={ `Mb-left ${OpenTab ? 'active' : ''}`}>
                     {
-                        chats.map(data =>(
+                       data.map(data =>(
                             <Chats key={data.id} chats={data} />
                         ))
                     }
