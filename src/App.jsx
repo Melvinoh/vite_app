@@ -22,6 +22,7 @@ import Signup from './components/forms/Signup'
 import Login from './components/forms/Login'
 import { AuthContext } from './context/AuthContext'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import Profile from './pages/profile page /Profile'
 
 
 
@@ -146,6 +147,10 @@ function App() {
           {
             path : "home/Notices",
             element : <Noticepage />
+          },
+          {
+            path : "/profile",
+            element : <Profile />
           }
         ]
       }

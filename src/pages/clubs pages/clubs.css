@@ -1,5 +1,5 @@
 /* clubs.jsx css styles */
-.clubs-wrapper, .sports-wrapper,.leaders-wrapper, .schools-wrapper{
+.clubs-wrapper, .sports-wrapper,.leaders-wrapper, .schools-wrapper,.p-wrapper{
     display:flex;
     flex-direction: column;
     gap: 0.3rem;

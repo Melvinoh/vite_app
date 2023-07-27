@@ -32,22 +32,21 @@ export const AuthContextProvider = ({children}) => {
 
         OpenformHandler();
     }    
-    useEffect(()=>{
-       if (currentUser){
-        localStorage.setItem("user", JSON.stringify(currentUser));
-       } 
-    },[currentUser]);
-    
+   
     const logout = async () =>{
         try {
             await axios.get("http://localhost:8800/api/auth/logout");
         } catch (err) {
             console.log(err)
             setError(err.response.data)  
-            setCurrentUser(false);
-            
+            setCurrentUser(null);            
         }
     }
+    useEffect(()=>{
+        if (currentUser){
+         localStorage.setItem("user", JSON.stringify(currentUser));
+        } 
+     },[currentUser]);
    
 
     const getClubs = async () =>{

@@ -38,11 +38,11 @@ const Chats = ({chats}) => {
                 </div>
             </div>
             <div className="content">
-                <img src="" alt="" />
+                <img src={`/upload/${chats.post_img}`} alt=""  />
                 <p>
                     {chats.desc}
                 </p>
-                <hr />
+                <hr/>
                 <div className="pp-reactions">
                   
                     <div className="emojis">
@@ -81,7 +81,7 @@ const Chats = ({chats}) => {
                 {OpenComments &&
                  <div className="comment-wrapper">
                     <div className="comment-box">
-                        <div className="comment-pp"><img src={chats.profile_pic} alt="" /></div>
+                        <div className="comment-pp"> <img src={`/pictures/${chats.profile_pic}`} alt=""  /></div>
                         <input type="text" placeholder='write a comment'/>
                         <div className="send-btn"><BsSend/></div>
                     </div>

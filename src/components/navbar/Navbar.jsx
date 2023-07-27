@@ -57,11 +57,11 @@ function Navbar(props) {
                 </Link>
             </div>
             <div className="navbar">
-                <Link to ="leaders" className="nav_item" >   
+                <Link to ="profile" className="nav_item" >   
                     <img src={`/pictures/${currentUser.profile_pic}`}alt="profile"className="navpic"/>              
                     <span>profile</span>
                 </Link>
-                <div to= "gallery" className="nav_item" onClick={handleclick}>
+                <div to= "" className="nav_item" onClick={handleclick}>
                     <BiLogOut className='nav_icons'/>
                     <span>log out</span>
                 </div>

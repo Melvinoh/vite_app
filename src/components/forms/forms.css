@@ -128,6 +128,7 @@ button{
     width: 80%;
     max-width: 40rem;
     height: 80vh;
+    max-height: fit-content;
     background-color: white;
     justify-content: space-between;
     position: relative;
@@ -180,14 +181,15 @@ button{
     margin: 0.2rem auto;
 }
 .img-preview{
-    width: fit-content;
+    width: 40%;
     margin: 0.1rem auto;
-    display: none;
+    max-height: 200px;
+
 }
 
 .img-preview img{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     
 }
 .c-form,.c-form1{

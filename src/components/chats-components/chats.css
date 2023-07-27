@@ -89,11 +89,22 @@
 
 /* body / content section */
 .chats_container .content{
-    width: 95%;
+    width: 90%;
     margin: 0.2rem auto;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+}
+hr{
+    width: 100%;
+    color: grey;
+    height: 1px;
+}
+.chats_container .content img{
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin: auto;
 }
 .chats_container .content .pp-reactions{
     display: flex;
@@ -200,5 +211,14 @@ hr{
     width: 100%;
     gap: 1rem;
     justify-content: space-around;
+    
+}
+@media (min-width:1125px) {
+    .chats_container .content img{
+        max-height: 400px;
+        object-fit: cover;
+        width: 100%;
+        margin: auto;
+      }
     
 }

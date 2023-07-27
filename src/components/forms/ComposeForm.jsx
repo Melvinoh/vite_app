@@ -10,6 +10,17 @@ const ComposeForm = ({close, isOpen, items, id}) => {
 
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
+    const uploadFile = async () =>{
+        try {
+            const formData = new FormData()
+            formData.append("file", file)
+            const res = await makeRequest.post("/uploadFile/upload",formData)
+            return res.data
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
     const queryClient = useQueryClient()  
     const mutation = useMutation( 
@@ -21,9 +32,11 @@ const ComposeForm = ({close, isOpen, items, id}) => {
             queryClient.invalidateQueries(['post'])
         },
    });
-    const handleShare = (e) =>{
+    const handleShare = async (e) =>{
         e.preventDefault()
-        mutation.mutate({desc:desc,clubid:id})
+        let imgUrl = "";
+        if(file) imgUrl = await uploadFile()
+        mutation.mutate({desc:desc,clubid:id, img:imgUrl})
         close();
     }
 
@@ -45,7 +58,7 @@ const ComposeForm = ({close, isOpen, items, id}) => {
                         <input type="file"  name="image" onChange={(e) =>setFile(e.target.files[0])}/>
                     </div>
                     <div className="img-preview">
-                        <img src={`/pictures/${items.profile_pic}`} alt=""/>
+                        {file && <img src={URL.createObjectURL(file)} alt=""/>}
                     </div>
                     <div className="c-in">
                         <label for="heading"> heading :</label>
