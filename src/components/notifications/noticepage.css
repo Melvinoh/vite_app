@@ -59,3 +59,150 @@
     font-size: 0.55rem;
     margin: 0.1rem auto;
 }
+
+/* notice modal css */
+.head-wrap{
+    position: relative;
+}
+
+.notification-modal{
+    position: fixed;
+    right: 0;
+    top: 4.1rem;
+    background-color: rgba(63, 62, 62, 0.149);
+    width: 100%;
+    height: 100vh;
+    z-index: 300;
+    animation-name: navAnimation;
+    animation-duration: 0.7s;
+}
+.note-wrapper{
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    max-width: 50%;
+    min-width: 320px;
+    min-height: 100vh;
+
+}
+.note-wrapper .header{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+
+}
+.note-wrapper .header .read{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.note-wrapper .note-tabs{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 0.9rem;
+    align-items: center;
+}
+.note-tabs .tabs-wrap{
+    display: flex;
+    gap: 1rem;
+}
+.tabs-wrap .n-tabs{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.n-tabs .num {
+    padding: 0.1rem 0.4rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(118, 116, 116, 0.119);
+    border-radius: 0.2rem;
+}
+.noticecard-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.noticecard-wrapper .notice-card{
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+.notice-card .img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.notice-card .img img{
+    width: 100%;
+    height: 100%;
+}
+.notice-card .ntc-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.notice-card .ntc-right .ntc-top{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+}
+.notice-card .ntc-right .ntc-top .right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    justify-content: flex-start;
+}
+.notice-card .ntc-right .ntc-top .left{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    align-items: flex-end;
+
+}
+.ntc-top .left .status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: greenyellow;
+
+
+}
+.notice-card .ntc-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.6rem;background-color: rgba(175, 174, 174, 0.136);
+    border-radius: 0.5em;
+}
+.notice-card .ntc-bottom .buttons{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.2rem;
+}
+.notice-card .ntc-bottom .buttons span{
+    padding: 0.5rem;
+    border: solid green 1px ;
+    border-radius: 0.5rem;
+}
+hr{
+    width: 100%;
+    height: 1px;
+    color:grey
+}
+
+
+
+

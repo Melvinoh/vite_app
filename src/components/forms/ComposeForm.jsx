@@ -20,8 +20,6 @@ const ComposeForm = ({close, isOpen, items, id}) => {
             console.log(error)
         }
     }
-
-
     const queryClient = useQueryClient()  
     const mutation = useMutation( 
         async (newpost) =>{
