@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./profile.css"
 import {BsThreeDotsVertical,BsFacebook,BsInstagram,BsTwitter,BsLinkedin,BsGithub} from "react-icons/bs"
-
+import ProfileUpdate from '../../components/forms/ProfileUpdate'
 const Profile = () => {
+    const [updateClick, setUpdateClick] = useState(false)
+    const handleclick = () =>{
+        setUpdateClick(true)
+    }
+    if (updateClick) return <ProfileUpdate/>
+
   return (
     <div className="p-wrapper">
         <h2 className='heading1'> profile</h2>
@@ -12,7 +18,6 @@ const Profile = () => {
                     <div className="cover-pic">
                         <div className="cover">
                             <img src="/pictures/rotaract.jpg" alt="" />
-
                         </div>
                         <div className="p-pic">
                             <img src="/pictures/JK1.jpg" alt="" />
@@ -42,6 +47,7 @@ const Profile = () => {
                     </div>
                     <div className="contacts">
                         <span>resume : melvinmurichu@gmail.com</span>
+                        <button onClick={handleclick}>update</button>
                     </div>
                 </div>
                 <div className="myskills">

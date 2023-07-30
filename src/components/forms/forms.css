@@ -209,7 +209,9 @@ button{
     .c-form{
         width: 99%;
     }
+  
 }
+
 
 
 
@@ -232,4 +234,154 @@ button{
         transition: translate 500s , opacity 1s;
     }
 }
+
+/* update form  */
+.prof-upt_wrapper{
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 85%;
+    height: 100%;
+    margin: auto 0.5rem;
+}
+.prof-upt_wrapper .cover-pic{
+    position: relative;
+    height: 250px;
+}
+.prof-upt_wrapper .cover-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prof-upt_wrapper .camicon{
+    position: absolute;
+    top: 10px;right: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border: solid 1px rgb(141, 247, 109);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+.prof-upt_form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 15rem;
+    left: 5%;
+}
+.prof-upt_form .right-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem;margin: 0.2em;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: fit-content;
+    flex: 1 250px;
+ 
+}
+.prof-upt_form .left-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem;margin: 0.2em;
+    background-color: white;
+    border-radius: 0.5rem;
+    flex: 1.5 300px;
+    
+}
+.form-inputs-wrapper, .prof-inf-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.2rem;
+}
+.updateForm-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.2rem;
+}
+.updateForm-wrapper .img{
+    display: flex;
+    flex-direction: column ;
+    position: relative;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.updateForm-wrapper .img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.updateForm-wrapper .img .iconic{
+    color: white;
+    background-color: rgb(46, 192, 46);
+    border-radius: 50%;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    position: absolute;
+    text-align: center;
+    top: 3.7rem;
+    right:0;
+   
+}
+
+.inputs-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    /* flex: 1 200px; */
+    /* justify-content:space-between; */
+}
+.inputs-upt{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: grey;
+    flex: 1 90px;
+ 
+}
+.inputs-upt input{
+    background-color: white;
+    border: solid 1px rgba(30, 145, 30, 0.2);
+}
+@media (max-width:899px) {
+    .prof-upt_wrapper{
+        padding: 0.2rem;
+        margin: 0.3rem;
+        border-radius: 0.5rem;
+        position: relative;
+        width: 99%;
+        height: 100%;
+        margin: auto 0.5rem;
+    }
+    .prof-upt_form {
+        width: 93%;
+        top: 11.5rem;
+        left: 3.5%;
+    }
+    .prof-upt_wrapper .cover-pic{
+        position: relative;
+        height: 180px;
+    }
+}
+
+
+
+
+
+
+
+
 

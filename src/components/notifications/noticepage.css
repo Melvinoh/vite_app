@@ -170,14 +170,12 @@
     gap: 0.4rem;
     padding: 0.5rem;
     align-items: flex-end;
-
 }
 .ntc-top .left .status{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: greenyellow;
-
 
 }
 .notice-card .ntc-bottom{
