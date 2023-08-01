@@ -5,9 +5,9 @@ import ProfileUpdate from '../../components/forms/ProfileUpdate'
 const Profile = () => {
     const [updateClick, setUpdateClick] = useState(false)
     const handleclick = () =>{
-        setUpdateClick(true)
+        setUpdateClick(!updateClick)
     }
-    if (updateClick) return <ProfileUpdate/>
+    if (updateClick) return <ProfileUpdate click={handleclick}/>
 
   return (
     <div className="p-wrapper">
@@ -48,6 +48,7 @@ const Profile = () => {
                     <div className="contacts">
                         <span>resume : melvinmurichu@gmail.com</span>
                         <button onClick={handleclick}>update</button>
+                        
                     </div>
                 </div>
                 <div className="myskills">
@@ -59,21 +60,16 @@ const Profile = () => {
                         <span>cloud computing</span>
                         <span>cybersecurity</span>
                         <span>cloud computing</span>
-                        <span>cybersecurity</span>
-                        <span>cloud computing</span>
-                        <span>cybersecurity</span>
-                        <span>cloud computing</span>
-                        <span>cybersecurity</span>
-                        <span>cloud computing</span>
-                       
+                        <span>cybersecurity</span>   
                     </div>  
                 </div>
                 <div className="myportfolio">
-                    <h2>my portfolio</h2>
+                    <h2 className='heading3'>my portfolio</h2>
                     <div className="portfolio">
                         <span>github: link</span>
                         <span>resume : </span>
                     </div>
+                    
                 </div>
             </div>
           <div className="left">

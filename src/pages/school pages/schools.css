@@ -67,7 +67,7 @@ hr{
 
 @media (min-width:899px) {
     .back{
-        display: none;
+        display: flex;
      }  
      .school-container{
         width: 90%;

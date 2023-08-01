@@ -3,18 +3,28 @@ import {AiFillCamera} from "react-icons/ai"
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import "./forms.css"
+import {MdArrowBack} from "react-icons/md"
 
-const ProfileUpdate = () => {
+const ProfileUpdate = ({click}) => {
+
+  
   const [value, setValue] = useState('');
 
   return (
     <div className="prof-upt_wrapper">
+      <div className="back">
+        <MdArrowBack/>
+        <span className='' onClick={click}> back</span>
+      </div>
       <h1 className="heading1">profile update</h1>
       <div className="cover-pic">
         <img src="/pictures/mbogi.jpg" alt="" />
         <div className="camicon">
-          <AiFillCamera/>
-          <span>change cover</span>
+          <label htmlFor="file-input">
+            <AiFillCamera/>
+            <span>change cover</span>
+          </label>
+          <input type="file" id='file-input'/>
         </div>
         
       </div>
@@ -23,9 +33,12 @@ const ProfileUpdate = () => {
           <h2 className="heading2">personal info</h2>
           <div className="updateForm-wrapper">
             <div className="img">
-              <img src="/pictures/coolboy.jpg" alt="" />
+              <img src="/pictures/coolboy.jpg" alt=""/>
               <div className="iconic">
-               <AiFillCamera />
+                <label htmlFor="file-input1">
+                  <AiFillCamera/>
+                </label>
+                <input type="file" id='file-input1'/>
               </div>
             </div>
             <div className="form-inputs-wrapper">
@@ -92,11 +105,13 @@ const ProfileUpdate = () => {
                 <input type="text" value="https://melvinoh.co.ke" />
               </div>
             </div>
-            <div className="inputs-upt">
-              <label htmlFor="id">bio</label>
-              <ReactQuill theme="snow" value={value} onChange={setValue} />
-            </div>
-            <div className="socila-upt">
+           <div className="bio">
+              <div className="inputs-upt">
+                <label htmlFor="id">bio</label>
+                <ReactQuill theme="snow" value={value} onChange={setValue} />
+              </div>
+           </div>
+            <div className="social-upt">
               <h2 className='heading2'>social hundles</h2>
               <div className="inputs-wrap">
                 <div className="inputs-upt">

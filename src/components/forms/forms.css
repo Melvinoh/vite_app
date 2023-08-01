@@ -90,7 +90,9 @@ button{
     cursor: pointer;
     color: white;
     border-radius: 0.5rem;
-    box-shadow: none;
+    box-shadow: 0 0 0;
+    
+    border-style: none;
 }
 
 
@@ -248,11 +250,13 @@ button{
 .prof-upt_wrapper .cover-pic{
     position: relative;
     height: 250px;
+    border-radius: 0.7rem;
 }
 .prof-upt_wrapper .cover-pic img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0.7rem;
 }
 .prof-upt_wrapper .camicon{
     position: absolute;
@@ -266,6 +270,7 @@ button{
     display: flex;
     gap: 0.5rem;
     justify-content: space-between;
+    cursor: pointer;
 }
 .prof-upt_form{
     display: flex;
@@ -334,6 +339,7 @@ button{
     text-align: center;
     top: 3.7rem;
     right:0;
+    cursor: pointer;
    
 }
 
@@ -341,8 +347,6 @@ button{
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    /* flex: 1 200px; */
-    /* justify-content:space-between; */
 }
 .inputs-upt{
     display: flex;
@@ -355,6 +359,16 @@ button{
 .inputs-upt input{
     background-color: white;
     border: solid 1px rgba(30, 145, 30, 0.2);
+}
+.back{
+    display: flex;
+}
+.camicon > input{
+    display: none;
+}
+.iconic > input{
+    display: none;
+   
 }
 @media (max-width:899px) {
     .prof-upt_wrapper{
@@ -375,7 +389,14 @@ button{
         position: relative;
         height: 180px;
     }
+    
 }
+.social-upt,.skill-upt{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 
 
 
