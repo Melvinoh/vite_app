@@ -24,7 +24,7 @@ const Home = () => {
             <div className="profile">
               <h3 className="heading2">my profile</h3>
               <div className="prof-pic">
-                <img src={`/pictures/${currentUser.profile_pic}`}alt="profile" srcset="" />
+                <img src={`/upload/${currentUser.profile_pic}`}alt="profile" srcset="" />
               </div>
               <div className="content">
                 <span>{currentUser.regno}</span>

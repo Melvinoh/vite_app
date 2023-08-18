@@ -53,9 +53,6 @@ body{
 .profile{
     padding: 0.5rem 0rem;
     display: flex;
-    /* border: solid green 1px; */
-    /* background-color: #f0f1f271;
-    box-shadow: -0.05rem 0.05rem 0.15rem 0.15rem rgba(128, 128, 128, 0.144); */
     border-radius: 0.5rem;
     flex-direction: column;
     gap: 0.6rem;
@@ -169,7 +166,7 @@ body{
     }
     .notice_wrapper{
         position: relative;
-        top: -28rem;left: -17.5vw;
+        top: -25rem;left: -17.3vw;
         justify-content: flex-start;
     }
     .react-datepicker__day-name,.react-datepicker__day{
@@ -218,12 +215,12 @@ body{
     }
     .notice_wrapper{
         position: relative;
-        top: -25rem;left: 3vw;
+        top: -22rem;left: 3.9vw;
     }
 }
 @media (min-width:1213px) {
     .notice_wrapper{
         position: relative;
-        top: -25rem;left: 5.5vw;
+        top: -22rem;left: 6.9vw;
     }
 }

@@ -22,7 +22,7 @@ const Chats = ({chats}) => {
         <div className="chats_container">
             <div className="chat-header">
                 <div className="left">
-                    <img src={`/pictures/${chats.profile_pic}`} alt=""  />
+                    <img src={`/upload/${chats.profile_pic}`} alt=""  />
                     <div className="sub-heading">
                         <span className='heading3'>{chats.fname}  {chats.sname}</span>
                         <span className='time'>{moment(chats.createdAt).fromNow()}</span>

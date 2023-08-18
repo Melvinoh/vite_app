@@ -21,7 +21,7 @@ const Registration = ({clubid}) => {
       }
       
       if(!Error){
-        navigate("/clubs"); 
+        navigate("/clubs/"); 
       }
       
   } 

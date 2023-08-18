@@ -23,7 +23,6 @@ function Navbar(props) {
     <div className={`nav_container ${(props.isOpen)? 'open' : ''}`} onClick={props.closefun} >
         <div className="nav-wrapper">
             <div className="navbar">
-                
                 <Link to= "/" className="nav_item active">
                     <VscHome className='nav_icons'/>
                     <span>home</span>
@@ -58,7 +57,7 @@ function Navbar(props) {
             </div>
             <div className="navbar">
                 <Link to ="profile" className="nav_item" >   
-                    <img src={`/pictures/${currentUser.profile_pic}`}alt="profile"className="navpic"/>              
+                    <img src={`/upload/${currentUser.profile_pic}`}alt="profile"className="navpic"/>              
                     <span>profile</span>
                 </Link>
                 <div to= "" className="nav_item" onClick={handleclick}>

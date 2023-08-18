@@ -1,13 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState , useContext } from 'react'
 import "./profile.css"
 import {BsThreeDotsVertical,BsFacebook,BsInstagram,BsTwitter,BsLinkedin,BsGithub} from "react-icons/bs"
 import ProfileUpdate from '../../components/forms/ProfileUpdate'
+import { makeRequest } from '../../../axios'
+import { useQuery } from '@tanstack/react-query'
+import { Link, useNavigate} from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext.jsx';
+
+
+
 const Profile = () => {
+
     const [updateClick, setUpdateClick] = useState(false)
+
+    const {isLoading, error, data} = useQuery(['profile'], async ()=>{
+        const response = await makeRequest.get("/profile/getProfile")
+        return response.data
+    })
+    if(isLoading)return <div> loading ... </div>
+    if(error)return <div> {error.message.data}</div>
+    
+    
     const handleclick = () =>{
         setUpdateClick(!updateClick)
     }
-    if (updateClick) return <ProfileUpdate click={handleclick}/>
+    if (updateClick) return <ProfileUpdate click={handleclick} data={data}/>
 
   return (
     <div className="p-wrapper">
@@ -17,23 +34,25 @@ const Profile = () => {
                 <div className="profile-header">
                     <div className="cover-pic">
                         <div className="cover">
-                            <img src="/pictures/rotaract.jpg" alt="" />
+                            {/* <img src="/pictures/rasterman.jpg" alt="" /> */}
+                            <img src={`/upload/${data.cover_photo}`} alt=""/>
                         </div>
                         <div className="p-pic">
-                            <img src="/pictures/JK1.jpg" alt="" />
+                            {/* <img src="/pictures/rasterman.jpg" alt="" /> */}
+                            <img src={`/upload/${data.profile_pic}`} alt=""/>
 
                         </div>
                     </div>
                     <div className="ph-content">
-                        <h2 className='heading2'> amanda smith</h2>
+                        <h2 className='heading2'> {data.fname} {data.sname} </h2>
                         <div className="prof-details">
                             <div className="sh-det">
-                                <span>Regno: SCCI/00573/2020</span>
+                                <span>Regno: {data.regno}</span>
                                 <span>school: school of computing and information technology </span>
                                 <span>course :computer technology</span>
                             </div>
                             <div className="social">
-                                <span>email : melvinmurichu@gmail.com</span>
+                                <span>email :{data.email}</span>
                                 <div className="ICON">
                                     <a href=""><BsFacebook/></a>
                                     <a href=""><BsTwitter/></a>
@@ -41,13 +60,15 @@ const Profile = () => {
                                     <a href=""><BsLinkedin/> </a>
                                     <a href=""><BsGithub/></a>
                                 </div>
-                                <p>phone: +254 728318369</p>
+                                <p>phone: +254 318369</p>
                             </div>
                         </div>      
                     </div>
                     <div className="contacts">
-                        <span>resume : melvinmurichu@gmail.com</span>
+                        <span>resume : {data.portfolio_url}</span>
+                        
                         <button onClick={handleclick}>update</button>
+                       
                         
                     </div>
                 </div>

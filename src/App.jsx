@@ -23,6 +23,7 @@ import Login from './components/forms/Login'
 import { AuthContext } from './context/AuthContext'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import Profile from './pages/profile page /Profile'
+import ProfileUpdate from './components/forms/ProfileUpdate'
 
 
 
@@ -151,6 +152,10 @@ function App() {
           {
             path : "/profile",
             element : <Profile />
+          },
+          {
+            path : "/profileUpdate",
+            element : <ProfileUpdate />
           }
         ]
       }
