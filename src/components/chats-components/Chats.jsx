@@ -1,10 +1,11 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import "./chats.css"
 import {BiLike} from "react-icons/bi"
 import {BsShare,BsSend,BsThreeDotsVertical} from "react-icons/bs"
 import {AiOutlineMessage} from "react-icons/ai"
 import moment from "moment"
+import { io } from "socket.io-client";
 
 
 const Chats = ({chats}) => {
@@ -17,6 +18,15 @@ const Chats = ({chats}) => {
     const Commentaction = () =>{
         setOpenComments(!OpenComments)
     }
+    useEffect(()=>{
+        const socket = io("http://localhost:5173", {
+            withCredentials: true,
+            extraHeaders: {
+              "my-custom-header": "abcd"
+            }
+        })
+    },[])
+
   return (
     <>
         <div className="chats_container">

@@ -89,7 +89,7 @@
 
 /* body / content section */
 .chats_container .content{
-    width: 90%;
+    width: 97%;
     margin: 0.2rem auto;
     display: flex;
     flex-direction: column;

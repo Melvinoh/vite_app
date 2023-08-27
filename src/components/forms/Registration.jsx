@@ -1,28 +1,44 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const Registration = ({clubid}) => {
- 
-  const [Regno, setRegno] = useState({clubid});
+const Registration = () => {
+  
+  const clubid = useLocation().pathname.split("/")[2]
+  const [Regno, setRegno] = useState({
+    clubid :`${clubid}`,
+    regno:""
+  });
+  
   const [Error, setError] = useState(null);
   const [Response, setResponse] = useState(null);
+
+  
+
+  console.log(clubid);
+  console.log(Regno);
   
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
+    
       e.preventDefault();
       try {
         const response = await axios.post("http://localhost:8800/api/clubs/clubreg",Regno);
         setResponse(response.data)
+
+       
         
       } catch (error) {
         setError(error.response.data); 
+        console.log(Error);
       }
       
       if(!Error){
         navigate("/clubs/"); 
       }
+      setRegno({});
+      console.log(Regno)
       
   } 
     
@@ -56,7 +72,7 @@ const Registration = ({clubid}) => {
           <input type="text" name='course' />
         </div>
         <div className="inputs">
-          <input type="hidden" name="clubid" value={clubid} />
+          <input type="hidden" name="clubid" value={clubid} onChange={handleInputs}/>
         </div>
         {Error && Error}
         {Response && Response}

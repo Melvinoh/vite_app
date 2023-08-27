@@ -36,6 +36,7 @@ export const AuthContextProvider = ({children}) => {
     const logout = async () =>{
         try {
             await axios.get("http://localhost:8800/api/auth/logout");
+            localStorage.removeItem("user");
         } catch (err) {
             console.log(err)
             setError(err.response.data)  

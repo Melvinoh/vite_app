@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./App.css"
 import Header from './components/header/Header'
 import Search from './components/search/Search'
@@ -24,7 +24,7 @@ import { AuthContext } from './context/AuthContext'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import Profile from './pages/profile page /Profile'
 import ProfileUpdate from './components/forms/ProfileUpdate'
-
+import { io } from "socket.io-client";
 
 
 function App() {
@@ -35,7 +35,11 @@ function App() {
     };
     const CloseNavHandler = ()=>{
       setOpenNav(false)
-    }
+  }
+  // useEffect(()=>{
+  //   const socket = io("http://localhost:5173")
+  // },[])
+
 //hook state for form opening and close
       const[openform ,setOpenform] = useState(false);
       const OpenformHandler = ()=>{
