@@ -28,6 +28,20 @@ import { io } from "socket.io-client";
 
 
 function App() {
+
+  const [socket,setSocket] = useState(null)
+  useEffect(()=>{
+    const socket = io("http://localhost:3000")
+    setSocket(socket)
+
+    console.log(socket.on("firstEvent", (msg)=>{
+      console.log(msg)
+    }))
+    return () =>{
+      socket.disconnect();
+    }
+  },[])
+
 //hook state for nav openinig and close
   const [openNav, setOpenNav] = useState(false);
     const OpenNavHandler = ()=>{
@@ -36,9 +50,6 @@ function App() {
     const CloseNavHandler = ()=>{
       setOpenNav(false)
   }
-  // useEffect(()=>{
-  //   const socket = io("http://localhost:5173")
-  // },[])
 
 //hook state for form opening and close
       const[openform ,setOpenform] = useState(false);

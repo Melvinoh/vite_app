@@ -1,32 +1,80 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useState,useEffect} from 'react'
 import "./chats.css"
 import {BiLike} from "react-icons/bi"
 import {BsShare,BsSend,BsThreeDotsVertical} from "react-icons/bs"
-import {AiOutlineMessage} from "react-icons/ai"
+import {AiOutlineMessage, AiFillLike} from "react-icons/ai"
 import moment from "moment"
 import { io } from "socket.io-client";
-
+import Comments from '../forms/Comments'
+import { makeRequest } from '../../../axios'
+import { AuthContext } from '../../context/AuthContext'
+import axios from 'axios'
+import { useMutation, useQueryClient, useQuery} from '@tanstack/react-query'
 
 const Chats = ({chats}) => {
 
+    const {currentUser} = useContext(AuthContext)
+    
+    const liked = true 
+    const PostID = chats.PostID
+  
+
     const [OpenAction, setOpenAction] = useState(false)
+    const [deleteUp, setDeleteUP] = useState(false)
+
+
     const handleaction = () =>{
         setOpenAction(!OpenAction)
+        if (currentUser.regno === chats.StudentID) {
+            setDeleteUP(true)
+            console.log(chats.StudentID);
+            console.log(currentUser.regno)
+        }
     }
     const [OpenComments, setOpenComments] = useState(false)
     const Commentaction = () =>{
         setOpenComments(!OpenComments)
     }
-    useEffect(()=>{
-        const socket = io("http://localhost:5173", {
-            withCredentials: true,
-            extraHeaders: {
-              "my-custom-header": "abcd"
-            }
-        })
-    },[])
 
+    const {isLoading, error, data} = useQuery(['likes', PostID], async ()=>{
+        const response = await axios.get("http://localhost:8800/api/likes/getLikes?postID="+PostID)
+        return response.data
+    });
+
+    const queryClient = useQueryClient()  
+
+    const mutation = useMutation( 
+        async (liked) =>{
+            if (liked) return  await makeRequest.delete("/likes/deleteLikes?postID="+PostID)
+            return await makeRequest.post("/likes/addLikes", {postID:PostID})
+        },
+        {
+            onSuccess: () => {
+            queryClient.invalidateQueries(['likes', PostID])
+        },
+    });
+
+    const deleteMutation = useMutation( 
+        async (PostID) =>{
+            return makeRequest.delete("/posts/deletePost?postID=" + PostID)
+            
+        },
+        {
+            onSuccess: () => {
+            queryClient.invalidateQueries(["post"])
+        },
+    });
+
+    const handleClick = async (e) =>{
+        e.preventDefault()
+        mutation.mutate(data.includes(currentUser.regno))
+    }
+    const handleDelete = () =>{
+        deleteMutation.mutate(PostID);
+        setOpenAction(!OpenAction);
+    }
+    
   return (
     <>
         <div className="chats_container">
@@ -41,43 +89,51 @@ const Chats = ({chats}) => {
                 <div className="right" > 
                     <BsThreeDotsVertical onClick={handleaction}/>
                     <div className={`actions-p ${OpenAction ? 'active' : ''}`}>
-                        <span>update</span>
-                        <span>delete</span>
-                        <span>hide</span>
+                        {
+                            deleteUp 
+                            ?   <div>
+                                    <span style={{margin:"0.5rem"}}>update</span>
+                                    <span style={{margin:"0.5rem"}} onClick={handleDelete}>delete</span>
+                                    <span style={{margin:"0.5rem"}}> hide </span>
+                                </div>
+                            :   <span> hide </span>
+                        }
                     </div>
                 </div>
             </div>
             <div className="content">
-                <img src={`/upload/${chats.post_img}`} alt=""  />
                 <p>
                     {chats.desc}
                 </p>
-                <hr/>
+                <img src={`/upload/${chats.post_img}`} alt=""  />
+                <hr style={{ color:"grey"}}/>
                 <div className="pp-reactions">
-                  
                     <div className="emojis">
                         <div className='emoji'>
                             <span role="img" aria-label="smile">😊</span>
                             <span role="img" aria-label="heart">❤️</span>
                             <BiLike className="ci"/>
                         </div>
-                        <span>+24 likes</span>
+                        <span>{data?.length} likes</span>
                     </div>
                     <div className="pics">
                         {/* <span className="pics">reacted by </span> */}
                         {/* <img src={chats.reactions[0]} alt="IMG" />
                         <img src={chats.reactions[1]}alt="IMG" />
                         <img src={chats.reactions[2]}alt="IMG" /> */}
-                        <span className="extra">+4 comments</span>
+                        <span className="extra"></span>
                     </div>
                 </div>
                 <div className="react">
                     <div className="share">
-                        
-                        <BiLike className="icons">
-                            <input type="radio" name="like" id="like" />
-                        </BiLike>
-                        <span>like</span>
+                        {
+                            isLoading ? "loading ..." :
+                            data?.includes(currentUser.regno)
+                            ?   (<AiFillLike style={{color:"#13d236"}}className="icons" onClick={handleClick}></AiFillLike> )
+                            :  ( <BiLike className="icons" onClick={handleClick}></BiLike>)
+                        }
+    
+                        <span>{data?.length} likes</span>
                     </div>
                     <div className="share"  onClick={Commentaction}>
                         <AiOutlineMessage className="icons"/>
@@ -89,25 +145,7 @@ const Chats = ({chats}) => {
                     </div>
                 </div>
                 {OpenComments &&
-                 <div className="comment-wrapper">
-                    <div className="comment-box">
-                        <div className="comment-pp"> <img src={`/pictures/${chats.profile_pic}`} alt=""  /></div>
-                        <input type="text" placeholder='write a comment'/>
-                        <div className="send-btn"><BsSend/></div>
-                    </div>
-                    <div className="r-comments">
-                        <div className="img"><img src="/pictures/customercare.PNG" alt="" /></div>
-                        <div className=''>
-                            <div className="r-content">
-                                <h6>bill eilliams comment</h6>
-                                <p> 4hr ago</p>
-                            </div>
-                            <p className="p">
-                                happy birthday bro man!
-                            </p>
-                        </div>
-                    </div>
-                 </div>
+                    <Comments comment={chats.PostID} prof={chats.profile_pic}/>
                 }
             </div>
         </div>

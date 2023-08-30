@@ -60,17 +60,17 @@
     flex-direction: column;
     gap: 0.4rem;
     background-color: white;
-    box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
+    box-shadow:rgba(116, 115, 115, 0.51) 0.01rem 0.01rem 1.2rem ;
     border-radius: 0.2rem;
     padding: 0.7rem;
     position: absolute;
-    right: 15px;top: 26px;
+    right: 19px;top: 29px;
     
 }
 .chat-header .right .actions-p span{
     background-color: rgb(228, 254, 228);
     padding: 0.1rem 0.6rem;
-    box-shadow:rgba(116, 115, 115, 0.527) 0.02rem 0.15rem 0.1rem ;
+    box-shadow:rgba(116, 115, 115, 0.527) 0.03rem 0.25rem 0.3rem ;
 
 }
 .chat-header .right .actions-p span:hover{
@@ -185,7 +185,7 @@ hr{
     background-color: white;
 }
 .chats_container .content .icons{
-    color: rgb(25, 163, 25);
+    color: #13d236;
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -198,20 +198,23 @@ hr{
     gap: 0.4rem;
     width: 96%;
     margin: 0.1rem auto;
+    justify-content: space-between;
+    align-items: center;
 }
 .r-comments img{
     width: 30px;
     height: 30px;
     object-fit: fill;
     border-radius: 50%;
-
+    aspect-ratio: 2;
 }
 .r-content{
-    display: flex;
     width: 100%;
-    gap: 1rem;
-    justify-content: space-around;
-    
+    gap: 1rem; 
+}
+hr{
+    width: 100%;
+    border: solid 1px #808080ab;
 }
 @media (min-width:1125px) {
     .chats_container .content img{
