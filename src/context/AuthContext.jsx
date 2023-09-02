@@ -1,12 +1,20 @@
 import {createContext, useEffect, useState } from "react";
 import axios from "axios";
 import React from "react";
-import { useQueryClient } from "@tanstack/react-query";
-
+import { io } from "socket.io-client";
 
 export const AuthContext = createContext();
 
+
 export const AuthContextProvider = ({children}) => {
+
+    const [socket ,setSocket] = useState(null)
+    // useEffect(()=>{
+    //     const socketio = io("http://localhost:5000");
+    //     setSocket(socketio)
+   
+    //  },[]);
+    // console.log(socket);
 
     const[openform ,setOpenform] = useState(false);
     const OpenformHandler = ()=>{
@@ -25,13 +33,16 @@ export const AuthContextProvider = ({children}) => {
                 withCredentials: true,
             })
             setCurrentUser(response.data)
+            // const socketio = io("http://localhost:5000");
+            // setSocket(socketio)
+           
         } catch (err) {
             console.log(err)
             setError()       
         }
 
         OpenformHandler();
-    }    
+    }   
    
     const logout = async () =>{
         try {
@@ -47,7 +58,16 @@ export const AuthContextProvider = ({children}) => {
         if (currentUser){
          localStorage.setItem("user", JSON.stringify(currentUser));
         } 
+        // const socketio = io("http://localhost:5000");
+        //  setSocket(socketio)
+        // loginForm();
      },[currentUser]);
+     
+  
+    
+     
+  
+
    
 
     const getClubs = async () =>{
@@ -59,6 +79,9 @@ export const AuthContextProvider = ({children}) => {
             setError(err.response.data)
         }
     }
+
+   console.log(socket)
+
     return(
         <AuthContext.Provider value={{loginForm, currentUser, setCurrentUser, logout, Error,getClubs,ClubsContent}}>
             {children}

@@ -1,4 +1,4 @@
-import React, { useContext ,useState} from 'react'
+import React, { useContext ,useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import sportdata from "../../data/sports.json"
 import clubsData from "../../data/clubs.json"
@@ -13,7 +13,10 @@ import { makeRequest } from '../../../axios';
 
 
 
+
 const Clubs =  () => { 
+  
+
     const queryClient = useQueryClient();
     const {currentUser} = useContext(AuthContext)
 

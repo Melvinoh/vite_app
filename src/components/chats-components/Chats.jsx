@@ -12,11 +12,10 @@ import { AuthContext } from '../../context/AuthContext'
 import axios from 'axios'
 import { useMutation, useQueryClient, useQuery} from '@tanstack/react-query'
 
-const Chats = ({chats}) => {
 
+const Chats = ({chats}) => {
+ 
     const {currentUser} = useContext(AuthContext)
-    
-    const liked = true 
     const PostID = chats.PostID
   
 

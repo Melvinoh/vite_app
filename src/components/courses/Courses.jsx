@@ -3,14 +3,23 @@ import "./cources.css";
 import reps from "../../data/reps.json"
 import Events from '../events /Events';
 import events from '../../data/events.json'
+import { json } from 'react-router-dom';
 
-const Courses = () => {
+const Courses = ({courseData}) => {
+    console.log(courseData)
+
+    console.log(courseData?.classreps)
+    if(courseData){
+        var classreps = JSON.parse(courseData?.classreps)
+    }
+    console.log(classreps);
   return (
   <div className="course_container">
     <div className="header">
-        <span className='heading2'>btech construction managemrnt</span>
+        <span className='heading2'>{courseData?.name}</span>
     </div>
     <div className="details">
+    <img src={`/pictures/${courseData?.profile_pic}`} alt=""  />
         <span>department : biulding tech</span>
         <span>chairman : Dr robato </span>
         <span>email : drrobato@tuk kenya.ac.ke</span>

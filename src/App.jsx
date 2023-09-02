@@ -4,7 +4,7 @@ import Header from './components/header/Header'
 import Search from './components/search/Search'
 import { Outlet, RouterProvider,Navigate } from 'react-router'
 import Navbar from './components/navbar/Navbar'
-import { useState,useContext} from 'react';
+import { useState, useContext} from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home page/Home';
 import Clubs from './pages/clubs pages/Clubs';
@@ -26,22 +26,16 @@ import Profile from './pages/profile page /Profile'
 import ProfileUpdate from './components/forms/ProfileUpdate'
 import { io } from "socket.io-client";
 
-
 function App() {
+  const [socket ,setSocket] = useState(null)
+  const {currentUser} = useContext(AuthContext);
+//   useEffect(()=>{
+//     const socketio = io("http://localhost:5000");
+//     setSocket(socketio)
+//  },[]);
+//   console.log(socket);
 
-  const [socket,setSocket] = useState(null)
-  useEffect(()=>{
-    const socket = io("http://localhost:3000")
-    setSocket(socket)
-
-    console.log(socket.on("firstEvent", (msg)=>{
-      console.log(msg)
-    }))
-    return () =>{
-      socket.disconnect();
-    }
-  },[])
-
+  
 //hook state for nav openinig and close
   const [openNav, setOpenNav] = useState(false);
     const OpenNavHandler = ()=>{
@@ -84,7 +78,7 @@ function App() {
       )
     }
     
-    const {currentUser} = useContext(AuthContext);
+    
     const ProtectedRoute = ({children}) =>{
       if (!currentUser) {
         return( <Navigate  to="/satuk" />)

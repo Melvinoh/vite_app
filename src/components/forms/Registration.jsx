@@ -27,11 +27,9 @@ const Registration = () => {
         const response = await axios.post("http://localhost:8800/api/clubs/clubreg",Regno);
         setResponse(response.data)
 
-       
-        
       } catch (error) {
-        setError(error.response.data); 
-        console.log(Error);
+        setError(err.response.data); 
+       
       }
       
       if(!Error){

@@ -4,16 +4,16 @@ import "./cards.css"
 
 const SchoolCard = ({items}) => {
   return (
-    <Link to={items.id} className="schoolcard_container">
+    <Link to={items.SchoolID} className="schoolcard_container">
       <div>
         <div className="schoolpic">
-            <img src={items.img} alt="" />
+        <img src={`/pictures/${items.profile_pic}`} alt=""  />
         </div>
         <div className="names">
             <span>{items.name}</span>
         </div>
         <div className="block link" >
-            <span>{items.block}</span>
+            <span>{items.description}</span>
         </div>
       </div>
     </Link>
