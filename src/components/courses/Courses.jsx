@@ -4,22 +4,46 @@ import reps from "../../data/reps.json"
 import Events from '../events /Events';
 import events from '../../data/events.json'
 import { json } from 'react-router-dom';
+import {  useQueries, useQuery, useQueryClient } from '@tanstack/react-query'
+import { makeRequest } from '../../../axios';
 
-const Courses = ({courseData}) => {
-    console.log(courseData)
+const Courses = ({courseID,initialId,}) => {
 
-    console.log(courseData?.classreps)
-    if(courseData){
-        var classreps = JSON.parse(courseData?.classreps)
+    let CourseId = '';
+    if (!courseID){
+        CourseId = initialId
+    }else{
+        CourseId = courseID
     }
-    console.log(classreps);
+   
+
+    const queryClient = useQueryClient();
+    const [courseQuery, classrepsQuery] = useQueries({
+        queries:[
+            {
+                queryKey:['course', CourseId],
+                queryFn: () => makeRequest.get("/schools/getCourse?CourseId="+CourseId).then((res)=> res.data)
+            },
+            {
+                queryKey:['Classreps'],
+                queryFn: () => makeRequest.get("/schools/getClassreps",Classrep).then((res)=> res.data)
+            },
+        ],
+        queryClient,
+    });
+    // console.log(courseQuery.data?.classreps)
+
+    // const Classrep = JSON.parse(courseQuery.data?.classreps);
+    // console.log(Classrep);
+
+    
   return (
   <div className="course_container">
     <div className="header">
-        <span className='heading2'>{courseData?.name}</span>
+        <span className='heading2'>{courseQuery.data?.name}</span>
     </div>
     <div className="details">
-    <img src={`/pictures/${courseData?.profile_pic}`} alt=""  />
+        <img src={`/pictures/${courseQuery.data?.profile_pic}`} alt=""  />
         <span>department : biulding tech</span>
         <span>chairman : Dr robato </span>
         <span>email : drrobato@tuk kenya.ac.ke</span>

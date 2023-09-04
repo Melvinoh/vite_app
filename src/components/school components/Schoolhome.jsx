@@ -9,20 +9,19 @@ import { makeRequest } from '../../../axios'
 import {MdArrowBack} from "react-icons/md";
 import Courses from '../../components/courses/Courses'
 
-const Schoolhome = ({fun, data}) => {
+const Schoolhome = ({data}) => {
 
     const [OpenCourse, setOpenCourse] = useState(false)
     const openhandler = () =>{
         setOpenCourse(!OpenCourse)
     }
 
-    const [courseId, setCourseId] = useState()
+    const [courseId, setCourseId] = useState('')
     
     const [ActiveTab, setActiveTab] = useState('btech')
   
     const queryClient = useQueryClient();
-
-    const [ CoursesQuery, courseQuery] = useQueries({
+    const [ CoursesQuery, schoolrepsQuery] = useQueries({
         queries:[
             {
                 queryKey:['Courses',data?.SchoolID],
@@ -30,30 +29,32 @@ const Schoolhome = ({fun, data}) => {
             },
         
             {
-                queryKey:['course', courseId],
-                queryFn: () => makeRequest.get("/schools/getCourse?CourseId="+courseId).then((res)=> res.data)
+                queryKey:['schoolreps', data?.congressMan_id, data?.congressLady_id],
+                queryFn: () => makeRequest.get("/schools/getLeaders?cm="+data?.congressMan_id+"&cl="+data?.congressLady_id).then((res)=> res.data)
             },
         
         ],
         queryClient,
     });
-    
 
+    let initialId = null
+    
     let tabs = []
+
+    if (CoursesQuery.data){
+        initialId = CoursesQuery.data[0]?.CourseID
+    }
+
     CoursesQuery.data?.map((ctabs)=>{
         if(!tabs.some((tabs) => tabs === ctabs.Course_category)){
             tabs.push(ctabs.Course_category)
         }
     })
-    // console.log(tabs)
-
-    // console.log(CoursesQuery.data)
-    
+   
     const handleclick = (courseID)=>{
         setCourseId(courseID)
-
     }
-    console.log(courseQuery.data)
+
   return (
     <div className="school-container">
         <div className={`sh-left ${ OpenCourse ? 'active' : ''}`}>
@@ -142,22 +143,16 @@ const Schoolhome = ({fun, data}) => {
                         <span>leaders</span>
                     </div>
                     <div className="ld-card_wrapper">
-                        <div className="ld-card_container">
-                            <img src="/pictures/mrform.jpg" alt="img" />
-                            <div className="content">
-                                <span>congress man </span>
-                                <span>+254 768 909 767 </span>
-                                <span className='button'>view profile</span>
+                        {schoolrepsQuery.data?.map((reps)=>(
+                            <div className="ld-card_container">
+                                 <img src={`/upload/${reps.profile_pic}`} alt=""  />
+                                <div className="content">
+                                    <span>{reps.position} </span>
+                                    <span>{reps.fname} {reps.sname}</span>
+                                    <span className='button'>view profile</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="ld-card_container">
-                            <img src="/pictures/customercare.PNG" alt="img" />
-                            <div className="content">
-                                <span>congress lady </span>
-                                <span>+254 768 909 767 </span>
-                                <span className='button'>view profile</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -168,7 +163,7 @@ const Schoolhome = ({fun, data}) => {
                 <MdArrowBack/>
                 <span className='' onClick={openhandler}> back</span>
             </div>
-            <Courses courseData={courseQuery.data}/>
+            <Courses courseID={courseId} initialId={initialId}/>
             </div>
     </div>
   )
