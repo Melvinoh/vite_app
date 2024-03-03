@@ -51,7 +51,7 @@ const Schoolhome = ({data}) => {
         }
     })
    
-    const handleclick = (courseID)=>{
+    const BandleClick = (courseID)=>{
         setCourseId(courseID)
     }
 
@@ -88,7 +88,7 @@ const Schoolhome = ({data}) => {
                                 {
                                     CoursesQuery.data?.map((cdata)=>{
                                         if(cdata.Course_category === ActiveTab){
-                                            return  (<span className={`item `} onClick={() => handleclick(cdata.CourseID)}>{cdata.name}</span>)
+                                            return  (<span className={`item `} onClick={() => BandleClick(cdata.CourseID)}>{cdata.name}</span>)
                                         }
                                     })
                                 }

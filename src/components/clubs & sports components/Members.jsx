@@ -9,19 +9,22 @@ import "./singlepages.css";
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 import GalleryComponent from '../gallery/GalleryComponent'
+import Messanger from './Messanger'
+import MembersProfile from './MembersProfile'
 
 
 const Members = ({items,id}) => {
 
-    const [OpenTab, setOpenTab] = useState(false)
-    const [galleryTab, setGalleryTab] = useState(false)
+    const [OpenTab, setOpenTab] = useState('posts')
+
     const [IsActive, setIsActive] = useState(false)
+
     useEffect(() => {
         window.addEventListener('load' , setIsActive(true))
         return () => {
           window.removeEventListener('load', setIsActive(false))
         }
-      }, [])
+    }, [])
 
       const images = [
         '/pictures/rasterman.jpg',
@@ -36,20 +39,18 @@ const Members = ({items,id}) => {
         '/pictures/developer.jpg',
         '/pictures/darling.jpg',
       ]
+    
+    
       
     const handleopen = () =>{
         setOpenTab(true)
-        setIsActive(false)
+        
     }
-    const handleGallery = () =>{
-        setGalleryTab(!galleryTab)
-        setIsActive(false)
+    const handleTabs = (tabs) =>{
+      setOpenTab(tabs);
+    
     }
-    const handleswitch = () =>{
-        setOpenTab(false)
-        setIsActive(true)
-    }
-  
+
     const [OpenCompose, setOpenCompose] = useState(false)
     const opencomposeform  = ()=>{
       setOpenCompose(!OpenCompose)
@@ -68,7 +69,24 @@ const Members = ({items,id}) => {
    
     if (isLoading) return <div>loading ...</div>
     if (error) return <div>{error.message}</div>
-
+    const tabsData = [
+        {
+            name:'posts',
+            component : data.map(data =>(<Chats key={data.id} chats={data}/>))
+        },
+        {
+            name:'gallery',
+            component : <GalleryComponent images={images}/>
+        },
+        {
+            name:'members',
+            component : <MembersProfile/>
+        },
+        {
+            name:'chats',
+            component : <Messanger/>
+        },  
+    ]
   return (
     <>
         <div className="form-modal">
@@ -80,36 +98,37 @@ const Members = ({items,id}) => {
                 <div className="img">
                     <img src={`/pictures/${items.profile_pic}`} alt="" />
                 </div>
+               
                 <h4 className="heading1">{items.name}</h4>
                 <div className="tabs-wrapper">
-                    <span className={`tabs  ${IsActive ? 'active' : '' }`} onClick={handleswitch}>posts</span>
-                    <span className={`tabs  ${OpenTab ? 'active' : ''}`} onClick={handleopen}> events</span>
-                    <span className={`tabs  ${OpenTab ? 'active' : ''}`} onClick={handleGallery}>gallery</span>
-                    <span className='tabs'>members</span>
+                    {tabsData.map(tabs => (
+                         <span className={`tabs  ${ OpenTab === tabs.name ? 'active' : ''}`} onClick={() => handleTabs(tabs.name)}>{tabs.name}</span>
+                    ))}
+                     <span className={`tabs  ${OpenTab === 'events' ? 'active' : ''}`}>events</span>
                 </div>
             </div>
-          {
-            galleryTab ? <GalleryComponent images={images}/>
-            :
-                <>
-                    <div className="Mb_content-box">
-                        <div className={ `Mb-left ${OpenTab ? 'active' : ''}`}>
-                            {
-                            data.map(data =>(
-                                    <Chats key={data.id} chats={data} />
-                                ))
+            <div className="Mb_content-box">
+                <div className="Mb-left">
+                    
+                    {
+                        tabsData.map((tab)=>{
+                            if(tab.name == OpenTab){
+                                return (
+                                    <>
+                                        {tab.component}
+                                    </>
+                                )
                             }
-                            <div className="compose-btn">
-                                <BsPenFill onClick={opencomposeform}/>
-                            </div>
-                        </div>
-                        <div className="Mb-right">
-                            <EventsCalendar/>
-                        </div>
+                        })
+                    }
+                    <div className="compose-btn">
+                        <BsPenFill onClick={opencomposeform}/>
                     </div>
-                </>
-          }
-           
+                </div>
+                <div className="Mb-right">
+                    <EventsCalendar/>
+                </div>
+            </div>
         </div>
     </>
     )

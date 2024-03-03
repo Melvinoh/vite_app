@@ -45,7 +45,7 @@ const Schools = () =>{
       <div className="schools-wrapper">
         <div className="school_tabs">
           <div className="tabs">
-            {facultiesQuery.data?.map(faculty =>(<span className='tab'  key={faculty.FacultyID} onClick={()=>{handleFaculties(faculty.FacultyID)}}>{faculty.name}</span>) )}
+            {facultiesQuery.data?.map(faculty =>(<span className="" key={faculty.FacultyID} onClick={()=>{handleFaculties(faculty.FacultyID)}}>{faculty.name}</span>) )}
           </div>
           <hr />
         </div>
@@ -53,7 +53,7 @@ const Schools = () =>{
           {
             facultiesQuery.data?.map((heading) => {
               if (facultyID === heading.FacultyID) {
-                return <span key={heading.FacultyID}>{heading.fullname}</span>
+                return <span className='' key={heading.FacultyID}>{heading.fullname}</span>
               }
             })
           }

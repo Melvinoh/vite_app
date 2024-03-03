@@ -17,6 +17,7 @@ const Chats = ({chats}) => {
  
     const {currentUser} = useContext(AuthContext)
     const PostID = chats.PostID
+    console.log(chats)
   
 
     const [OpenAction, setOpenAction] = useState(false)
@@ -76,78 +77,80 @@ const Chats = ({chats}) => {
     
   return (
     <>
-        <div className="chats_container">
-            <div className="chat-header">
-                <div className="left">
-                    <img src={`/upload/${chats.profile_pic}`} alt=""  />
-                    <div className="sub-heading">
-                        <span className='heading3'>{chats.fname}  {chats.sname}</span>
-                        <span className='time'>{moment(chats.createdAt).fromNow()}</span>
-                    </div>
-                </div>
-                <div className="right" > 
-                    <BsThreeDotsVertical onClick={handleaction}/>
-                    <div className={`actions-p ${OpenAction ? 'active' : ''}`}>
-                        {
-                            deleteUp 
-                            ?   <div>
-                                    <span style={{margin:"0.5rem"}}>update</span>
-                                    <span style={{margin:"0.5rem"}} onClick={handleDelete}>delete</span>
-                                    <span style={{margin:"0.5rem"}}> hide </span>
-                                </div>
-                            :   <span> hide </span>
-                        }
-                    </div>
-                </div>
-            </div>
-            <div className="content">
-                <p>
-                    {chats.desc}
-                </p>
-                <img src={`/upload/${chats.post_img}`} alt=""  />
-                <hr style={{ color:"grey"}}/>
-                <div className="pp-reactions">
-                    <div className="emojis">
-                        <div className='emoji'>
-                            <span role="img" aria-label="smile">😊</span>
-                            <span role="img" aria-label="heart">❤️</span>
-                            <BiLike className="ci"/>
+        
+                <div className="chats_container">
+                    <div className="chat-header">
+                        <div className="left">
+                            <img src={`/upload/${chats.profile_pic}`} alt=""  />
+                            <div className="sub-heading">
+                                <span className='heading3'>{chats.fname}  {chats.sname}</span>
+                                <span className='time'>{moment(chats.createdAt).fromNow()}</span>
+                            </div>
                         </div>
-                        <span>{data?.length} likes</span>
+                        <div className="right" > 
+                            <BsThreeDotsVertical onClick={handleaction}/>
+                            <div className={`actions-p ${OpenAction ? 'active' : ''}`}>
+                                {
+                                    deleteUp 
+                                    ?   <div>
+                                            <span style={{margin:"0.5rem"}}>update</span>
+                                            <span style={{margin:"0.5rem"}} onClick={handleDelete}>delete</span>
+                                            <span style={{margin:"0.5rem"}}> hide </span>
+                                        </div>
+                                    :   <span> hide </span>
+                                }
+                            </div>
+                        </div>
                     </div>
-                    <div className="pics">
-                        {/* <span className="pics">reacted by </span> */}
-                        {/* <img src={chats.reactions[0]} alt="IMG" />
-                        <img src={chats.reactions[1]}alt="IMG" />
-                        <img src={chats.reactions[2]}alt="IMG" /> */}
-                        <span className="extra"></span>
-                    </div>
-                </div>
-                <div className="react">
-                    <div className="share">
-                        {
-                            isLoading ? "loading ..." :
-                            data?.includes(currentUser.regno)
-                            ?   (<AiFillLike style={{color:"#13d236"}}className="icons" onClick={handleClick}></AiFillLike> )
-                            :  ( <BiLike className="icons" onClick={handleClick}></BiLike>)
+                    <div className="content">
+                        <p>
+                            {chats.desc}
+                        </p>
+                        <img src={`/upload/${chats.post_img}`} alt=""  />
+                        <hr style={{ color:"grey"}}/>
+                        <div className="pp-reactions">
+                            <div className="emojis">
+                                <div className='emoji'>
+                                    <span role="img" aria-label="smile">😊</span>
+                                    <span role="img" aria-label="heart">❤️</span>
+                                    <BiLike className="ci"/>
+                                </div>
+                                <span>{data?.length} likes</span>
+                            </div>
+                            <div className="pics">
+                                {/* <span className="pics">reacted by </span> */}
+                                {/* <img src={chats.reactions[0]} alt="IMG" />
+                                <img src={chats.reactions[1]}alt="IMG" />
+                                <img src={chats.reactions[2]}alt="IMG" /> */}
+                                <span className="extra"></span>
+                            </div>
+                        </div>
+                        <div className="react">
+                            <div className="share">
+                                {
+                                    isLoading ? "loading ..." :
+                                    data?.includes(currentUser.regno)
+                                    ?   (<AiFillLike style={{color:"#13d236"}}className="icons" onClick={handleClick}></AiFillLike> )
+                                    :  ( <BiLike className="icons" onClick={handleClick}></BiLike>)
+                                }
+            
+                                <span>{data?.length} likes</span>
+                            </div>
+                            <div className="share"  onClick={Commentaction}>
+                                <AiOutlineMessage className="icons"/>
+                                <span> comment</span>
+                            </div>
+                            <div className="share">
+                                <BsShare className="icons"/>
+                                <span>share</span>
+                            </div>
+                        </div>
+                        {OpenComments &&
+                            <Comments comment={chats.PostID} prof={chats.profile_pic}/>
                         }
-    
-                        <span>{data?.length} likes</span>
-                    </div>
-                    <div className="share"  onClick={Commentaction}>
-                        <AiOutlineMessage className="icons"/>
-                        <span> comment</span>
-                    </div>
-                    <div className="share">
-                        <BsShare className="icons"/>
-                        <span>share</span>
                     </div>
                 </div>
-                {OpenComments &&
-                    <Comments comment={chats.PostID} prof={chats.profile_pic}/>
-                }
-            </div>
-        </div>
+          
     </>
    
     

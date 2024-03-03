@@ -1,5 +1,7 @@
 import React from 'react'
+import MembersProfile from '../../components/clubs & sports components/MembersProfile'
 import GalleryComponent from '../../components/gallery/GalleryComponent'
+import Messanger from '../../components/clubs & sports components/Messanger'
 
 
 function Gallery() {
@@ -21,7 +23,7 @@ function Gallery() {
    <div className="wrapper-con">
       <h1 className='heading1'>gallery</h1>
       <div >
-        <GalleryComponent images={images}/>
+        <Messanger/>
       </div>
       
    </div>

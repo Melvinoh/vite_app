@@ -43,7 +43,7 @@ const Courses = ({courseID,initialId,}) => {
         <span className='heading2'>{courseQuery.data?.name}</span>
     </div>
     <div className="details">
-        <img src={`/pictures/${courseQuery.data?.profile_pic}`} alt=""  />
+        <div className='ibox'><img src={`/pictures/${courseQuery.data?.profile_pic}`} alt=""  /></div>
         <span>department : biulding tech</span>
         <span>chairman : Dr robato </span>
         <span>email : drrobato@tuk kenya.ac.ke</span>
@@ -53,7 +53,7 @@ const Courses = ({courseID,initialId,}) => {
         <div className="heading3">
             <span>class representatives</span>
         </div>
-        <div className="cr-wrapper grid">
+        <div className="cr-wrapper grid ">
             {reps.map( data => (
             <div className="ld-card_wrapper" key={data.id}>
                 <div className="ld-card_container">
