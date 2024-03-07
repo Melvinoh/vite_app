@@ -4,17 +4,18 @@ import {BsThreeDotsVertical,BsFacebook,BsInstagram,BsTwitter,BsLinkedin,BsGithub
 import ProfileUpdate from '../../components/forms/ProfileUpdate'
 import { makeRequest } from '../../../axios'
 import { useQuery } from '@tanstack/react-query'
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate, useParams} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext.jsx';
 
 
 
 const Profile = () => {
+    const {id} = useParams()
 
     const [updateClick, setUpdateClick] = useState(false)
 
     const {isLoading, error, data} = useQuery(['profile'], async ()=>{
-        const response = await makeRequest.get("/profile/getProfile")
+        const response = await makeRequest.get(`/profile/getProfile/`)
         return response.data
     })
     if(isLoading)return <div> loading ... </div>

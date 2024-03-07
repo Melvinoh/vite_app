@@ -11,11 +11,12 @@ const Schools = () =>{
   const sdata = "3238a35e-6d57-4221-a4f4-44b1ea64579c"
 
   const[facultyID, setFacultyID] = useState(sdata)
+  const [ActiveTab, setActiveTab] = useState('FSSS')
 
-  const handleFaculties = (facultyId) =>{
+  const handleFaculties = (facultyId,name) =>{
 
-    console.log(facultyId);
     setFacultyID(facultyId);
+    setActiveTab(name)
 
 
   }
@@ -37,7 +38,7 @@ const Schools = () =>{
     ],
     queryClient,
   });
-  console.log(facultiesQuery.data)
+  // console.log(facultiesQuery.data)
  
   
   return (
@@ -45,9 +46,10 @@ const Schools = () =>{
       <div className="schools-wrapper">
         <div className="school_tabs">
           <div className="tabs">
-            {facultiesQuery.data?.map(faculty =>(<span className="" key={faculty.FacultyID} onClick={()=>{handleFaculties(faculty.FacultyID)}}>{faculty.name}</span>) )}
+            {facultiesQuery.data?.map(faculty =>(<span className={`tab ${ActiveTab === faculty.name ? 'active':''}`}  key={faculty.FacultyID} onClick={()=>{handleFaculties(faculty.FacultyID,faculty.name)}}>{faculty.name}</span>) )}
           </div>
           <hr />
+        
         </div>
         <div className="heading1">
           {

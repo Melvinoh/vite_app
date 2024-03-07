@@ -7,11 +7,24 @@ function Leaders() {
     <div className="wrapper-con">
       <div className="leaders-wrapper">
         <span className="heading1"> Satuk leadership</span>
-        <div className="leaders_wrapper grid">
-          {
-            leaders.map(data =>(<LeadersCard key={data.id} item={data}/>))
-          }
+        
+        <div className=''>
+          <div className='heading1'>exceutive leaders</div>
+          <div className="card4-wrapper">
+            {
+              leaders.map(data =>(<LeadersCard key={data.id} item={data}/>))
+            }
+          </div>
         </div>
+        <div className=''>
+          <div className='heading1'>school congress</div>
+          <div className="leaders_wrapper grid">
+            {
+              leaders.map(data =>(<LeadersCard key={data.id} item={data}/>))
+            }
+          </div>
+        </div>
+        
       </div>
     </div>
   ) 

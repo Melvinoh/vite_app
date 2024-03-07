@@ -5,6 +5,8 @@ import clubsData from "../../data/clubs.json"
 import Card1 from '../../components/cards/Card1'
 import Card2 from '../../components/cards/Card2'
 import Card3 from '../../components/cards/Card3'
+import Card4 from '../../components/cards/Card4'
+
 import LeadersCard from '../../components/cards/LeadersCard'
 import "./clubs.css"
 import { AuthContext } from '../../context/AuthContext'
@@ -48,33 +50,33 @@ const Clubs =  () => {
             <div className="clubs_container">
                 <div className='clubs-box'>
                     <div className="card4-box">
-                    <span className='heading2'> my clubs</span>
-                    <div className="card4-wrapper grid">
-                        {
-                            Array.isArray(myClubsQuery.data) ? (myClubsQuery.data.map( (data) => <LeadersCard key={data.ClubID} item={data} /> )) : (<div>{myClubsQuery.data}</div>)
-                        }
-                    </div>
+                        <span className='heading2'> my clubs</span>
+                        <div className="card4-wrapper ">
+                            {
+                                Array.isArray(myClubsQuery.data) ? (myClubsQuery.data.map( (data) => <Card4 key={data.ClubID} item={data} /> )) : (<div>{myClubsQuery.data}</div>)
+                            }
+                        </div>
                     </div>
                     <div className="card2-box">
-                    <div className="ft">
-                        <span className='heading2'>featured clubs</span>
-                    </div>
-                    <div className="cd2-wrapper">
-                        {
-                            clubsQuery.data?.slice(6).map(data =>(<Card2 key={data.ClubsID} item2={data}/>))
-                        }
-                    </div>
+                        <div className="ft">
+                            <span className='heading2'>featured clubs</span>
+                        </div>
+                        <div className="cd2-wrapper">
+                            {
+                                clubsQuery.data?.slice(6).map(data =>(<Card2 key={data.ClubsID} item2={data}/>))
+                            }
+                        </div>
                     </div>
                     <div className="card1-box">
-                    <div className='heading2'>
-                        <span>recomended clubs</span>
-                    </div>
-                    <div className="cd1-wrapper">
-                        {
-                            clubsQuery.data?.map(data =>(<Card1 key={data.ClubsID} item2={data}/>))
-                        }
-                           
-                    </div>
+                        <div className='heading2'>
+                            <span>recomended clubs</span>
+                        </div>
+                        <div className="cd1-wrapper">
+                            {
+                                clubsQuery.data?.map(data =>(<Card1 key={data.ClubsID} item2={data}/>))
+                            }
+                            
+                        </div>
                     </div> 
                     <div className="card3-box">
                         <div className="heading2">

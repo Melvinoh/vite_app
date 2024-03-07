@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom'
 
 const LeadersCard = ({item}) => {
   return (
-    <Link to={item.ClubsID}  className="ld-card_wrapper link">
+    <Link to={`/profile/'${item.regno}'`}  className=" link">
       <div className="ld-card_container">
-          <div className='img'>
-            <img src={`/pictures/${item.profile_pic}`}alt="" />
-          </div>
-          <div className="content">
-              <span>{item.name}</span>
-              <span className='heading3'>{item.position}</span>
-              <span>{item.block}</span>
-              <span>{item.room}</span>
-          </div>
+        <div className='img'>
+          <img src={`/upload/${item.profile_pic}`}alt="" />
+        </div>
+        <div className="content">
+          <span>{item.fname} {item.sname}</span>
+          <span className='heading3'>{item.position}</span>
+          <span>{item.contacts}</span>
+          <span>{item.year}</span>
+
+        </div>
       </div>
     </Link>
   )

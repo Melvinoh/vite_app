@@ -44,7 +44,7 @@
     margin: auto;
 
 }
-.cr-wrapper{
+/* .cr-wrapper{
     gap: 0.4rem;
     padding: 0.1rem;
     grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr) );
@@ -67,4 +67,4 @@
         width: 90%;
   
     }
-}
+} */

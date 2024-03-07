@@ -27,9 +27,9 @@
     padding: 0.4rem;
     height:fit-content;
     background-color:#FAFAFA;
-    gap: 0.5rem;
+    gap: 0.4rem;
     height: max-content;
-    border-radius: 5px;
+    border-radius: 0.2rem;
     text-align: center;
     box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
 
@@ -47,7 +47,7 @@
     object-fit: cover;
     height: 130px;
     width: 95%;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 
@@ -187,36 +187,31 @@
 }
 
 /* leaders card */
-.ld-card_wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    height: fit-content;  
-    margin: 0.3rem auto;
-}
+
 .ld-card_container{
     max-width: 150px;
     padding: 0.3rem;
     margin: 0.3rem;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    background-color: rgba(240, 248, 255, 0.732);
     text-align: center;
     box-shadow:rgba(116, 115, 115, 0.527) 0.01rem 0.06rem 0.2rem ;
 }
-.ld-card_wrapper .img{
-    width: 110px;
-    height: 120px;
+.ld-card_container .img{
+    width: 95%;
+    margin: auto;
+    aspect-ratio: 1/1.1;
+    min-width: 100px;
     
 }
-.ld-card_wrapper .img img{
+.ld-card_container .img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.ld-card_wrapper .content{
+.ld-card_container .content{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -270,12 +265,15 @@
     gap: 0.5rem;
 
 }
-.card4-wrapper, .card1-wrapper{
-    gap: 0.7rem;
+.card4-wrapper{
+    gap: 0.4rem;
     width: min(100%,100%);
     margin: 0.1rem auto;
     padding: 0.3rem;
     border-radius: 0.5rem;
+    display: grid;
+     justify-items: center;
+    align-content: center;
     grid-template-columns: repeat( auto-fit, minmax(7.5rem, 1fr) );
 }
 @media (min-width:899px) {

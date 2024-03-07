@@ -20,7 +20,6 @@ const Club_details = () => {
       } 
    },[Myclubs]);
   
-  
   console.log(Myclubs.length);
   for (let i = 0; i < Myclubs.length; i++) {
     if(Myclubs[i].ClubsID  == id ){

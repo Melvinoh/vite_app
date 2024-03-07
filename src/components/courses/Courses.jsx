@@ -31,7 +31,7 @@ const Courses = ({courseID,initialId,}) => {
         ],
         queryClient,
     });
-    // console.log(courseQuery.data?.classreps)
+    console.log(courseQuery.data?.classreps)
 
     // const Classrep = JSON.parse(courseQuery.data?.classreps);
     // console.log(Classrep);
@@ -53,18 +53,20 @@ const Courses = ({courseID,initialId,}) => {
         <div className="heading3">
             <span>class representatives</span>
         </div>
-        <div className="cr-wrapper grid ">
+        <div className=" card4-wrapper ">
             {reps.map( data => (
-            <div className="ld-card_wrapper" key={data.id}>
-                <div className="ld-card_container">
-                    <img src="/pictures/mrform.jpg" alt="img" />
-                    <div className="content">
-                        <span>{data.name} </span>
-                        <span>{data.tel}</span>
-                        <span className='button'>{data.year}</span>
-                    </div>
-                </div>  
-            </div>
+                <div className=" " key={data.id}>
+                    <div className="ld-card_container">
+                        <div className='img'>
+                            <img src={data.img} alt="" />
+                        </div>
+                        <div className="content">
+                            <span>{data.name} </span>
+                            <span>{data.tel}</span>
+                            <span className='button'>{data.year}</span>
+                        </div>
+                    </div>  
+                </div>
             ))}
         </div>
      

@@ -163,6 +163,10 @@ function App() {
             element : <Profile />
           },
           {
+            path : "/profile/:id",
+            element : <Profile />
+          },
+          {
             path : "/profileUpdate",
             element : <ProfileUpdate />
           }

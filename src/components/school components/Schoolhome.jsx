@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom'
 import { makeRequest } from '../../../axios'
 import {MdArrowBack} from "react-icons/md";
 import Courses from '../../components/courses/Courses'
+import LeadersCard from '../cards/LeadersCard'
 
 const Schoolhome = ({data}) => {
 
@@ -142,16 +143,9 @@ const Schoolhome = ({data}) => {
                     <div className="heading2">
                         <span>leaders</span>
                     </div>
-                    <div className="ld-card_wrapper">
+                    <div className="card4-wrapper">
                         {schoolrepsQuery.data?.map((reps)=>(
-                            <div className="ld-card_container">
-                                 <img src={`/upload/${reps.profile_pic}`} alt=""  />
-                                <div className="content">
-                                    <span>{reps.position} </span>
-                                    <span>{reps.fname} {reps.sname}</span>
-                                    <span className='button'>view profile</span>
-                                </div>
-                            </div>
+                           <LeadersCard key={reps.regno} item={reps}></LeadersCard>
                         ))}
                     </div>
                 </div>

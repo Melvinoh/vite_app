@@ -24,9 +24,21 @@ hr{
     padding: 0.3rem 0.9rem;
  
 }
-.school_tabs .tab:hover{
+.school_tabs .tabs .tab:hover{
     color : green;
     cursor: pointer;
+}
+.school_tabs .tabs .tab.active{
+    
+    text-decoration: underline;
+    border: solid grey 2px;
+    border-radius: 0.2rem;
+    background-color: white;
+    top: 3px;
+    border-bottom: 0;
+    color: rgb(10, 114, 10);
+    font-weight: 200;
+    font-size: medium;
 }
 .school_tabs #fast{
     border: solid 1px green ;
@@ -48,9 +60,7 @@ hr{
     font-size: 1rem;
     width: 100%;
     margin: auto;
-    gap: 0.9rem;
-    height: 100vh;
- 
+    gap: 0.1rem; 
 }
 .sh-left,.sh-right{
     flex: 1;
