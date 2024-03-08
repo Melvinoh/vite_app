@@ -69,8 +69,8 @@ const Non_members = ({items}) => {
 
         <div className="cl-leaders">
           <span className='heading2'>club leaders</span>
-          <div className="leaders_wrapper">
-            <div className="ld-card_wrapper">
+          <div className="card4-wrapper">
+            <div className="ld-card_container">
                 <img src="/pictures/mrform.jpg" alt="img" />
                 <div className="content">
                     <span>emily wachira </span>
@@ -78,7 +78,7 @@ const Non_members = ({items}) => {
                     <span className='button'>+254 28319879</span>
                 </div>
             </div>
-            <div className="ld-card_wrapper">
+            <div className="ld-card_container">
                 <img src="/pictures/customercare.PNG" alt="img" />
                 <div className="content">
                     <span>Martin kamau </span>
@@ -86,7 +86,7 @@ const Non_members = ({items}) => {
                     <span className='button'>+254 3467 897</span>
                 </div>
             </div>
-            <div className="ld-card_wrapper">
+            <div className="ld-card_container">
                 <img src="/pictures/coolboy.jpg" alt="img" />
                 <div className="content">
                     <span>MUturi Melvin </span>

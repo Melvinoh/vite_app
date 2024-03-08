@@ -37,13 +37,13 @@ function App() {
 
   
 //hook state for nav openinig and close
-  const [openNav, setOpenNav] = useState(false);
+    const [openNav, setOpenNav] = useState(false);
     const OpenNavHandler = ()=>{
         setOpenNav(!openNav)
     };
     const CloseNavHandler = ()=>{
       setOpenNav(false)
-  }
+    }
 
 //hook state for form opening and close
       const[openform ,setOpenform] = useState(false);

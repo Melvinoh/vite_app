@@ -4,13 +4,16 @@ import {BsThreeDotsVertical,BsFacebook,BsInstagram,BsTwitter,BsLinkedin,BsGithub
 import ProfileUpdate from '../../components/forms/ProfileUpdate'
 import { makeRequest } from '../../../axios'
 import { useQuery } from '@tanstack/react-query'
-import { Link, useNavigate, useParams} from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext.jsx';
 
 
 
 const Profile = () => {
     const {id} = useParams()
+    const ID = useLocation().pathname.split('/')[2]
+
+    console.log(ID)
 
     const [updateClick, setUpdateClick] = useState(false)
 

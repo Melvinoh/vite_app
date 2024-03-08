@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LeadersCard = ({item}) => {
   return (
-    <Link to={`/profile/'${item.regno}'`}  className=" link">
+    <Link to={`/profile/[${item.profile_pic}]`}  className=" link">
       <div className="ld-card_container">
         <div className='img'>
           <img src={`/upload/${item.profile_pic}`}alt="" />

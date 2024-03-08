@@ -37,6 +37,7 @@ const Schoolhome = ({data}) => {
         ],
         queryClient,
     });
+   
 
     let initialId = null
     
@@ -55,6 +56,7 @@ const Schoolhome = ({data}) => {
     const BandleClick = (courseID)=>{
         setCourseId(courseID)
     }
+    console.log(schoolrepsQuery.data)
 
   return (
     <div className="school-container">
