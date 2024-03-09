@@ -36,6 +36,7 @@ const Clubs =  () => {
         ],
         queryClient,
     });
+    
 
     if(clubsQuery.isLoading || myClubsQuery.isLoading) return <div>loading ...</div> 
     if(clubsQuery.error|| myClubsQuery.error) return <div>{ myClubsQuery.error.message.data}</div> 

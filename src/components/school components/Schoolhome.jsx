@@ -37,8 +37,9 @@ const Schoolhome = ({data}) => {
         ],
         queryClient,
     });
+    console.log(data?.congressMan_id)
+    console.log(schoolrepsQuery.data)
    
-
     let initialId = null
     
     let tabs = []

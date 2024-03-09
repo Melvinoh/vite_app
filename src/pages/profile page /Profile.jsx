@@ -3,26 +3,56 @@ import "./profile.css"
 import {BsThreeDotsVertical,BsFacebook,BsInstagram,BsTwitter,BsLinkedin,BsGithub} from "react-icons/bs"
 import ProfileUpdate from '../../components/forms/ProfileUpdate'
 import { makeRequest } from '../../../axios'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery,useQueries,useQueryClient,useMutation } from '@tanstack/react-query'
 import { Link, useLocation, useNavigate, useParams} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext.jsx';
 
 
 
 const Profile = () => {
-    const {id} = useParams()
+  
     const ID = useLocation().pathname.split('/')[2]
+    const queryClient = useQueryClient();
+    
 
-    console.log(ID)
-
+    if(ID){
+        const {isLoading, error, data} = useQuery(['profile'], async ()=>{
+            const response = await makeRequest.get("/profile/getProfileID?id="+ID)
+            return response.data
+        })
+    }
     const [updateClick, setUpdateClick] = useState(false)
 
     const {isLoading, error, data} = useQuery(['profile'], async ()=>{
-        const response = await makeRequest.get(`/profile/getProfile/`)
+        const response = await makeRequest.get("/profile/getProfile")
         return response.data
     })
     if(isLoading)return <div> loading ... </div>
     if(error)return <div> {error.message.data}</div>
+
+    const myclubs  = queryClient.getQueriesData(['clubs'])
+
+    console.log(myclubs);
+    
+    // const [ clubsQuery, myClubsQuery,profileQuery] = useQueries({
+    //     queries:[
+    //         {
+    //             queryKey:['clubs'],
+    //             queryFn: () => makeRequest.get("/clubs/getClubs").then((res)=> res.data)
+    //         },
+    //         {
+    //             queryKey:['myclubs'],
+    //             queryFn: () => makeRequest.post("/clubs/myclubs",regno).then((res)=> res.data)
+    //         },
+    //         {
+    //             queryKey:['profile'],
+    //             queryFn: () => makeRequest.get("/profile/getProfileID?id="+ID).then((res)=> res.data)
+    //         },
+          
+    //     ],
+    //     queryClient,
+    // });
+   
     
     
     const handleclick = () =>{
@@ -69,11 +99,10 @@ const Profile = () => {
                         </div>      
                     </div>
                     <div className="contacts">
-                        <span>resume : {data.portfolio_url}</span>
-                        
-                        <button onClick={handleclick}>update</button>
-                       
-                        
+                        <span>resume : {data.portfolio_url}</span> 
+                       {
+                        ID ? "": ( <button onClick={handleclick}>update</button>) 
+                       }
                     </div>
                 </div>
                 <div className="myskills">
