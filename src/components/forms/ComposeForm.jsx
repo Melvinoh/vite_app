@@ -4,6 +4,9 @@ import "./forms.css"
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import axios from "axios"
 import { makeRequest } from '../../../axios'
+import { GrGallery } from "react-icons/gr";
+import { MdOutlineGifBox,MdAddPhotoAlternate,MdLocationPin  } from "react-icons/md";
+
 
 
 const ComposeForm = ({close, isOpen, items, id}) => {
@@ -39,35 +42,57 @@ const ComposeForm = ({close, isOpen, items, id}) => {
     }
 
   return (
-    <div className={`form_modal ${isOpen ? "active" : "" }`}>
-        <div className="compose">
+    <div  className={`form_modal ${isOpen ? "active" : "" }`} >
+        
+        <div className='compose'>
             < IoIosClose className='icons' onClick={close}/>
-            <div className="c-heading">
-                <div  className='tt'>
-                    <span className='heading2'> posting to:  {items.name}</span>
-                </div>
-                <img src={`/pictures/${items.profile_pic}`} alt=""/> 
+            <div className=' heading3 cp_heading' > 
+                <span>create post</span>
             </div>
-            <div className="c-form">
-                <form action="c-form1">
+            <div className='cp_profile'>
+                <div className='cp_img'>
+                    <img src={`/pictures/${items.profile_pic}`}alt="" />
+                </div>
+                <div className='cp_data'>
+                    <span>writing a post to  :</span>
+                    <span style={{backgroundColor: "#cbc8c8",padding :"2px",border_radius:"25%"}}>{items.name}</span>
+                </div>
+            </div>
+            <div className="cp_form">
+                <form action="" className='c_form'>
                     <input type="hidden" name="clubID" value={id}/>
-                    <div className="c-in">
-                        <label for="image"> image :</label>
-                        <input type="file"  name="image" onChange={(e) =>setFile(e.target.files[0])}/>
+
+                    <textarea name="" id="" cols="30" rows="3" placeholder='whats on your mind?'  onChange={(e) =>setDesc(e.target.value)}></textarea>
+
+                    <div className="cp_imgchoose">
+                        {
+                            file ? 
+                            <img src={URL.createObjectURL(file)} alt="" /> :
+  
+                            <>
+                                <label htmlFor="file-input" className='img_input'>
+                                    <div className="box">
+                                        <MdAddPhotoAlternate />
+                                    </div>
+                                    <span>Add photos/videos</span>
+                                    <span> or drag and drop</span>
+                                    
+                                </label>
+                                <input type="file" id='file-input' name="image" onChange={(e) =>setFile(e.target.files[0])}/>
+                            </>
+                        }  
                     </div>
-                    <div className="img-preview">
-                        {file && <img src={URL.createObjectURL(file)} alt=""/>}
+
+                    <div className="cp_addons">
+                        <span>add to your post</span>
+                        <div className='addons'>
+                            <GrGallery  />
+                            <MdLocationPin />
+                            <MdOutlineGifBox />
+
+                        </div>
                     </div>
-                    <div className="c-in">
-                        <label for="heading"> heading :</label>
-                        <input type="text"  name="image"/>
-                    </div>
-                
-                    <div className="c-in">
-                        <label for="image">message :</label>
-                        <textarea name="message" rows="15 " columns="30"  placeholder='your text' onChange={(e) =>setDesc(e.target.value)}/>
-                    </div>
-                    <div className='btn' onClick={handleShare}> <span>publish</span></div>
+                    <button className='c_button'  onClick={handleShare}> publish</button>
                 </form>
             </div>
         </div>

@@ -2,8 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Card3 = ({cards}) => {
+  if (cards.ClubsID){
+    var id = cards.ClubsID
+  }else {
+    var id = cards.SportsID
+  }
   return (
-    <Link  to={cards.ClubsID} className='card3-container link' key={cards.id}>
+    <Link  to={id} className='card3-container link' key={cards.id}>
         <div className="card3-pic">
           <img src={`/pictures/${cards.profile_pic}`} alt="" />
         </div>

@@ -14,7 +14,7 @@ import TukSoko from './pages/tuk soko/TukSoko';
 import Leaders from './pages/leadership_page/leaders pages/Leaders';
 import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports pages/Sports';
-import Sport from './pages/sports pages/SingleSport_Pg';
+import SingleSport_pg from './pages/sports pages/SingleSport_Pg';
 import SchoolSchool_Pg from './pages/school pages/SingleSchool_Pg.jsx';
 import Noticepage from './components/notifications/Noticepage';
 import Landing from './components/landin page/Landing';
@@ -152,7 +152,7 @@ function App() {
           },
           {
             path : "/sports/:id",
-            element : <Sport />
+            element : <SingleSport_pg/>
           },
           {
             path : "home/Notices",
